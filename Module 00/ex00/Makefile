@@ -1,18 +1,18 @@
 # Executable
-NAME = megaphone
+NAME 		= megaphone
 
 # Compiler and flags
 CC			= c++
-FLAGS		= -Wall -Wextra -Werror -std=c++98
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 # Sources files
-SRC = megaphone.cpp
-
-# Objects files
-OBJ		= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
+SRC 		= megaphone.cpp
 
 # Object Directory
 OBJDIR 		= obj
+
+# Objects files
+OBJ			= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
 
 # Colors
 BOLD		= \033[1m
@@ -27,12 +27,12 @@ RESET		= \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJ) 
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	$(CC) $(CPPFLAGS) -o $(NAME) $(OBJ)
 	@echo "$(CORAL) $(UNDER) $(BOLD) $(ITALIC) ✨Compilation Done✨   $(RESET)"
 
 $(OBJDIR)/%.o: %.cpp
 	@mkdir -p $(OBJDIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CPPFLAGS) -c $< -o $@
 
 # Clean
 clean:
@@ -41,7 +41,7 @@ clean:
 
 fclean: clean
 		@rm -f $(NAME)
-		@echo "$(GREEN) $(ITALIC)	  ✅ ✅ ✅$(RESET)"
+		@echo "$(GREEN) $(ITALIC)  ✅ Removed executable ✅$(RESET)"
 
 re:		fclean all
 
