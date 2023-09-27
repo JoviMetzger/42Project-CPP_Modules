@@ -6,7 +6,7 @@ CC			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 # Sources files
-SRC 		= phonebook.cpp
+SRC 		= phoneBook.cpp
 
 # Object Directory
 OBJDIR 		= obj
