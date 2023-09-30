@@ -1,29 +1,21 @@
 #include "phoneBook.hpp"
 
-void MyClass::myMethod() 
+void PhoneBook::ft_search()
 {
-  std::cout << "Hello World!";
+  std::cout << "search ";
 }
 
-int main() 
+void PhoneBook::ft_add()
 {
-  MyClass myObj;  // Create an object of MyClass
+  std::cout << "add ";
+}
 
-  // Access attributes and set values
-  myObj.myNum = 15; 
-  myObj.myString = "Some text";
+PhoneBook::PhoneBook() 
+{
 
-  // Print attribute values
-  std::cout << myObj.myNum << "\n";
-  std::cout << myObj.myString <<"\n";
+}
 
-  myObj.myMethod();  // Call the method
-
-  myObj.x = 25;  // Allowed (public)
-  // myObj.y = 50;  // Not allowed (private) //WONT EVENCOMPILE
-
-  myObj.setSalary(50000);
-  std::cout << myObj.getSalary();
-
-  return 0;
+PhoneBook::~PhoneBook() 
+{
+  
 }
