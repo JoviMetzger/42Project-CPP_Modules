@@ -30,11 +30,11 @@ class Contact
     std::string get_phoneNumber();
     std::string get_dSecret();
 
-    void set_firstName(std::string _firstName);
-    void set_lastName(std::string _lastName);
-    void set_nickName(std::string _nickName);
-    void set_phoneNumber(std::string _phoneNumber);
-    void set_dSecret(std::string _dSecret);
+    void set_firstName(std::string firstName);
+    void set_lastName(std::string lastName);
+    void set_nickName(std::string nickName);
+    void set_phoneNumber(std::string phoneNumber);
+    void set_dSecret(std::string dSecret);
   
 };
 
@@ -42,6 +42,8 @@ class PhoneBook
 {
   private:
     Contact _contact[8];
+    int _index;
+    int _currentPos;
     std::string _firstName;
    std::string _lastName;
    std::string _nickName;

@@ -1,15 +1,15 @@
 #include "phoneBook.hpp"
 
-void ft_display()
+void ft_display_welcome()
 {
   std::cout << " +--------------------------------------------+\n";
-  std::cout << " |   " BLUE"WELCOME TO MY CRAPPY AWESOME PHONEBOOK" RESET"   |\n";
+  std::cout << " |   " << BLUE"WELCOME TO MY CRAPPY AWESOME PHONEBOOK" << RESET"   |\n";
   std::cout << " +--------------------------------------------+\n";
   std::cout << " |                                            |\n";
   std::cout << " |   Command Options:                         |\n";
-  std::cout << " |" RED"                 1." RESET " ADD,                    |\n";
-  std::cout << " |" RED"                 2." RESET " SEARCH,                 |\n";
-  std::cout << " |" RED"                 3." RESET " EXIT                    |\n";
+  std::cout << " |" << RED"                 1." << RESET " ADD,                    |\n";
+  std::cout << " |" << RED"                 2." << RESET " SEARCH,                 |\n";
+  std::cout << " |" << RED"                 3." << RESET " EXIT                    |\n";
   std::cout << " |                                            |\n";
   std::cout << " +--------------------------------------------+\n\n";
 }
@@ -19,7 +19,7 @@ int main()
     PhoneBook phonebook;
     std::string command;
 
-    ft_display();
+    ft_display_welcome();
     while (1)
     {
       std::cout << "Enter a command "<< BLUE ">> " << RESET;
