@@ -2,6 +2,7 @@
 # define PHONEBOOK_H
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 # define RED "\e[1;91m"
@@ -49,7 +50,6 @@ class PhoneBook
    std::string _nickName;
    std::string _phoneNumber;
    std::string _dSecret;
-
 
   public:
     PhoneBook();    // Constructor

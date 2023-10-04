@@ -52,29 +52,7 @@ void Contact::set_nickName(std::string nickName)
 
 void Contact::set_phoneNumber(std::string phoneNumber)
 {
-    while (1)
-    {
-        bool valid = true;
-        for (size_t i = 0; i < phoneNumber.length(); ++i)
-        {
-            if (!std::isdigit(phoneNumber[i]))
-            {
-                std::cout << RED"Input is not valid!\n" << RESET "Only numbers are valid\n";
-                std::cout << "Please enter a valid phone number\n";
-                valid = false;
-                break;
-            }
-        }
-        if (valid)
-        {
-            this->_phoneNumber = phoneNumber;
-            break;
-        }
-        
-        // Prompt the user for input again
-        std::cout << BLUE "Phone number: " << RESET;
-        std::cin >> phoneNumber; //used to read input from the standard input stream
-    }
+    this->_phoneNumber = phoneNumber;
 }
 
 void Contact::set_dSecret(std::string dSecret)
