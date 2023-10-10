@@ -6,7 +6,8 @@ CC			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 # Sources files
-SRC 		= account.cpp
+SRC 		= Account.cpp \
+				tests.cpp
 
 # Object Directory
 OBJDIR 		= obj
