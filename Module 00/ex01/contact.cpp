@@ -1,61 +1,67 @@
 #include "phoneBook.hpp"
 
-Contact::Contact() 
+// Constructor
+Contact::Contact()
 {
 
 }
 
+// Destructor
 Contact::~Contact() 
 {
-  
+
 }
 
-std::string Contact:: get_firstName()
+
+// ---------- GET FUNCTIONS ---------- 
+std::string	Contact:: get_firstName()
 {
-    return (this->_firstName);
+	return (this->firstName_);
 }
 
-std::string Contact:: get_lastName()
+std::string	Contact:: get_lastName()
 {
-    return (this->_lastName);
+	return (this->lastName_);
 }
 
-std::string Contact:: get_nickName()
+std::string	Contact:: get_nickName()
 {
-    return (this->_nickName);
+	return (this->nickName_);
 }
 
-std::string Contact:: get_phoneNumber()
+std::string	Contact:: get_phoneNumber()
 {
-    return (this->_phoneNumber);
+	return (this->phoneNumber_);
 }
 
-std::string Contact:: get_dSecret()
+std::string	Contact:: get_dSecret()
 {
-    return (this->_dSecret);
+	return (this->dSecret_);
 }
 
-void Contact::set_firstName(std::string firstName)
+
+// ---------- SET FUNCTIONS ---------- 
+void	 Contact::set_firstName(std::string firstName)
 {
-    this->_firstName = firstName;
+	this->firstName_ = firstName;
 }
 
-void Contact::set_lastName(std::string lastName)
+void	Contact::set_lastName(std::string lastName)
 {
-    this->_lastName = lastName;
+	this->lastName_ = lastName;
 }
 
-void Contact::set_nickName(std::string nickName)
+void	Contact::set_nickName(std::string nickName)
 {
-    this->_nickName = nickName;
+	this->nickName_ = nickName;
 }
 
-void Contact::set_phoneNumber(std::string phoneNumber)
+void	Contact::set_phoneNumber(std::string phoneNumber)
 {
-    this->_phoneNumber = phoneNumber;
+	this->phoneNumber_ = phoneNumber;
 }
 
-void Contact::set_dSecret(std::string dSecret)
+void	Contact::set_dSecret(std::string dSecret)
 {
-    this->_dSecret = dSecret;
+	this->dSecret_ = dSecret;
 }

@@ -1,5 +1,8 @@
 #include <iostream>
 
+/* main(); 
+ *	Converts a string into capital letters.
+ */
 int	main(int argc, char **argv)
 {
 	if (argc > 1)
