@@ -33,11 +33,11 @@ class	Contact
 		std::string	get_phoneNumber();
 		std::string	get_dSecret();
 
-		void	set_firstName(std::string firstName);
-		void	set_lastName(std::string lastName);
-		void	set_nickName(std::string nickName);
-		void	set_phoneNumber(std::string phoneNumber);
-		void	set_dSecret(std::string dSecret);
+		void		set_firstName(std::string firstName);
+		void		set_lastName(std::string lastName);
+		void		set_nickName(std::string nickName);
+		void		set_phoneNumber(std::string phoneNumber);
+		void		set_dSecret(std::string dSecret);
 };
 
 // --------- PHONEBOOK CLASS --------
