@@ -1,6 +1,4 @@
-<div class="center-text">
-  <p>Module 00</p>
-</div>
+# Module 00
 
 ## 🌀 Exercise 00
 ### Description
