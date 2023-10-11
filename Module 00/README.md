@@ -1,9 +1,8 @@
 # Module 00
 <br>
-<br>
 
 ## 🌀 Exercise 00
-#### Description
+### Description
 This program takes a string as input and converts it to uppercase, then prints the uppercase string to the standard output.
 <br>
 ### Installation
@@ -19,7 +18,7 @@ $ ./megaphone "hello world!"
 <br>
 
 ## 🌀 Exercise 01
-#### Description
+### Description
 The program starts with an empty phonebook and accepts three commands: ADD, SEARCH, and EXIT.
 <br>
 
@@ -39,7 +38,7 @@ $ ./phonebook
 <br>
 
 ## 🌀 Exercise 02
-#### Description
+### Description
 This exercise involves recreating the missing source file based on the available information *(Reverse Engineering)*.
 <br>
 ### Installation
