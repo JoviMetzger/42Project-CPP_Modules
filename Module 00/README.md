@@ -1,5 +1,4 @@
 # Module 00
-<br>
 
 ## 🌀 Exercise 00
 ### Description
