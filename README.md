@@ -4,7 +4,6 @@ Welcome to the C++ Modules! <br>
 These modules are an introduction to **Object-Oriented Programming** in C++.
 
 <br>
-<br>
 
 ## 	🌠 C++ modules:
 
