@@ -1,4 +1,14 @@
-# Module 00
+<style>
+  .center {
+    text-align: center; /* Center the text horizontally */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Optional: Add some padding for spacing */
+  }
+</style>
+
+<div class="center">
+  <h1>Module 00</h1>
+</div>
 
 ## 🌀 Exercise 00
 ### Description
