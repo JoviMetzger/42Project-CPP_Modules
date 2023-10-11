@@ -1,8 +1,8 @@
 <style>
   .center {
-    text-align: center; /* Center the text horizontally */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Optional: Add some padding for spacing */
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
   }
 </style>
 
