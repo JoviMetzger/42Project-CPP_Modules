@@ -1,6 +1,6 @@
 # Module 00
 
-## 🌀 ex00
+## 🌀 Exercise 00
 #### Description
 
 ### Installation
@@ -13,7 +13,7 @@ $ make
 $ ./megaphone "hello world!"
 ```
 
-## 🌀 ex01
+## 🌀 Exercise 01
 #### Description
 ### Installation
 1. Compile the program:
@@ -25,7 +25,7 @@ $ make
 $ ./phonebook
 ```
 
-## 🌀 ex02
+## 🌀 Exercise 02
 #### Description
 ### Installation
 1. Compile the program:
