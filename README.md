@@ -24,14 +24,14 @@ These webpages provide a comprehensive resource for C++, containing all the esse
 ## Module 00
 These exercises provide a range of practical skills and knowledge for working with C++ and building more complex programs, from basic string manipulation to object-oriented programming and debugging.
 
-### 🔶 Exercise 00 - Megaphone
+### 🔸Exercise 00 - Megaphone
 This exercise is about string manipulation and basic C++ program structure. <br>
 **You'll learn or practice:**
 1. Command-line argument handling in C++.
 2. Converting strings to uppercase.
 3. Creating a simple C++ program structure with Makefile.
 
-### 🔸 Exercise 01 - My Awesome PhoneBook
+### 🔸Exercise 01 - My Awesome PhoneBook
 This exercise focuses on creating a simple phonebook program in C++ and using classes.<br>
 **You'll learn or practice:**
 1. Object-oriented programming (OOP) concepts, including class design and encapsulation.
@@ -39,17 +39,19 @@ This exercise focuses on creating a simple phonebook program in C++ and using cl
 3. Command-line interaction and implementing basic command parsing.
 4. Memory management without dynamic allocation.
 
-### Exercise 02 - The Job Of Your Dreams
+### 🔸Exercise 02 - The Job Of Your Dreams
 In this exercise, you are tasked with recreating a missing source file based on provided header files and a log file. <br>
 **You'll learn or practice:**
 1. Reverse engineering C++ code from header files and expected output.
 2. Debugging and fixing C++ code to match specified requirements.
 3. Understanding code functionality and relationships between different code files.
 
+<br>
 
-➡️ [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2000) ⬅️
+➡️  [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2000)  ⬅️
 <br>
 <br>
+
 </details>
 
 ---
