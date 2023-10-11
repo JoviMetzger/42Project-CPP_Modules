@@ -25,7 +25,7 @@ Account::Account( int initial_deposit )
 	_displayTimestamp();
 	std::cout << "index:" <<_accountIndex << ";" 
 	<< "amount:" << _amount << ";"
-	<< "created:" << std::endl;
+	<< "created" << std::endl;
 }
 
 // ---------- Destructor ----------
@@ -37,7 +37,7 @@ Account::~Account( void )
 	_displayTimestamp();
 	std::cout << "index:" <<_accountIndex << ";" 
 	<< "amount:" << _amount << ";"
-	<< "closed:" << std::endl;
+	<< "closed" << std::endl;
 }
 
 // ---------- DISPLAY FUNCTIONS ----------
