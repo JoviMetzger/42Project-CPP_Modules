@@ -2,7 +2,6 @@
 
 Welcome to the C++ Modules! <br>
 These modules are an introduction to **Object-Oriented Programming** in C++.
-
 <br>
 
 ## 	🌠 Useful Resources
@@ -13,7 +12,6 @@ These webpages provide a comprehensive resource for C++, containing all the esse
 - [cplusplus](https://cplusplus.com/doc/tutorial/) 
 - [programiz](https://www.programiz.com/cpp-programming) 
 - [geeksforgeeks](https://www.geeksforgeeks.org/c-plus-plus/)
-
 <br>
 
 ## 	🌠 C++ modules:
@@ -135,6 +133,5 @@ These webpages provide a comprehensive resource for C++, containing all the esse
 </br>
 
 </details>
-
 <br>
 <br>
