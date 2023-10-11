@@ -5,6 +5,17 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 
 <br>
 
+## 	🌠 Useful Resources
+
+These webpages provide a comprehensive resource for C++, containing all the essential information you need. <br>
+
+- [w3schools](https://www.w3schools.com/cpp/cpp_getstarted.asp) 
+- [cplusplus](https://cplusplus.com/doc/tutorial/) 
+- [programiz](https://www.programiz.com/cpp-programming) 
+- [geeksforgeeks](https://www.geeksforgeeks.org/c-plus-plus/)
+
+<br>
+
 ## 	🌠 C++ modules:
 
 <details>
@@ -127,12 +138,3 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 
 <br>
 <br>
-
-## 	🌠 Useful Resources
-
-These webpages provide a comprehensive resource for C++, containing all the essential information you need. <br>
-
-- [w3schools](https://www.w3schools.com/cpp/cpp_getstarted.asp) 
-- [cplusplus](https://cplusplus.com/doc/tutorial/) 
-- [programiz](https://www.programiz.com/cpp-programming) 
-- [geeksforgeeks](https://www.geeksforgeeks.org/c-plus-plus/) 
