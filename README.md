@@ -3,7 +3,7 @@
 Welcome to the C++ Modules! <br>
 These modules are an introduction to **Object-Oriented Programming** in C++.
 
-## 	🎇 C++ modules:
+## 	🌠 C++ modules:
 
 <details>
   <summary>Module 00</summary>
@@ -123,7 +123,10 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 
 </details>
 
-## 	🎇 Useful Resources
+<br>
+<br>
+
+## 	🌠 Useful Resources
 
 These webpages provide a comprehensive resource for C++, containing all the essential information you need. <br>
 
