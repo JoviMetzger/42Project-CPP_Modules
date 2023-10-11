@@ -1,5 +1,6 @@
 # Module 00
-
+<br>
+<br>
 ## 🌀 Exercise 00
 #### Description
 
@@ -12,7 +13,8 @@ $ make
 ```bash 
 $ ./megaphone "hello world!"
 ```
-
+<br>
+<br>
 ## 🌀 Exercise 01
 #### Description
 ### Installation
@@ -24,7 +26,8 @@ $ make
 ```bash 
 $ ./phonebook
 ```
-
+<br>
+<br>
 ## 🌀 Exercise 02
 #### Description
 ### Installation
