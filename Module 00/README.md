@@ -1,13 +1,5 @@
-<style>
-  .center {
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-  }
-</style>
-
-<div class="center">
-  <h1>Module 00</h1>
+<div class="center-text">
+  <p>Module 00</p>
 </div>
 
 ## 🌀 Exercise 00
