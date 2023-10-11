@@ -15,7 +15,7 @@ These webpages provide a comprehensive resource for C++, containing all the esse
 - [geeksforgeeks](https://www.geeksforgeeks.org/c-plus-plus/)
 <br>
 
-## 	🌠 C++ modules:
+## 	🌠 C++ Modules
 
 <details>
   <summary>Module 00</summary>
