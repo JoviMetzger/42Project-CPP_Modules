@@ -15,6 +15,7 @@ $ ./megaphone "hello world!"
 ```
 <br>
 <br>
+
 ## 🌀 Exercise 01
 #### Description
 ### Installation
@@ -28,6 +29,7 @@ $ ./phonebook
 ```
 <br>
 <br>
+
 ## 🌀 Exercise 02
 #### Description
 ### Installation
