@@ -57,7 +57,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary>Module 01</summary>
+  <summary><strong>Module 01:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> New, pointers to members, references, switch statement, Memory allocation)</em></summary>
   <br>
   <br>
   <br>
@@ -69,7 +69,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary>Module 02</summary>
+  <summary><strong>Module 02:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Ad-hoc polymorphism, operator overload and Orthodox Cononical classes)</em></summary>
   <br>
   <br>
   <br>
@@ -81,7 +81,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary>Module 03</summary>
+  <summary><strong>Module 03:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Inheritance)</em></summary>
   <br>
   <br>
   <br>
@@ -93,7 +93,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary>Module 04</summary>
+  <summary><strong>Module 04:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Subtype polymorphism, abstract classes, interfaces)</em></summary>
   <br>
   <br>
   <br>
@@ -105,7 +105,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary>Module 05</summary>
+  <summary><strong>Module 05:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Repetition and Exceptions)</em></summary>
   <br>
   <br>
   <br>
@@ -117,7 +117,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary>Module 06</summary>
+  <summary><strong>Module 06:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> C++ casts)</em></summary>
   <br>
   <br>
   <br>
@@ -129,7 +129,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary>Module 07</summary>
+  <summary><strong>Module 07:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> C++ templates)</em></summary>
   <br>
   <br>
   <br>
@@ -141,7 +141,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary>Module 08</summary>
+  <summary><strong>Module 08:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Templated containers, iterators, algorithms)</em></summary>
   <br>
   <br>
   <br>
@@ -153,7 +153,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary>Module 09</summary>
+  <summary><strong>Module 09:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Namespace, class, member functions, and some basic stuff...)</em></summary>
   <br>
   <br>
   <br>
