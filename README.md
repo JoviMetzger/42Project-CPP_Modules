@@ -153,7 +153,7 @@ In this exercise, you are tasked with recreating a missing source file based on 
 ---
 
 <details>
-  <summary><strong>Module 09:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Namespace, class, member functions, and some basic stuff...)</em></summary>
+  <summary><strong>Module 09:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> )</em></summary>
   <br>
   <br>
   <br>
