@@ -18,7 +18,7 @@ These webpages provide a comprehensive resource for C++, containing all the esse
 ## 	🌠 C++ Modules
 
 <details>
-  <summary><strong>Module 00:</strong> <br> <em>(<strong>Topics:</strong> Namespace, class, member functions, and some basic stuff...)</em></summary>
+  <summary><strong>Module 00:</strong> <br> &nbsp;<em>(<strong>Topics:</strong> Namespace, class, member functions, and some basic stuff...)</em></summary>
 <br>
   
 ## Module 00
