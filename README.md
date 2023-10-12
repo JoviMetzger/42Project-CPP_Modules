@@ -31,6 +31,8 @@ This exercise is about string manipulation and basic C++ program structure. <br>
 2. Converting strings to uppercase.
 3. Creating a simple C++ program structure with Makefile.
 
+<br>
+
 ### 🔸Exercise 01 - My Awesome PhoneBook
 This exercise focuses on creating a simple phonebook program in C++ and using classes.<br>
 **You'll learn or practice:**
@@ -38,6 +40,8 @@ This exercise focuses on creating a simple phonebook program in C++ and using cl
 2. Input and output in C++, including formatting output.
 3. Command-line interaction and implementing basic command parsing.
 4. Memory management without dynamic allocation.
+
+<br>
 
 ### 🔸Exercise 02 - The Job Of Your Dreams
 In this exercise, you are tasked with recreating a missing source file based on provided header files and a log file. <br>
