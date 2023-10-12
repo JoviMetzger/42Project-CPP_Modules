@@ -18,12 +18,10 @@ These webpages provide a comprehensive resource for C++, containing all the esse
 ## 	🌠 C++ Modules
 
 <details>
-  <summary>Module 00</summary>
+  <summary>Module 00: ***(Topics:** Namespace, class, member functions, and some basic stuff..)* </summary>
 <br>
   
 ## Module 00
-
-#### **Topics:** Namespace, class, member functions, and some basic stuff..
 These exercises provide a range of practical skills and knowledge for working with C++ and building more complex programs, from basic string manipulation to object-oriented programming and debugging.
 
 ### 🔸Exercise 00 - Megaphone
