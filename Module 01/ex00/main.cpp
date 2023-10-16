@@ -2,20 +2,17 @@
 
 int main()
 {
-
     // Create a heap zombie and announce it and destroy it
     std::cout << L_BLUE << "HEAP" << RESET << std::endl;
     Zombie* heapZombie = newZombie("HeapZombie");
     heapZombie->announce();
     delete heapZombie;
 
-
     // Create and announce a stack zombie
     std::cout << L_BLUE << "\n\nStack" << RESET << std::endl;
     randomChump("StackZombie");
 
     return 0;
-
 }
 
 
