@@ -8,7 +8,7 @@ int	main()
 	Zombie *horde = zombieHorde(N, "Bob");
 	std::cout << L_BLUE << "Zombies Working" << RESET "\n..." <<std::endl;
 	std::cout << L_BLUE << "R.I.P. Zombies" << RESET <<std::endl;
-    delete[] horde;
+	delete[] horde;
 
 	return 0;
 }

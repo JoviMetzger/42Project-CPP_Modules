@@ -2,7 +2,7 @@
 NAME 		= zombie
 
 # Compiler and flags
-CC		= c++
+CC			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 # Sources files
