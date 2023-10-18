@@ -4,6 +4,7 @@
 Zombie::Zombie(std::string name)
 {
 	_name = name;
+	std::cout << "Zombie [" << _name << "] has been created." << std::endl;
 }
 
 // Destructor
