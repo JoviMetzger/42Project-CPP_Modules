@@ -1,9 +1,10 @@
 # Executable
-NAME 		= violence
+NAME		= violence
 
 # Compiler and flags
-CC			= c++
+CC		= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
+CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
 SRC 		= main.cpp \
