@@ -29,19 +29,19 @@ int	main()
 		Weapon knifeA("knife");
 		HumanA bob("Bob", knifeA);
 	
-		bob.attack();			// Test HumanA's attack with the initial weapon
+		bob.attack();		// Test HumanA's attack with the initial weapon
 		knifeA.setType("bat");	// Change the weapon type for HumanA
-		bob.attack();			// Test HumanA's attack with the modified weapon
+		bob.attack();		// Test HumanA's attack with the modified weapon
 
 		// Create a weapon for HumanB
 		Weapon knifeB("knife");
 		HumanB jim("Jim");
 
-		jim.attack();			// Test HumanB's attack without initially having a weapon
+		jim.attack();		// Test HumanB's attack without initially having a weapon
 		jim.setWeapon(knifeB);	// Set a weapon for HumanB
-		jim.attack();			// Test HumanB's attack with the weapon
+		jim.attack();		// Test HumanB's attack with the weapon
 		knifeB.setType("bat");	// Change the weapon type for HumanB
-		jim.attack();			// Test HumanB's attack with the modified weapon
+		jim.attack();		// Test HumanB's attack with the modified weapon
 	}
 	
 	return 0;
