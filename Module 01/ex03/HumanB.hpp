@@ -7,10 +7,10 @@ class	HumanB
 {
 	private:
 		std::string _name;
-		Weapon *_weapon;		    // pointed weapon: it is designed to potentially not have a weapon.
+		Weapon *_weapon;		// pointed weapon: it is designed to potentially not have a weapon.
 	public:
 		HumanB(std::string name);	// Constructor
-		~HumanB();			        // Destructor
+		~HumanB();			// Destructor
 
 		void	attack();
 		void	setWeapon(Weapon &weapon);
