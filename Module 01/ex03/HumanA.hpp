@@ -7,10 +7,10 @@ class	HumanA
 {
 	private:
 		std::string _name;
-		Weapon &_weapon;				            // reference weapon: is designed to always have a weapon.
+		Weapon &_weapon;				// reference weapon: is designed to always have a weapon.
 	public:
 		HumanA(std::string name, Weapon &weapon);	// Constructor
-		~HumanA();					                // Destructor
+		~HumanA();					// Destructor
 
 		void	attack();
 };
