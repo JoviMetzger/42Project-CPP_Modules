@@ -2,20 +2,21 @@
 NAME 		= zombie
 
 # Compiler and flags
-CC			= c++
+CC		= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
+CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
-SRC 		= main.cpp \
-				Zombie.cpp \
-				newZombie.cpp \
-				randomChump.cpp \
+SRC		= main.cpp \
+			Zombie.cpp \
+			newZombie.cpp \
+			randomChump.cpp \
 
 # Object Directory
 OBJDIR 		= obj
 
 # Objects files
-OBJ			= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
+OBJ		= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
 
 # Colors
 BOLD		= \033[1m
@@ -28,7 +29,7 @@ RESET		= \033[0m
 
 # Targets
 all: $(NAME)
-
+	
 $(NAME): $(OBJ) 
 	$(CC) $(CPPFLAGS) -o $(NAME) $(OBJ)
 	@echo "$(CORAL) $(UNDER) $(BOLD) $(ITALIC) ✨Compilation Done✨   $(RESET)"

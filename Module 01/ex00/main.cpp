@@ -2,7 +2,7 @@
 
 int	main()
 {
-	// Create a heap zombie and announce it and destroy it
+	// Create a heap zombie and announce it and destroy it (basicly like 'malloc', need to delete/ free afterwards.)
 	std::cout << L_BLUE << "HEAP" << RESET << std::endl;
 	Zombie* heapZombie = newZombie("HeapZombie");
 	heapZombie->announce();
