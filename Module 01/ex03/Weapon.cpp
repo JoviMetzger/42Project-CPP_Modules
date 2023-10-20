@@ -14,7 +14,7 @@ Weapon::~Weapon()
 }
 
 // getType(): retrives the weapon
-const	std::string Weapon::getType()
+const	std::string &Weapon::getType()
 {
 	return (_type);
 }
