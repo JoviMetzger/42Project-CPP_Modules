@@ -2,19 +2,19 @@
 NAME 		= harlFilter
 
 # Compiler and flags
-CC			= c++
+CC		= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
 SRC 		= main.cpp \
-				Harl.cpp \
+			Harl.cpp \
 
 # Object Directory
 OBJDIR 		= obj
 
 # Objects files
-OBJ			= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
+OBJ		= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
 
 # Colors
 BOLD		= \033[1m
