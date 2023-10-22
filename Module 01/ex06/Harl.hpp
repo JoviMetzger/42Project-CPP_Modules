@@ -1,25 +1,27 @@
 #ifndef HARL_HPP
 # define HARL_HPP
 
-#include <iostream>
-#include <string>
-#include <map>
+# include <iostream>
+# include <string>
 
 // COLORS
 # define RED "\e[1;91m"
 # define RESET "\033[0m"
+# define PURPLE "\e[0;35m"
 
-class   Harl
+class	Harl
 {
-    private:
-        void debug( void );
-        void info( void );
-        void warning( void );
-        void error( void );
-    public:
-        Harl(); // Constructor
-        ~Harl();    // Destructor
-        void harlFilter( std::string level );
-}; 
+	private:
+		void	debug( void );
+		void	info( void );
+		void	warning( void );
+		void	error( void );
+	public:
+		Harl();		// Constructor
+		~Harl();	// Destructor
+		void	complain( std::string level );
+};
+
+void	harlFilter(char *argv, Harl harl);
 
 #endif
