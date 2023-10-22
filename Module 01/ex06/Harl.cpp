@@ -21,7 +21,7 @@ Harl::~Harl()
 int	ft_convert(char *argv)
 {
 	std::string	l_str[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	int	i = -1;
+	int		i = -1;
 
 	while (++i < 4)
 	{
