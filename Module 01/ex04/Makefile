@@ -7,7 +7,7 @@ CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
-SRC 		= 
+SRC 		= main.cpp \
 
 # Object Directory
 OBJDIR 		= obj

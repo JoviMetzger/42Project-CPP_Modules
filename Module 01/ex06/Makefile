@@ -1,5 +1,5 @@
 # Executable
-NAME 		= harlfilter
+NAME 		= harlFilter
 
 # Compiler and flags
 CC			= c++
