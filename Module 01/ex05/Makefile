@@ -2,7 +2,7 @@
 NAME 		= harl
 
 # Compiler and flags
-CC			= c++
+CC		= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 CPPFLAGS	+= -g -fsanitize=address
 
@@ -14,7 +14,7 @@ SRC 		= main.cpp \
 OBJDIR 		= obj
 
 # Objects files
-OBJ			= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
+OBJ		= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
 
 # Colors
 BOLD		= \033[1m
