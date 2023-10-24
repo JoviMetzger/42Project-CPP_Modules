@@ -103,7 +103,7 @@ $ ./harl INFO
 ## 🌀 Exercise 06
 ### Description
 This exercise focuses on filtering and displaying messages based on log levels and utilizing the switch statement in C++. <br>
-**Select from:** `DEBUG`, `INFO`, `WARNING`, `ERROR`. <br>
+**Select from:** `DEBUG`, `INFO`, `WARNING`, `ERROR`.
 <br>
 ### Installation
 1. Compile the program:
