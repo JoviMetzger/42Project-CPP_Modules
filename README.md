@@ -246,4 +246,3 @@ This exercise focuses on program behavior control using the switch statement and
 </details>
 <br>
 
-## 	🌠 Classes
