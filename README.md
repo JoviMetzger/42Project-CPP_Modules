@@ -116,13 +116,13 @@ This exercise involves file handling and string manipulation, requiring you to r
 2. String manipulation and replacement.
 3. Error handling and input validation.
 
-**NOTE:**
+**NOTE:** <br>
 *Take care of:*
 ```bash
 $ ./replace infile "" "hello"
 $ ./replace infile "bee" "bee"
 $ ./replace infile "bee" "been"
-$ ./replace wrong_infle "hello" "Hello"
+$ ./replace wrong_infile "hello" "Hello"
 ```
 <br>
 
