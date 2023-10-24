@@ -7,46 +7,78 @@
 # define L_BLUE "\e[1;36m"
 # define RESET "\033[0m"
 
+/* ft_replacing();
+ *	- Read lines from an input stream (infile).
+ *	- Search for occurrences of a specified text (old_str) within each line.
+ *	- Replace all instances of old_str with a new text (new_str).
+ *	- Write the modified lines to an output stream (outfile).
+ *	- (match != std::string::npos) npos returns 'match' if it can't find it.
+ */
+void	ft_replacing(std::istream &infile, std::ostream &outfile, std::string old_str, std::string new_str)
+{
+	std::string	line;
+	while (std::getline(infile, line))
+	{
+		size_t	pos = 0;
+		while (1)
+		{
+			size_t	match_pos = line.find(old_str, pos);
+			if (match_pos != std::string::npos)
+			{
+				line.replace(match_pos, old_str.length(), new_str);
+				pos = match_pos + new_str.length();
+			}
+			else
+				break ;	// No more matches in the current line
+		}
+		outfile << line << '\n';
+	}
+}
+
 /* ft_executing();
  *	- Opens an input file (ifstream).
  *	- Creates an output file (ofstream).
  *		- ofstream/ifstream takes a const char*
  *		- convert the std::string to const char* with 'c_str'
- *	- Reads each line 'getline'
- *	- If it finds the text (old_str) in the line, 
- *	  it remembers where it found it (the position), 
- *	  which is stored in f_pos.
- *	- 'old_str' is being replaces with the new text (new_str).
- *	- Writes the modified line to the output file..
+ *	- Replacing strings ft_replacing().
  *	- Finally, it closes both the input and output files.
  */
 void	ft_executing(const char* filename, std::string old_str, std::string new_str)
 {
-	std::ifstream	infile(filename);				// Input File Stream
+	std::ifstream	infile;		// Input File Stream
+	std::ofstream	outfile;	// Output File Stream
+
+	std::string	output_filename = std::string(filename) + ".replace";
+	const char*	conv_outfilename = output_filename.c_str();	// Converts to const char*
+
+	// Some Error checking
+	if (old_str == new_str)
+	{
+		std::cout << RED << "Error: " << RESET << "Why do you want to replace a string with the sameone?!" << std::endl;
+		return ;
+	}
+
+	// Opening infile
+	infile.open(filename);
 	if (!infile)
 	{
 		std::cout << "Error: Unable to open file" << std::endl;
 		return ;
 	}
 
-	std::string	output_filename = std::string(filename) + ".replace";
-	const char*	conv_outfilename = output_filename.c_str();	// Converts to const char*
-
-	std::ofstream	outfile(conv_outfilename);			// Output File Stream
+	// Opening outfile
+	outfile.open(conv_outfilename);
 	if (!outfile)
 	{
-		std::cout << "Error: Unable to create file" << std::endl;
+		std::cout << RED "Error: " << RESET << "Unable to create file" << std::endl;
+		infile.close();
 		return ;
 	}
 
-	std::string	line;
-	while (std::getline(infile, line))				// Replacing the lines
-	{
-		size_t	f_pos;
-		while ((f_pos = line.find(old_str)) != std::string::npos)
-			line.replace(f_pos, old_str.length(), new_str);
-		outfile << line << '\n';
-	}
+	// Replacing strings
+	ft_replacing(infile, outfile, old_str, new_str);
+
+	// Closing files
 	infile.close();
 	outfile.close();
 
