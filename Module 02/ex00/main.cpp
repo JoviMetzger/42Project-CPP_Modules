@@ -1,0 +1,18 @@
+/*
+    - floating-point represent real numbers (numbers with decimal points).
+    - Mantissa: A floating-point number is composed of two main parts. The first part is called the "mantissa," which stores the significant digits of the number. It represents the actual value you want to work with.
+    - Exponent: The second part is the "exponent," which indicates the scale or magnitude of the number. It shows where the decimal point should be placed in the mantissa.
+    - Sign: Floating-point numbers can be positive or negative, so there's also a sign bit to represent the sign of the number.
+
+
+
+
+    - IMAGES:
+        - (https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.puntoflotante.net%2FIEEE-754-ENGLISH.jpg&tbnid=JLQHGm5FO6x3RM&vet=12ahUKEwi1j6Pir5GCAxVY6QIHHb2vDSAQxiAoAHoECAAQEg..i&imgrefurl=https%3A%2F%2Fwww.puntoflotante.net%2FFLOATING-POINT-FORMAT-IEEE-754.htm&docid=_aHMmmak4DS2qM&w=1586&h=632&itg=1&q=floating%20point%20in%20c%2B%2B&ved=2ahUKEwi1j6Pir5GCAxVY6QIHHb2vDSAQxiAoAHoECAAQEg);
+        - (https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.c-programming-simple-steps.com%2Fimages%2FIEEE-754-float-representation.png&tbnid=atnns8NsA2RMYM&vet=12ahUKEwjoosSJsJGCAxVK2AIHHeBIBs8QxiAoAnoECAAQIg..i&imgrefurl=https%3A%2F%2Fwww.c-programming-simple-steps.com%2Fc-float.html&docid=GvXdJTvRdDSJNM&w=733&h=370&itg=1&q=floating%20point%20in%20c%2B%2B&ved=2ahUKEwjoosSJsJGCAxVK2AIHHeBIBs8QxiAoAnoECAAQIg);
+        - (https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F348825339%2Ffigure%2Ffig1%2FAS%3A984782259380226%401611801795273%2FRepresentation-of-floating-point-and-fixed-point-numbers.ppm&tbnid=dK_UMv57jE7TqM&vet=12ahUKEwjO05q3r5GCAxVm_bsIHT8-AVIQxiAoA3oECAAQKg..i&imgrefurl=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FRepresentation-of-floating-point-and-fixed-point-numbers_fig1_348825339&docid=RAnocK8GnXGfDM&w=850&h=579&itg=1&q=floating%20point%20in%20c%2B%2B&ved=2ahUKEwjO05q3r5GCAxVm_bsIHT8-AVIQxiAoA3oECAAQKg);
+        - (https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.springernature.com%2Flw685%2Fspringer-static%2Fimage%2Fart%253A10.1007%252Fs00521-021-06821-x%2FMediaObjects%2F521_2021_6821_Fig1_HTML.png&tbnid=v5wNeGkYF1vNpM&vet=12ahUKEwi36o7lr5GCAxVH2aQKHeXJAsoQxiAoA3oECAAQFA..i&imgrefurl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs00521-021-06821-x&docid=GaBXsQs9VjESHM&w=685&h=329&itg=1&q=floating%20point%20in%20c%2B%2B&ved=2ahUKEwi36o7lr5GCAxVH2aQKHeXJAsoQxiAoA3oECAAQFA);
+        - (https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F353927374%2Ffigure%2Ffig1%2FAS%3A1057456302080001%401629128637300%2FExample-of-fixed-point-number-representation.png&tbnid=lQ1SzGxqXAD2qM&vet=12ahUKEwi36o7lr5GCAxVH2aQKHeXJAsoQxiAoAXoECAAQGg..i&imgrefurl=https%3A%2F%2Fundefined.photos%2Fphoto-gallery%2Fhow-are-floating-point-numbers-represented-in-binary&docid=jhP3vuCfykFScM&w=850&h=492&itg=1&q=floating%20point%20in%20c%2B%2B&ved=2ahUKEwi36o7lr5GCAxVH2aQKHeXJAsoQxiAoAXoECAAQGg);
+        - (https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.c-jump.com%2Fbcc%2Fcommon%2FTalk2%2FCxx%2FIEEE_754_fp_standard%2Fconst_images%2Fieee.gif&tbnid=zMhq6IzU2tfxIM&vet=12ahUKEwjLy4C0r5GCAxU95gIHHSFkDtsQMygWegUIARCBAQ..i&imgrefurl=http%3A%2F%2Fwww.c-jump.com%2Fbcc%2Fcommon%2FTalk2%2FCxx%2FIEEE_754_fp_standard%2FIEEE_754_fp_standard.html&docid=atOiniCr-wkS7M&w=511&h=233&q=floating%20point%20in%20c%2B%2B&ved=2ahUKEwjLy4C0r5GCAxU95gIHHSFkDtsQMygWegUIARCBAQ);
+        - ();
+*/
