@@ -24,25 +24,25 @@ Fixed::Fixed(const Fixed& value)
  *  Assign one Fixed object to another using the assignment operator (=).
  *  'return *this': returns a reference, allows chain assignments (obj1 = obj2 = obj3).
  */
-Fixed &Fixed::operator=(const Fixed& value)
+Fixed	&Fixed::operator=(const Fixed& value)
 {
-    std::cout << "Copy assignment operator called " << std::endl;  
-    if (this != &value)                     // Check for self-assignment (obj1 = obj1)
-        _fixedPoint = value.getRawBits();   // Perform a deep copy
-    return *this;
+	std::cout << "Copy assignment operator called " << std::endl;
+	if (this != &value)				// Check for self-assignment (obj1 = obj1)
+		_fixedPoint = value.getRawBits();	// Perform a deep copy
+	return *this;
 }
 
 // Return the raw value (raw bits)
-int Fixed::getRawBits() const
+int	Fixed::getRawBits() const
 {
-    std::cout << "getRawBits member function called" << std::endl;  
-    return _fixedPoint;
+	std::cout << "getRawBits member function called" << std::endl;
+	return _fixedPoint;
 }
 
 // Set the raw value (raw bits)
-void Fixed::setRawBits(int const raw)
-{  
-    _fixedPoint = raw;
+void	Fixed::setRawBits(int const raw)
+{
+	_fixedPoint = raw;
 }
 
 /*
