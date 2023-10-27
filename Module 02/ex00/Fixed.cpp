@@ -1,7 +1,7 @@
 #include "Fixed.hpp"
 
 // Constructor - Initializes the object's data members
-Fixed::Fixed():
+Fixed::Fixed()
 {
 	_fixedPoint = 0;
 	std::cout << "Default constructor called" << std::endl;
