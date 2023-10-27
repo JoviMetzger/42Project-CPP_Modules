@@ -62,7 +62,7 @@ void	ft_executing(const char* filename, std::string old_str, std::string new_str
 	infile.open(filename);
 	if (!infile)
 	{
-		std::cout << "Error: Unable to open file" << std::endl;
+		std::cout << RED << "Error: " << RESET << "Unable to open file" << std::endl;
 		return ;
 	}
 
