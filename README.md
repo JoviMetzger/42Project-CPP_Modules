@@ -246,3 +246,8 @@ This exercise focuses on program behavior control using the switch statement and
 </details>
 <br>
 
+
+# 🌠 Floating-Point & Fixed-Point
+# 🌠 Orthodox Canonical Form
+# 🌠 Stack & Heap allocation
+# 🌠 Deep copy & Shallow copy
