@@ -29,8 +29,8 @@ int	main( void )
 	// j = j;	- will not work
 	std::cout << BLUE << "Copy assignment: " << RESET << tree.getRawBits() << std::endl;
 
-	// Test setting raw bits
-	one.setRawBits(1);
+	// Test setting raw bits (only takes x.0 or x)
+	one.setRawBits(1.0);
 	std::cout << BLUE << "Setting raw bits (Default construction)" << RESET << one.getRawBits() << std::endl;
 
 	two.setRawBits(2);
