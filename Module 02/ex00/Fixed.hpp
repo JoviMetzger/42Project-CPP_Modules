@@ -16,7 +16,7 @@ class	Fixed
 		Fixed();				// Default constructor
 		Fixed(const Fixed& value);		// Copy constructor
 		Fixed& operator=(const Fixed& value);	// Copy assignment operator
-		~Fixed();				// Destructor - used to perform cleanup operations
+		~Fixed();				// Destructor
 
 		int	getRawBits( void ) const;
 		void	setRawBits( int const raw );
