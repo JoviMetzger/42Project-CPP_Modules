@@ -45,8 +45,8 @@ void	Fixed::setRawBits(int const raw)
 	_fixedPoint = raw;
 }
 
-/*
- * - Deep Copy: Any changes made to the copied object or its internal data won't affect the original object.
- * - Shallow Copy: However, they can lead to unintended side effects, as changes in the copied object 
- *    can affect the original object and vice versa.
+/* Deep Copy: 
+ *		- Any changes made to the copied object or its internal data won't affect the original object.
+ * Shallow Copy: 
+ * 		- Changes in the copied object can affect the original object and vice versa.
  */
