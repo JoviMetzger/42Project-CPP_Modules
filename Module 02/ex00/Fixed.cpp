@@ -46,7 +46,7 @@ void	Fixed::setRawBits(int const raw)
 }
 
 /* Deep Copy: 
- *		- Any changes made to the copied object or its internal data won't affect the original object.
+ *	- Any changes made to the copied object or its internal data won't affect the original object.
  * Shallow Copy: 
- * 		- Changes in the copied object can affect the original object and vice versa.
+ *	- Changes in the copied object can affect the original object and vice versa.
  */
