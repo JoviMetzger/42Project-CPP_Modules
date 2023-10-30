@@ -17,8 +17,8 @@ Fixed::~Fixed()
 // Copy constructor - Used to initialize a new object
 Fixed::Fixed(const Fixed& value)
 {
-	_fixedPoint = value._fixedPoint;
-	std::cout << "Copy constructor called" << std::endl;  
+	std::cout << "Copy constructor called" << std::endl; 
+	_fixedPoint = value._fixedPoint; 
 }
 
 // Constructor - Converts int to fixed-point value
