@@ -31,7 +31,7 @@ int	main( void )
 	std::cout << "d: " << d << std::endl;
 	std::cout << "e: " << e << std::endl;
 
-	// Arithmetic operations
+	// ---------- Arithmetic operations ----------
 	Fixed	result;
 	std::cout << L_BLUE << "\nArithmetic operations" << RESET << std::endl;
 	result = b + c;
@@ -46,7 +46,7 @@ int	main( void )
 	result = b / c;
 	std::cout << "b / c: " << result << std::endl;
 
-	// Comparison operators
+	// --------- Comparison operators ----------
 	std::cout << L_BLUE << "\nComparison operators" << RESET << std::endl;
 	bool	less_than = b < c;
 	std::cout << "b < c : " << (less_than ? "true" : "false") << std::endl;
@@ -60,7 +60,7 @@ int	main( void )
 	bool not_equal = b != c;
 	std::cout << "b != c: " << (not_equal ? "true" : "false") << std::endl;
 
-	// Increment and decrement operators
+	// ---------- Increment and decrement operators ----------
 	std::cout << L_BLUE << "\nIncrement and decrement operators" << RESET << std::endl;
 	e++;
 	std::cout << "e after post-increment: " << e << std::endl;
@@ -74,7 +74,7 @@ int	main( void )
 	--e;
 	std::cout << "e after pre-decrement : " << e << std::endl;
 
-	// Static member functions
+	// ---------- Static member functions ----------
 	std::cout << L_BLUE << "\nStatic member functions" << RESET << std::endl;
 	Fixed	min_value = Fixed::min(b, c);
 	std::cout << "Minimum value among b and c: " << min_value << std::endl;
