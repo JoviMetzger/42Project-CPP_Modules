@@ -11,7 +11,7 @@ class	Fixed
 		static const int	_fractionalBits = 8;
 	public:
 		Fixed();						// Default constructor
-		~Fixed():						// Destructor
+		~Fixed();						// Destructor
 		Fixed(const int intValue);				// Converts int to fixed-point value
 		Fixed(const float floatValue);				// Converts float to fixed-point value
 		Fixed(const Fixed& value);				// Copy constructor
