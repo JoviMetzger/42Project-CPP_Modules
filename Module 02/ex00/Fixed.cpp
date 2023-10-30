@@ -16,8 +16,8 @@ Fixed::~Fixed()
 // Copy constructor - Used to initialize a new object
 Fixed::Fixed(const Fixed& value)
 {
+	std::cout << "Copy constructor called" << std::endl; 
 	_fixedPoint = value._fixedPoint;
-	std::cout << "Copy constructor called" << std::endl;  
 }
 
 /* Copy assignment operator - Used to make a deep copy of one object
