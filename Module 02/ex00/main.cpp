@@ -12,32 +12,31 @@ int	main( void )
 	std::cout << c.getRawBits() << std::endl;
 
 	
-	std::cout << " --------- Extra Test ---------- " << std::endl;
+	// std::cout << " --------- Extra Test ---------- " << std::endl;
+	// // Test the default constructor
+	// Fixed	a;
+	// std::cout << BLUE << "Default construction: " << RESET << a.getRawBits() << std::endl;
 
-	// Test the default constructor
-	Fixed	one;
-	std::cout << BLUE << "Default construction: " << RESET << one.getRawBits() << std::endl;
+	// // Test the copy constructor
+	// Fixed	b(a);
+	// std::cout << BLUE << "Copy construction: " << RESET << b.getRawBits() << std::endl;
 
-	// Test the copy constructor
-	Fixed	two(one);
-	std::cout << BLUE << "Copy construction: " << RESET << two.getRawBits() << std::endl;
+	// // Test the copy assignment operator
+	// Fixed	c;
+	// c = b;
+	// c = b = a;
+	// // d = d;	- will not work
+	// std::cout << BLUE << "Copy assignment: " << RESET << c.getRawBits() << std::endl;
 
-	// Test the copy assignment operator
-	Fixed	tree;
-	tree = two;
-	tree = two = one;
-	// j = j;	- will not work
-	std::cout << BLUE << "Copy assignment: " << RESET << tree.getRawBits() << std::endl;
+	// // Test setting raw bits (only takes x.0 or x)
+	// a.setRawBits(1.0);
+	// std::cout << BLUE << "Setting raw bits (Default construction)" << RESET << a.getRawBits() << std::endl;
 
-	// Test setting raw bits (only takes x.0 or x)
-	one.setRawBits(1.0);
-	std::cout << BLUE << "Setting raw bits (Default construction)" << RESET << one.getRawBits() << std::endl;
+	// b.setRawBits(2);
+	// std::cout << BLUE << "Setting raw bits: (Copy construction)"<< RESET << b.getRawBits() << std::endl;
 
-	two.setRawBits(2);
-	std::cout << BLUE << "Setting raw bits: (Copy construction)"<< RESET << two.getRawBits() << std::endl;
-
-	tree.setRawBits(3);
-	std::cout << BLUE << "Setting raw bits: (Copy assignment)" << RESET << tree.getRawBits() << std::endl;
+	// c.setRawBits(3);
+	// std::cout << BLUE << "Setting raw bits: (Copy assignment)" << RESET << c.getRawBits() << std::endl;
 
 	return 0;
 }
