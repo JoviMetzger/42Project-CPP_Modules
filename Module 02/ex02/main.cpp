@@ -9,12 +9,12 @@ int	main( void )
 	// Fixed	a;					// Initial value of a
 	// Fixed	const b( Fixed( 5.05f ) * Fixed( 2 ) );	// Initial value of 10.1016
 
-	// std::cout << a << std::endl;			// Value of a
+	// std::cout << a << std::endl;				// Value of a
 	// std::cout << ++a << std::endl;			// Pre-increments a
-	// std::cout << a << std::endl;			// Current value of a
+	// std::cout << a << std::endl;				// Current value of a
 	// std::cout << a++ << std::endl;			// Post-increments a 
-	// std::cout << a << std::endl;			// Current value of a
-	// std::cout << b << std::endl;			// Value of b
+	// std::cout << a << std::endl;				// Current value of a
+	// std::cout << b << std::endl;				// Value of b
 	// std::cout << Fixed::max( a, b ) << std::endl;	// Finding Max value between a & b
 
 	std::cout << "\n ---------- Extra Test ----------" << std::endl;
