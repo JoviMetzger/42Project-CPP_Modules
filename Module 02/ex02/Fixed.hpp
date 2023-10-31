@@ -26,10 +26,10 @@ class	Fixed
 		bool	operator!=(const Fixed value) const;		// Not Equal assignment operator
 
 		// ----------- Arithmetic operators ----------
-		float	operator+(const Fixed value) const;		// addition assignment operator
-		float	operator-(const Fixed value) const;		// Subtraction assignment operator
-		float	operator*(const Fixed value) const;		// Multiplication assignment operator
-		float	operator/(const Fixed value) const;		// Division assignment operator
+		Fixed	operator+(const Fixed value) const;		// addition assignment operator
+		Fixed	operator-(const Fixed value) const;		// Subtraction assignment operator
+		Fixed	operator*(const Fixed value) const;		// Multiplication assignment operator
+		Fixed	operator/(const Fixed value) const;		// Division assignment operator
 
 		// ----------- Increment/decrement operators ----------
 		Fixed	operator++(void);				// Pre-Increment assignment operator (++i)
