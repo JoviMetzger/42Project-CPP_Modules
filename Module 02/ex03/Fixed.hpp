@@ -11,12 +11,12 @@ class	Fixed
 		int			_fixedPoint;
 		static const int	_fractionalBits = 8;
 	public:
-		Fixed();				// Default constructor
-		Fixed(const int intValue);		// Converts int to fixed-point value
-		Fixed(const float floatValue);		// Converts float to fixed-point value
-		Fixed(const Fixed& value);		// Copy constructor
-		Fixed& operator=(const Fixed& value);	// Copy assignment operator
-		~Fixed();				// Destructor
+		Fixed();						// Default constructor
+		Fixed(const int intValue);				// Converts int to fixed-point value
+		Fixed(const float floatValue);				// Converts float to fixed-point value
+		Fixed(const Fixed& value);				// Copy constructor
+		Fixed& operator=(const Fixed& value);			// Copy assignment operator
+		~Fixed();						// Destructor
 
 		// ----------- Comparison operators ----------
 		bool	operator>(const Fixed value) const;		// Greater than assignment operator
