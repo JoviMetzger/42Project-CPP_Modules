@@ -3,7 +3,7 @@
 ## 🌀 Exercise 00
 ### Description
 This program introduces you to the Orthodox Canonical Form. <br>
-**Orthodox Canonical Form:***
+**Orthodox Canonical Form:**
 - *Default constructor*
 - *Copy constructor*
 - *Copy assignment operator*
@@ -40,15 +40,16 @@ $ ./ex01
 ## 🌀 Exercise 02
 ### Description
 In this exercise you need to create your own operators.
-- **The 6 comparison operators:** `>`, `<`, `>=`, `<=`, `==` and `!=`.
-- **The 4 arithmetic operators:** `+`, `-`, `*`, and `/`.
-- **The 4 increment/decrement:** 
-&nbsp;&nbsp; `++i` *- pre-increment*,
-&nbsp;&nbsp; `i++` *- post-increment*, 
-&nbsp;&nbsp; `--i` *- pre-decrement*,
-&nbsp;&nbsp; `i--` *- post-decrement*.
-- **static member functions:** `static min()`, `static const min()`, `static max()` and `static const max()`.
+- The 6 comparison operators: `>`, `<`, `>=`, `<=`, `==` and `!=`.
+- The 4 arithmetic operators: `+`, `-`, `*`, and `/`.
+- The 4 increment/decrement: <br>
+&nbsp;&nbsp; `++i` * pre-increment*,
+&nbsp;&nbsp; `i++` * post-increment*, 
+&nbsp;&nbsp; `--i` * pre-decrement*,
+&nbsp;&nbsp; `i--` * post-decrement*.
+- static member functions: `static min()`, `static const min()`, `static max()` and `static const max()`.
 <br>
+
 ### Installation
 1. Compile the program:
 ```bash 
