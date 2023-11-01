@@ -290,6 +290,28 @@ Implement the four required member functions:
 &nbsp; and is the opposite of a constructor.
 <br>
 
+## 🌠 Deep copy & Shallow copy
+
+### 🌘 Deep Copy:
+- A deep copy creates a new object that is a duplicate of the original object, <br>
+and it recursively copies all the objects referenced by the original object.
+- Deep copy ensures that the copy is fully independent of the original object. 
+- **Any changes made to the copied object or its internal data won't affect the original object.**
+
+### 🌘 Shallow Copy:
+- A shallow copy, creates a new object that is a copy of the original object, <br>
+but it doesn't recursively copy the objects referenced by the original.
+- Instead, a shallow copy maintains references to the same objects as the original.
+- Shallow copies are often faster and use less memory than deep copies <br>
+because they don't replicate all the data and objects. 
+- **Any changes in the copied object can affect the original object and vice versa.**
+<br>
+
+*In summary, the key distinction is that a deep copy creates a completely independent duplicate,* <br> 
+*while a shallow copy shares some of the underlying data with the original object.*
+<br>
+<br>
+
 ## 🌠 Stack & Heap allocation
 
 ### 🌘 Allocate on the Heap:
@@ -324,27 +346,7 @@ int	main()
 ```
 <br>
 
-## 🌠 Deep copy & Shallow copy
-
-### 🌘 Deep Copy:
-- A deep copy creates a new object that is a duplicate of the original object, <br>
-and it recursively copies all the objects referenced by the original object.
-- Deep copy ensures that the copy is fully independent of the original object. 
-- **Any changes made to the copied object or its internal data won't affect the original object.**
-
-### 🌘 Shallow Copy:
-- A shallow copy, creates a new object that is a copy of the original object, <br>
-but it doesn't recursively copy the objects referenced by the original.
-- Instead, a shallow copy maintains references to the same objects as the original.
-- Shallow copies are often faster and use less memory than deep copies <br>
-because they don't replicate all the data and objects. 
-- **Any changes in the copied object can affect the original object and vice versa.**
-<br>
-
-*In summary, the key distinction is that a deep copy creates a completely independent duplicate,* <br> 
-*while a shallow copy shares some of the underlying data with the original object.*
-<br>
-<br>
+## 🌠 Reference & Pointer
 
 ## 🌠 Floating-Point & Fixed-Point
 
