@@ -291,7 +291,7 @@ Implement the four required member functions:
 
 ## 🌠 Stack & Heap allocation
 
-### 🌘 Allocate on the Heap:
+#### 🌘 Allocate on the Heap:
 - The **heap** is created on the heap using dynamic memory allocation, <br>
   typically through the `new` operator in C++. 
 - This means that the memory for the **heap** object is allocated on the heap, <br>
