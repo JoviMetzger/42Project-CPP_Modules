@@ -5,7 +5,7 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 <br>
 <br>
 
-## 	🌠 Useful Resources
+## 🌠Useful Resources
 
 These webpages provide a comprehensive resource for C++, containing all the essential information you need. <br>
 
@@ -16,7 +16,7 @@ These webpages provide a comprehensive resource for C++, containing all the esse
 - [learncpp](https://www.learncpp.com/)
 <br>
 
-## 	🌠 C++ Modules
+## 🌠C++ Modules
 
 <details>
   <summary><strong>Module 00:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Namespace, class, member functions, and some basic stuff...)</em></summary>
@@ -248,7 +248,7 @@ This exercise focuses on program behavior control using the switch statement and
 <br>
 
 
-## 🌠 Orthodox Canonical Form
+## 🌠Orthodox Canonical Form
 
 Implement the four required member functions:
 - `Default constructor`
@@ -298,7 +298,7 @@ Implement the four required member functions:
   and is the opposite of a constructor.
 <br>
 
-## 🌠 Deep copy & Shallow copy
+## 🌠Deep copy & Shallow copy
 
 ### 🌘 Deep Copy:
 - A deep copy creates a new object that is a duplicate of the original object, <br>
@@ -320,9 +320,9 @@ because they don't replicate all the data and objects.
 <br>
 <br>
 
-## 🌠 Stack & Heap allocation
+## 🌠Stack & Heap allocation
 
-### 🌘 Allocate on the Heap:
+### 🎆 Allocate on the Heap:
 - The **heap** is created on the heap using dynamic memory allocation, <br>
   typically through the `new` operator in C++. 
 - This means that the memory for the **heap** object is allocated on the heap, <br>
@@ -339,7 +339,7 @@ int	main()
 }
 ```
 
-### 🌘 Allocate on the Stack:
+### 🎆 Allocate on the Stack:
 - Stack-allocated objects are automatically managed by the program's execution stack. 
 - They have a shorter lifetime and are typically limited to the scope in which they are defined. 
 - When the scope ends *(e.g., when the function returns)*, <br>
@@ -354,8 +354,8 @@ int	main()
 ```
 <br>
 
-## 🌠 Reference & Pointer
+## 🌠Reference & Pointer
 
-## 🌠 Floating-Point & Fixed-Point
+## 🌠Floating-Point & Fixed-Point
 
 
