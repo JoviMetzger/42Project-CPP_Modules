@@ -16,7 +16,7 @@ Fixed::~Fixed()
 // Copy constructor - Used to initialize a new object
 Fixed::Fixed(const Fixed& value)
 { 
-	_fixedPoint = value._fixedPoint;
+	*this = value;
 }
 
 // Constructor - Converts int to fixed-point value
