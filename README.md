@@ -311,7 +311,7 @@ int	main()
 ### 🌘 Allocate on the Stack:
 - Stack-allocated objects are automatically managed by the program's execution stack. 
 - They have a shorter lifetime and are typically limited to the scope in which they are defined. 
-- When the scope ends (e.g., when the function returns), <br>
+- When the scope ends *(e.g., when the function returns)*, <br>
   the stack-allocated objects are automatically destroyed.
 Example:
 ```c++
