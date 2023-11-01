@@ -8,7 +8,6 @@ This program introduces you to the Orthodox Canonical Form. <br>
 - *Copy constructor*
 - *Copy assignment operator*
 - *Destructor*
-<br>
 
 ### Installation
 1. Compile the program:
@@ -48,8 +47,11 @@ In this exercise you need to create your own operators.
 &nbsp;&nbsp; `i++` *post-increment*, <br>
 &nbsp;&nbsp; `--i` *pre-decrement*, <br>
 &nbsp;&nbsp; `i--` *post-decrement*.
-- static member functions: `static min()`, `static const min()`, `static max()` and `static const max()`.
-<br>
+- static member functions: <br>
+&nbsp;&nbsp; `static min()`, <br>
+&nbsp;&nbsp; `static const min()`, <br>
+&nbsp;&nbsp; `static max()` and <br>
+&nbsp;&nbsp; `static const max()`.
 
 ### Installation
 1. Compile the program:
