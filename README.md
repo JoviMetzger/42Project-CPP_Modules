@@ -416,8 +416,8 @@ int	main()
     and a certain number of bits to say where within that number the decimal place sits *(the exponent)*. <br> 
     **For example:** <br>
     *A floating point number that took up 10 digits with 2 digits reserved for the exponent* ***might represent***: <br> 
-    `Largest value`: 9.9999999e+50 *(10^50)*, <br>
-    `Smallest non-zero value`: 0.0000001e-49 *(10^-49)*
+    **Largest value**: `9.9999999e+50` *(10^50)*, <br>
+    **Smallest non-zero value**: `0.0000001e-49` *(10^-49)*
 
     ```bash
     9.9999999e+50
@@ -431,8 +431,8 @@ int	main()
     No matter how large or small your number is, it will always use the same number of bits for each portion. <br> 
     **For example:** <br>
     *If your fixed point format was in decimal IIIII.FFFFF then:* <br>
-    `Largest number` - `99999.99999`, <br>
-    `Smallest non-zero number` - `00000.00001`
+    **Largest number** - `99999.99999`, <br>
+    **Smallest non-zero number** - `00000.00001`
 
     ```bash
     99999.99999
@@ -446,7 +446,7 @@ int	main()
     where a wide range of values and precision is required.
   - ◼️`Fixed-Point:` Suitable for applications where you need a consistent level of precision <br> 
     and don't want to deal with the variability and potential rounding errors of floating-point numbers.
-<br>
+
 ### 🌗 Floating-Point level of precision:
 Floating-point represent real numbers *(numbers with decimal points)*. <br>
 A Floating-point number is composed of two main parts.
