@@ -43,7 +43,6 @@ std::ostream& operator<<(std::ostream& out, const Fixed& value)
 
 /* Copy assignment operator - Used to make a deep copy of one object
  *	Assign one Fixed object to another using the assignment operator (=).
- *	'return *this': returns a reference, allows chain assignments (obj1 = obj2 = obj3).
  */
 Fixed	&Fixed::operator=(const Fixed& value)
 {
