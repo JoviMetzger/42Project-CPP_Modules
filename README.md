@@ -5,6 +5,17 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 <br>
 <br>
 
+## 🌠Table of Contents
+
+- [Useful Resources](#Useful-Resources)
+- [C++ Modules](#C++-Modules)
+- [Orthodox Canonical Form](#Orthodox-Canonical-Form)
+- [Deep copy & Shallow copy](#Deep-copy-&-Shallow-copy)
+- [Stack & Heap allocation](#Stack-&-Heap-allocation)
+- [Reference & Pointer](#Reference-&-Pointer)
+- [Floating-Point & Fixed-Point](#Floating-Point-&-Fixed-Point)
+
+
 ## 🌠Useful Resources
 
 These webpages provide a comprehensive resource for C++, containing all the essential information you need. <br>
