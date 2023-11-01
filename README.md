@@ -373,6 +373,7 @@ int	main()
 - 🟠 `References` are declared using the `&` symbol - (int& ref = someInt;), <br>
       and you access the referenced value directly using the reference variable `ref = 42;`.
 <br>
+
 ### 🪐Initialization:
 - 🟣 `Pointers` can be declared without initialization and can be assigned a value later.
       **Or** can be assigned a special value, `nullptr`, to indicate that they don't point to any valid object. <br> 
@@ -398,39 +399,41 @@ int	main()
 ## 🌠Floating-Point & Fixed-Point
 
 ### 🌗 Precision:
-  - ◽`Floating-Point:` Numbers offer a variable level of precision. <br> 
+  - ◻️`Floating-Point:` Numbers offer a variable level of precision. <br> 
     They use a fixed number of bits for the **mantissa** and another set of bits for the **exponent**. <br> 
     This allows them to represent a wide range of values but with varying precision.
-  - ◾`Fixed-Point:` Numbers have a fixed number of decimal places. <br> 
+  - ◼️`Fixed-Point:` Numbers have a fixed number of decimal places. <br> 
     This means you specify a fixed precision for your numbers, and all numbers have the same precision.
 ### 🌗 Range:
-  - ◽`Floating-Point:` Numbers can represent a wide range of values, <br> 
+  - ◻️`Floating-Point:` Numbers can represent a wide range of values, <br> 
     both very small (close to zero) and very large, thanks to the exponent.
-  - ◾`Fixed-Point:` The range is constrained to a predefined interval, <br> 
+  - ◼️`Fixed-Point:` The range is constrained to a predefined interval, <br> 
     determined by the number of bits allocated for the integer and fractional parts.
 ### 🌗 Storage:
-  - ◽`Floating-Point:` The number does not reserve a specific number of bits for the integer part <br> 
+  - ◻️`Floating-Point:` The number does not reserve a specific number of bits for the integer part <br> 
     or the fractional part. 
     Instead it reserves a certain number of bits for the number *(the mantissa or significand)* <br> 
     and a certain number of bits to say where within that number the decimal place sits *(the exponent)*. <br> 
-    **For example:** 
+    **For example:** <br>
     *A floating point number that took up 10 digits with 2 digits reserved for the exponent* ***might represent***: <br> 
-    `Largest value` - `9.9999999e+50` *(10^50)*,
+    `Largest value` - `9.9999999e+50` *(10^50)*, <br>
     `Smallest non-zero value`  - `0.0000001e-49` *(10^-49)*
+
     ```bash
     9.9999999e+50
     ^^^^^^^^^^^^^
     - Significand (9.9999999)
     - Exponent (50)
     ```
-  - ◾`Fixed-Point:` The number has a specific number of bits *(or digits)* reserved for <br> 
+  - ◼️`Fixed-Point:` The number has a specific number of bits *(or digits)* reserved for <br> 
     the integer part *(the part to the left of the decimal point)* and a specific number of bits reserved for <br> 
     the fractional part *(the part to the right of the decimal point)*. <br> 
     No matter how large or small your number is, it will always use the same number of bits for each portion. <br> 
-    **For example:**
-    If your fixed point format was in decimal IIIII.FFFFF then:
-    `Largest number` - `99999.99999`,
+    **For example:** <br>
+    *If your fixed point format was in decimal IIIII.FFFFF then:*
+    `Largest number` - `99999.99999`, <br>
     `Smallest non-zero number` - `00000.00001`
+
     ```bash
     99999.99999
     ^^^^^^^^^^^
@@ -438,12 +441,10 @@ int	main()
     - Integer digits (IIIII)
     ```
 ### 🌗 Usage:
-  - ◽`Floating-Point:` Suitable for scientific calculations, simulations, and applications <br> 
+  - ◻️`Floating-Point:` Suitable for scientific calculations, simulations, and applications <br> 
     where a wide range of values and precision is required.
-  - ◾`Fixed-Point:` Suitable for applications where you need a consistent level of precision <br> 
+  - ◼️`Fixed-Point:` Suitable for applications where you need a consistent level of precision <br> 
     and don't want to deal with the variability and potential rounding errors of floating-point numbers.
-
-![image](https://github.com/JoviMetzger/42Project-CPP_Modules/assets/117259075/c348ce7e-2b9f-4e59-819a-43cf1c8b20e0)
 <br>
 
 ### 🌗 Floating-Point level of precision:
@@ -464,10 +465,9 @@ A Floating-point number is composed of two main parts.
 - Floating-point numbers include both float and double.
 - Float and double are standard floating-point data types, <br> 
   designed to represent real numbers with variable precision.
-
+  <br>
+  <br>
 - Fixed-point numbers don't have predefined data types. 
 - Fixed-point numbers are typically implemented using integer data types *(e.g., int, long)* <br> 
   with a specific interpretation of the position of the decimal point.
-  
-![image](https://github.com/JoviMetzger/42Project-CPP_Modules/assets/117259075/ef38f874-e7e4-4770-a7ff-993ada47fbe7)
 <br>
