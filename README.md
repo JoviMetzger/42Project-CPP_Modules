@@ -300,16 +300,10 @@ Implement the four required member functions:
   until explicitly freed by the programmer.
 Example:
 ```c++
-Heap*	heapAllocation( std::string name )
-{
-	Heap *newHeap = new Heap(name);
-	return (newHeap);
-}
-
 int	main()
 {
-	Heap* heapAllocation = newHeap("Bob");
-	delete heapAllocation;
+	Heap *newHeap = new Heap("Bob");
+	delete newHeap;
 	return 0;
 }
 ```
@@ -321,14 +315,9 @@ int	main()
   the stack-allocated objects are automatically destroyed.
 Example:
 ```c++
-void	stackAllocation( std::string name )
-{
-	Stack newStack = Stack(name);
-}
-
 int	main()
 {
-	stackAllocation("Bob");
+	Stack newStack = Stack("Bob");
 	return 0;
 }
 ```
