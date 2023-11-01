@@ -193,8 +193,10 @@ You expand the functionality of your Fixed class to handle various constructors 
 ### 🔸Exercise 02 - Now we’re talking
 This exercise builds on the Fixed class by overloading comparison operators and arithmetic operators. <br>
 **You'll learn or practice:**
-1. You'll implement *pre-increment (++i)*, *post-increment (i++)*, *pre-decrement (--i)*, and *post-decrement (i--)* operators.
-2. You need to create static member functions and use them for finding the minimum and maximum values among fixed-point numbers.
+1. You'll implement the 6 comparison operators: `>`, `<`, `>=`, `<=`, `==` and `!=`.
+2. You'll implement the 4 arithmetic operators: `+`, `-`, `*`, and `/`.
+3. You'll implement `(++i)`*pre-increment*, `(i++)`*post-increment, `(--i)*`pre-decrement* and `(i--)`*post-decrement* operators.
+4. You need to create static member functions and use them for finding the minimum and maximum values among fixed-point numbers.
    
 <br>
 
