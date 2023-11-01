@@ -11,9 +11,9 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 - [C++ Modules](#C-Modules)
 - [Orthodox Canonical Form](#Orthodox-Canonical-Form)
 - [Deep copy & Shallow copy](#Deep-copy--Shallow-copy)
-- [Stack & Heap allocation](#Stack-Heap-allocation)
-- [Reference & Pointer](#Reference-Pointer)
-- [Floating-Point & Fixed-Point](#Floating-Point-Fixed-Point)
+- [Stack & Heap allocation](#Stack--Heap-allocation)
+- [Reference & Pointer](#Reference--Pointer)
+- [Floating-Point & Fixed-Point](#Floating-Point--Fixed-Point)
 
 
 ## 🌠Useful Resources
