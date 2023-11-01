@@ -259,23 +259,28 @@ Implement the four required member functions:
 ### 🌘 Default Constructor:
 
 ***Constructor();***
-- A default constructor is a special member function of a class that is called when an object is created without any arguments. <br>
-- It initializes the object's data members, to a default value (usually 0 or a specified value). <br>
-- It's called automatically when you create an object of the class without providing any explicit constructor arguments.
+- A default constructor is a special member function of a class <br>
+  that is called when an object is created without any arguments. <br>
+- It initializes the object's data members, <br>
+  to a default value (usually 0 or a specified value). <br>
+- It's called automatically when you create an object of the class <br>
+  without providing any explicit constructor arguments.
 
 ### 🌘 Copy Constructor:
 
 ***Constructor(const Constructor& value);***
-- A copy constructor is a member function that creates a new object by copying the values of another object of the same class.
+- A copy constructor is a member function that creates a new object <br>
+  by copying the values of another object of the same class.
 - It's used to initialize a new object with the same data as an existing object.
 
 ### 🌘 Copy Assignment Operator Overload:
 
 ***Constructor& operator(const Constructor& value);***
-- The copy assignment operator *(often denoted as operator=)* is a member function that allows you to assign
+- The copy assignment operator *(operator=)* is a member function that allows you to assign
   the value of one object to another object of the same class.
 - It's used to make a deep copy of one object into another. <br>
-- It is typically invoked when you use the assignment operator, like obj1 = obj2, and ensures that obj1 now holds a copy of obj2's data.
+- It is typically invoked when you use the assignment operator, <br>
+  like obj1 = obj2, and ensures that obj1 now holds a copy of obj2's data.
 
 **❗NOTE:❗** <br>
 `obj1 = obj2:` *Should work.* <br>
@@ -285,9 +290,11 @@ Implement the four required member functions:
 ### 🌘 Destructor:
 
 ***~Constructor();***
-- A destructor is a special member function that is called when an object is destroyed or goes out of scope.
-- It is used to perform cleanup operations, such as releasing resources or deallocating memory, <br>
-&nbsp; and is the opposite of a constructor.
+- A destructor is a special member function that is called when <br>
+  an object is destroyed or goes out of scope.
+- It is used to perform cleanup operations, <br>
+  such as releasing resources or deallocating memory, <br>
+  and is the opposite of a constructor.
 <br>
 
 ## 🌠 Deep copy & Shallow copy
