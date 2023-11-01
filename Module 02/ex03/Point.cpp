@@ -27,7 +27,6 @@ Point::Point(const Point& value): _x(value.getValueX()), _y(value.getValueY())
 
 /* Copy assignment operator - Used to make a deep copy of one object
  *	Assign one Point object to another using the assignment operator (=).
- *	'return *this': returns a reference, allows chain assignments (obj1 = obj2 = obj3).
  */
 Point	&Point::operator=(const Point& value)
 {
