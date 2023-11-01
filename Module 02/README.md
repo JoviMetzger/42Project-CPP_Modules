@@ -50,7 +50,7 @@ In this exercise you need to create your own operators.
 - static member functions: <br>
 &nbsp;&nbsp; `static min()`, <br>
 &nbsp;&nbsp; `static const min()`, <br>
-&nbsp;&nbsp; `static max()` and <br>
+&nbsp;&nbsp; `static max()`, <br>
 &nbsp;&nbsp; `static const max()`.
 
 ### Installation
