@@ -1,6 +1,6 @@
 # Module 01
 
-## 🌀 Exercise 01
+## 🌀 Exercise 00
 ### Description
 This program demonstrates the distinction between Heap and Stack memory allocation.
 
