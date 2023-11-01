@@ -166,10 +166,50 @@ This exercise focuses on program behavior control using the switch statement and
 <details>
   <summary><strong>Module 02:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Ad-hoc polymorphism, operator overload and Orthodox Cononical classes)</em></summary>
   <br>
-  <br>
-  <br>
+	
+## Module 02
+Tis exercises provide a structured progression of learning, starting from building a basic class and gradually extending its capabilities to solve more complex problems in the context of geometric calculations and computer graphics.
 
-</br>
+### 🔸Exercise 00 - My First Class in Orthodox Canonical Form
+This program introduces you to the Orthodox Canonical Form.<br>
+**You'll learn or practice:**
+1. Create a class representing fixed-point numbers in Orthodox Canonical Form.
+- `Default constructor`
+- `Copy constructor`
+- `Copy assignment operator`
+- `Destructor`
+2. You need to implementing member functions and operator overloading in C++.
+
+<br>
+
+### 🔸Exercise 01 - Towards a more useful fixed-point number class
+In this exercise you will convert float to int and vice versa.<br>
+**You'll learn or practice:**
+1. You expand the functionality of your Fixed class to handle various constructors and conversions.
+2. You'll deal with operator overloading, including overloading the insertion *(<<)* operator for output stream.
+3. You will learn how to convert between fixed-point numbers and floating-point numbers or integers.
+
+<br>
+
+### 🔸Exercise 02 - Now we’re talking
+This exercise builds on the Fixed class by overloading comparison operators and arithmetic operators. <br>
+**You'll learn or practice:**
+1. You'll implement *pre-increment (++i)*, *post-increment (i++)*, *pre-decrement (--i)*, and *post-decrement (i--)* operators.
+2. You need to create static member functions and use them for finding the minimum and maximum values among fixed-point numbers.
+   
+<br>
+
+### 🔸Exercise 03 - BSP  (Binary Space Partitioning)
+In this exercise, you apply the concepts you've learned in the previous exercises to solve a real-world problem, which involves checking if a point is inside a triangle. <br>
+**You'll learn or practice:**
+1. You'll implement a function that performs geometric calculations to determine if a point is inside a triangle using ***Binary Space Partitioning (BSP)***.
+3. This exercise reinforces your understanding of classes, operators, and geometric calculations in C++.
+
+<br>
+
+➡️  [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2002)  ⬅️
+<br>
+<br>
 
 </details>
 
