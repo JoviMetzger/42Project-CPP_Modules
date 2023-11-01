@@ -288,6 +288,7 @@ Implement the four required member functions:
 - A destructor is a special member function that is called when an object is destroyed or goes out of scope.
 - It is used to perform cleanup operations, such as releasing resources or deallocating memory, <br>
 &nbsp; and is the opposite of a constructor.
+<br>
 
 ## 🌠 Stack & Heap allocation
 
@@ -321,6 +322,7 @@ int	main()
 	return 0;
 }
 ```
-  
+<br>
+
 ## 🌠 Deep copy & Shallow copy
 ## 🌠 Floating-Point & Fixed-Point
