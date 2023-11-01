@@ -322,7 +322,7 @@ because they don't replicate all the data and objects.
 
 ## 🌠Stack & Heap allocation
 
-### 🌕 Allocate on the Heap:
+### 🌛 Allocate on the Heap:
 - The **heap** is created on the heap using dynamic memory allocation, <br>
   typically through the `new` operator in C++. 
 - This means that the memory for the **heap** object is allocated on the heap, <br>
@@ -339,7 +339,7 @@ int	main()
 }
 ```
 
-### 🌕 Allocate on the Stack:
+### 🌛 Allocate on the Stack:
 - Stack-allocated objects are automatically managed by the program's execution stack. 
 - They have a shorter lifetime and are typically limited to the scope in which they are defined. 
 - When the scope ends *(e.g., when the function returns)*, <br>
