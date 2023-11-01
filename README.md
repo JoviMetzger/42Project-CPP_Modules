@@ -379,7 +379,7 @@ int	main()
       **Or** can be assigned a special value, `nullptr`, to indicate that they don't point to any valid object. <br> 
       ***This allows for the representation of the absence of a value.***
 - 🟠 `References` must be initialized when declared, and once initialized, <br> 
-      they cannot be changed to refer to a different object. 
+      they cannot be changed to refer to a different object.  <br>
       ***This enforces that references always refer to a valid object.***
 <br>
 
@@ -416,8 +416,8 @@ int	main()
     and a certain number of bits to say where within that number the decimal place sits *(the exponent)*. <br> 
     **For example:** <br>
     *A floating point number that took up 10 digits with 2 digits reserved for the exponent* ***might represent***: <br> 
-    `Largest value` - `9.9999999e+50` *(10^50)*, <br>
-    `Smallest non-zero value`  - `0.0000001e-49` *(10^-49)*
+    `Largest value`: 9.9999999e+50 *(10^50)*, <br>
+    `Smallest non-zero value`: 0.0000001e-49 *(10^-49)*
 
     ```bash
     9.9999999e+50
@@ -430,12 +430,13 @@ int	main()
     the fractional part *(the part to the right of the decimal point)*. <br> 
     No matter how large or small your number is, it will always use the same number of bits for each portion. <br> 
     **For example:** <br>
-    *If your fixed point format was in decimal IIIII.FFFFF then:*
+    *If your fixed point format was in decimal IIIII.FFFFF then:* <br>
     `Largest number` - `99999.99999`, <br>
     `Smallest non-zero number` - `00000.00001`
 
     ```bash
     99999.99999
+    IIIII.FFFFF
     ^^^^^^^^^^^
     - Fractional digits (FFFFF)
     - Integer digits (IIIII)
@@ -446,7 +447,6 @@ int	main()
   - ◼️`Fixed-Point:` Suitable for applications where you need a consistent level of precision <br> 
     and don't want to deal with the variability and potential rounding errors of floating-point numbers.
 <br>
-
 ### 🌗 Floating-Point level of precision:
 Floating-point represent real numbers *(numbers with decimal points)*. <br>
 A Floating-point number is composed of two main parts.
@@ -462,12 +462,12 @@ A Floating-point number is composed of two main parts.
 
 ### 🌗 Difference between a Floating-Point, Fixed-Point, float and double:
 
-- Floating-point numbers include both float and double.
-- Float and double are standard floating-point data types, <br> 
+- **Floating-point** numbers include both float and double.
+- *Float* and *double* are standard floating-point data types, <br> 
   designed to represent real numbers with variable precision.
   <br>
   <br>
-- Fixed-point numbers don't have predefined data types. 
+- **Fixed-point** numbers don't have predefined data types. 
 - Fixed-point numbers are typically implemented using integer data types *(e.g., int, long)* <br> 
   with a specific interpretation of the position of the decimal point.
 <br>
