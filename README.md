@@ -183,11 +183,10 @@ This program introduces you to the Orthodox Canonical Form.<br>
 <br>
 
 ### 🔸Exercise 01 - Towards a more useful fixed-point number class
-In this exercise you will convert float to int and vice versa.<br>
+You expand the functionality of your Fixed class to handle various constructors and conversions.<br>
 **You'll learn or practice:**
-1. You expand the functionality of your Fixed class to handle various constructors and conversions.
-2. You'll deal with operator overloading, including overloading the insertion *(<<)* operator for output stream.
-3. You will learn how to convert between fixed-point numbers and floating-point numbers or integers.
+1. You'll deal with operator overloading, including overloading the insertion *(<<)* operator for output stream.
+2. You will learn how to convert between fixed-point numbers and floating-point numbers or integers.
 
 <br>
 
