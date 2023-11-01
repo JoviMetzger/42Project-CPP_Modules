@@ -9,6 +9,7 @@ This program introduces you to the Orthodox Canonical Form. <br>
 - *Copy assignment operator*
 - *Destructor*
 <br>
+
 ### Installation
 1. Compile the program:
 ```bash 
@@ -43,10 +44,10 @@ In this exercise you need to create your own operators.
 - The 6 comparison operators: `>`, `<`, `>=`, `<=`, `==` and `!=`.
 - The 4 arithmetic operators: `+`, `-`, `*`, and `/`.
 - The 4 increment/decrement: <br>
-&nbsp;&nbsp; `++i` * pre-increment*,
-&nbsp;&nbsp; `i++` * post-increment*, 
-&nbsp;&nbsp; `--i` * pre-decrement*,
-&nbsp;&nbsp; `i--` * post-decrement*.
+&nbsp;&nbsp; `++i` *pre-increment*, <br>
+&nbsp;&nbsp; `i++` *post-increment*, <br>
+&nbsp;&nbsp; `--i` *pre-decrement*, <br>
+&nbsp;&nbsp; `i--` *post-decrement*.
 - static member functions: `static min()`, `static const min()`, `static max()` and `static const max()`.
 <br>
 
