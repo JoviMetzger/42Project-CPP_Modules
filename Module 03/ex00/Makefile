@@ -8,7 +8,7 @@ CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
 SRC			= main.cpp \
-				ClapTrap..cpp \
+				ClapTrap.cpp \
 
 # Object Directory
 OBJDIR 		= obj
