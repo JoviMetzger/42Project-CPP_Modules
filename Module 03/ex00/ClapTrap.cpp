@@ -3,7 +3,7 @@
 // Default Constructor
 ClapTrap::ClapTrap(): _name("Default Bob"), _hitPoints(10), _energyPoints(10), _damage(0)
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Default Constructor called" << std::endl;
 }
 
 // Constructor
@@ -13,6 +13,7 @@ ClapTrap::ClapTrap(std::string name)
 	_hitPoints = 10;
 	_energyPoints = 10;
 	_damage = 0;
+	std::cout << "Constructor called" << std::endl;
 	std::cout << "Player " << YELLOW << _name << RESET << " starts with:" << std::endl;
 	std::cout << "[" << _hitPoints << "] HitPoints," <<std::endl;
 	std::cout << "[" << _energyPoints << "] EnergyPoints," << std::endl;
