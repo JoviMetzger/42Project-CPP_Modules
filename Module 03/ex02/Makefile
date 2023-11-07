@@ -8,7 +8,6 @@ CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
 SRC			= main.cpp \
-				ScavTrap.cpp \
 				ClapTrap.cpp \
 				FragTrap.cpp \
 

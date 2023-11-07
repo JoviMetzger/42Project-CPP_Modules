@@ -1,22 +1,26 @@
 #include "FragTrap.hpp"
 
 // Default Constructor
-FragTrap::FragTrap()
+FragTrap::FragTrap() : ClapTrap()
 {
-	std::cout << "FragTrap Constructor called" << std::endl;
+	_hitPoints = 100;
+	_energyPoints = 100;
+	_damage = 30;
+	std::cout << "FragTrap Default Constructor called" << std::endl;
 }
 
 // Constructor
-FragTrap::FragTrap(const std::string name)
+FragTrap::FragTrap(const std::string name) : ClapTrap(name)
 {
 	_name = name;
 	_hitPoints = 100;
 	_energyPoints = 100;
-	_attackDamage = 30;
+	_damage = 30;
+	std::cout << "FragTrap Constructor called" << std::endl;
 	std::cout << "Your FragTrap player " << YELLOW << _name << RESET << " starts with:" << std::endl;
 	std::cout << "[" << _hitPoints << "] HitPoints," <<std::endl;
 	std::cout << "[" << _energyPoints << "] EnergyPoints," << std::endl;
-	std::cout << "[" << _attackDamage << "] Damage." << std::endl << std::endl;
+	std::cout << "[ " << _damage << "] Damage." << std::endl << std::endl;
 }
 
 // Destructor
@@ -26,7 +30,7 @@ FragTrap::~FragTrap()
 }
 
 // Copy constructor - Used to initialize a new object
-FragTrap::FragTrap(const FragTrap& value)
+FragTrap::FragTrap(const FragTrap& value) : ClapTrap(value)
 {
 	*this = value;
 }
@@ -34,15 +38,25 @@ FragTrap::FragTrap(const FragTrap& value)
 // Copy assignment operator - Used to make a deep copy of one object
 FragTrap	&FragTrap::operator=(const FragTrap& value)
 {
-	// Perform a deep copy
-	_name = value._name;
-	_hitPoints = value._hitPoints;
-	_energyPoints = value._energyPoints;
-	_attackDamage = value._attackDamage;
+	ClapTrap::operator=(value);
 	return *this;
 }
 
-void FragTrap::highFivesGuys(void)
+void	FragTrap::highFivesGuys(void)
 {
-    std::cout << "🖐️  FragTrap requests a " << PURPLE << "high five" << RESET << "! 🎊" << std::endl;
+	if (_hitPoints == 0)
+	{
+		std::cout << "❌ " << _name << " can't give a " << PURPLE 
+		<< "High five" << RESET << ". No hit points left!" << std::endl;
+	}
+	else if (_energyPoints == 0)
+	{
+		std::cout << "❌ " << _name << " can't give a " << PURPLE 
+		<< "High five" << RESET << ". No energy points left!" << std::endl;
+	}
+	else
+	{
+		std::cout << "🖐️  " << PURPLE << "High five" 
+		<< RESET << " alert!🎊 Let's make this moment awesome! 🎊" << std::endl;
+	}
 }

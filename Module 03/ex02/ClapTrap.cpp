@@ -1,22 +1,19 @@
 #include "ClapTrap.hpp"
 
 // Default Constructor
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap(): _name("Default Bob"), _hitPoints(10), _energyPoints(10), _damage(0)
 {
-	std::cout << "ClapTrap Constructor called" << std::endl;
+	std::cout << "ClapTrap Default Constructor called" << std::endl;
 }
 
 // Constructor
-ClapTrap::ClapTrap(const std::string name): _damage(0)
+ClapTrap::ClapTrap(const std::string name)
 {
 	_name = name;
 	_hitPoints = 10;
 	_energyPoints = 10;
-	//_damage = 0;
-	std::cout << "Your ClapTrap player " << YELLOW << _name << RESET << " starts with:" << std::endl;
-	std::cout << "[" << _hitPoints << "] HitPoints," <<std::endl;
-	std::cout << "[" << _energyPoints << "] EnergyPoints," << std::endl;
-	std::cout << "[ " << _damage << "] Damage." << std::endl << std::endl;
+	_damage = 0;
+	std::cout << "ClapTrap Constructor called" << std::endl;
 }
 
 // Destructor
@@ -25,13 +22,13 @@ ClapTrap::~ClapTrap()
 	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
-// Copy constructor - Used to initialize a new object
+// Copy constructor
 ClapTrap::ClapTrap(const ClapTrap& value)
 {
 	*this = value;
 }
 
-// Copy assignment operator - Used to make a deep copy of one object
+// Copy assignment operator
 ClapTrap	&ClapTrap::operator=(const ClapTrap& value)
 {
 	// Perform a deep copy
@@ -46,17 +43,17 @@ void	ClapTrap::attack(const std::string& target)
 {
 	if (_hitPoints == 0)
 	{
-		std::cout << "❌ ClapTrap " << _name << PURPLE << " can't attack." 
+		std::cout << "❌ " << _name << PURPLE << " can't attack." 
 		<< RESET << " No hit points left!" << std::endl;
 	}
 	else if (_energyPoints == 0)
 	{
-		std::cout << "❌ ClapTrap " << _name << PURPLE << " can't attack." 
+		std::cout << "❌ " << _name << PURPLE << " can't attack." 
 		<< RESET << " No energy points left!" << std::endl;
 	}
 	else
 	{
-		std::cout << "🤖 ClapTrap " << _name << PURPLE " attacks " << RESET 
+		std::cout << "🤖 " << _name << PURPLE " attacks " << RESET 
 		<< target << ", cousing " << _damage << " points of damage!" << std::endl;
 		_energyPoints -= 1;
 	}
@@ -67,7 +64,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	if (amount > _hitPoints)
 	{
 		_hitPoints = 0;
-		std::cout << "❌ ClapTrap " << _name << PURPLE << " can't take damage." 
+		std::cout << "❌ " << _name << PURPLE << " can't take damage." 
 		<< RESET << " No hit points left!" << std::endl;
 	}
 	else if(_hitPoints > 0)
@@ -75,7 +72,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		_hitPoints -= amount;
 		if (_hitPoints < 0) 
 			_hitPoints = 0;
-		std::cout << "👊 ClapTrap " << _name << " takes " << amount 
+		std::cout << "👊 " << _name << " takes " << amount 
 		<< " points of " << PURPLE "damage" << RESET << "!" << std::endl;
 	}
 }
@@ -84,24 +81,19 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_hitPoints <= 0)
 	{
-		std::cout << "❌ ClapTrap " << _name << PURPLE << " can't be repaired." 
+		std::cout << "❌ " << _name << PURPLE << " can't be repaired." 
 		<< RESET << " No hit points left!" << std::endl;
 	}
 	else if (_energyPoints <= 0)
 	{
-		std::cout << "❌ ClapTrap " << _name << PURPLE << " can't be repaired." 
+		std::cout << "❌ " << _name << PURPLE << " can't be repaired." 
 		<< RESET << " No energy points left!" << std::endl;
-	}
-	else if (_hitPoints + amount > 10)
-	{
-		std::cout << "❌ ClapTrap " << _name << PURPLE << " can't be repaired." 
-		<< RESET << " Reaching over maximum hit points!" << std::endl;
 	}
 	else
 	{
 		_hitPoints += amount;
 		_energyPoints -= 1;
-		std::cout << "♻️  ClapTrap " << _name << " is " << PURPLE << "repaired" 
+		std::cout << "♻️  " << _name << " is " << PURPLE << "repaired" 
 		<< RESET << " for " << amount << " hit points!" << std::endl;
 	}
 }

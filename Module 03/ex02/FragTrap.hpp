@@ -6,20 +6,15 @@
 // Derived class
 class	FragTrap : public ClapTrap
 {
-	private:
-		std::string		_name;
-		unsigned int	_hitPoints;
-		unsigned int	_energyPoints;
-		unsigned int	_attackDamage;
 	public:
-		FragTrap();				        			// Default Constructor
-		~FragTrap();				        		// Destructor
-		FragTrap(const FragTrap& value);			// Copy constructor
+		FragTrap();					// Default Constructor
+		~FragTrap();					// Destructor
+		FragTrap(const FragTrap& value);		// Copy constructor
 		FragTrap& operator=(const FragTrap& value);	// Copy assignment operator
 
-		FragTrap(const std::string name);					// Constructor
+		FragTrap(const std::string name);		// Constructor
 
-		void highFivesGuys(void);
+		void	highFivesGuys(void);
 };
 
 #endif
