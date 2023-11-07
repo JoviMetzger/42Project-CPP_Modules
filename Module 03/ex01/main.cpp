@@ -37,7 +37,7 @@ int	main()
 		scavB.attack("SC4V-42");	// Attckes
 		scavB.takeDamage(95);		// Takes damage
 		scavB.takeDamage(30);		// Can't take damage, has 0 hit points
-		scavB.attack("SC4V-42");	// Can't attack, hs 0 hit points 
+		scavB.attack("SC4V-42");	// Can't attack, has 0 hit points 
 		scavB.guardGate();		// Can't guards gate has 0 hit points
 		
 		std::cout << std::endl;
