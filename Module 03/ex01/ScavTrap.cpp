@@ -6,7 +6,7 @@ ScavTrap::ScavTrap(): ClapTrap()
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_damage = 20;
-	std::cout << "ScavTrap Constructor called" << std::endl;
+	std::cout << "ScavTrap Default Constructor called" << std::endl;
 }
 
 // Constructor
@@ -16,6 +16,7 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_damage = 20;
+	std::cout << "ScavTrap Constructor called\n" << std::endl;
 	std::cout << "Your ScavTrap player " << YELLOW << _name << RESET << " starts with:" << std::endl;
 	std::cout << "[" << _hitPoints << "] HitPoints," <<std::endl;
 	std::cout << "[ " << _energyPoints << "] EnergyPoints," << std::endl;
@@ -41,16 +42,21 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap& value)
 	return *this;
 }
 
-void ScavTrap::guardGate()
+void	ScavTrap::guardGate()
 {
 	if (_hitPoints == 0)
 	{
-		std::cout << "❌ ScavTrap " << _name << " can't switch into " << PURPLE 
+		std::cout << "❌ " << _name << " can't switch into " << PURPLE 
 		<< "Gate keeper" << RESET << " mode. No hit points left!" << std::endl;
+	}
+	else if (_energyPoints == 0)
+	{
+		std::cout << "❌ " << _name << " can't switch into " << PURPLE 
+		<< "Gate keeper" << RESET << " mode. No energy points left!" << std::endl;
 	}
 	else
 	{
-		std::cout << "⚔️  ScavTrap " << _name << " is now in " << PURPLE 
+		std::cout << "⚔️  " << _name << " is now in " << PURPLE 
 		<< "Gate keeper" << RESET << " mode!" << std::endl;
 	}
 }
