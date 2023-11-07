@@ -10,34 +10,38 @@ int	main()
 	// std::cout << GREEN << ">> " << RESET;
 	// getline(std::cin, ClapTrapName);
 
-	// ClapTrap	claptrap("ClapTrapName");	// Create a ClapTrap object
-	// std::cout << std::endl;
+	{
+		std::cout << BLUE << BOLD << " --- TESTING CLAPTRAP ---\n" << RESET << std::endl;
 
-	// claptrap.attack("CL4P-42");
-	// claptrap.takeDamage(5);
-	// claptrap.beRepaired(3);
+		ClapTrap clapA;
+		ClapTrap clapB("ClapTrapName");
 
-	// // Test: repairing with an amount over the max (10)
-	// claptrap.beRepaired(12);		// ClapTrap can't be repaired
+		clapA.attack("CL4P-42");
+		clapA.takeDamage(5);
+		clapA.beRepaired(3);
+		clapA.beRepaired(12);
+		clapA.takeDamage(8);
+		clapA.takeDamage(2);
+		clapA.attack("CL4P-42");	
+		clapA.beRepaired(3);
+	}
+	{
+		std::cout << BLUE << BOLD << "\n\n --- TESTING SCAVTRAP ---\n" << RESET << std::endl;
 
-	// // Test: taking more hit points
-	// claptrap.takeDamage(8);			// ClapTrap had 8 hit points left
-	// 					            // Now has 0 hit points left
+		ScavTrap scavA;
+		ScavTrap scavB("ScavTrapName");
 
-	// // Test: attacking when no hit points or energy points are left
-	// claptrap.takeDamage(2);			// ClapTrap can't take damage
-	// claptrap.attack("CL4P-42");		// ClapTrap can't attack
-
-	// // Test: repairing when no hit points or energy points are left
-	// claptrap.beRepaired(3);			// ClapTrap can't be repaired
-
-	// std::cout << std::endl;
-
-	ClapTrap claptrap("CL4P-TP");
-    claptrap.attack("Bandit");
-
-    ScavTrap scavtrap("SC4V-TP");
-    scavtrap.guardGate();
+		scavA.attack("SC4V-42");
+		scavA.beRepaired(22);
+		scavA.takeDamage(20);
+		scavA.beRepaired(15);
+		scavA.guardGate();
+		scavA.attack("SC4V-42");
+		scavA.takeDamage(50);
+		scavA.takeDamage(30);
+		scavA.attack("SC4V-42");
+		std::cout << std::endl;
+	}
 
 	return (0);
 }

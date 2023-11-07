@@ -7,11 +7,6 @@
 // Derived class
 class	ScavTrap : public ClapTrap
 {
-	private:
-		std::string		_name;
-		unsigned int	_hitPoints;
-		unsigned int	_energyPoints;
-		unsigned int	_attackDamage;
 	public:
 		ScavTrap();				      				// Default Constructor
 		~ScavTrap();				        		// Destructor

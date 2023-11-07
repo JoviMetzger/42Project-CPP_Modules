@@ -1,18 +1,18 @@
 #include "ClapTrap.hpp"
 
 // Default Constructor
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap(): _name("Default Bob"), _hitPoints(10), _energyPoints(10), _damage(0)
 {
 	std::cout << "ClapTrap Constructor called" << std::endl;
 }
 
 // Constructor
-ClapTrap::ClapTrap(const std::string name): _damage(0)
+ClapTrap::ClapTrap(const std::string name)
 {
 	_name = name;
 	_hitPoints = 10;
 	_energyPoints = 10;
-	//_damage = 0;
+	_damage = 0;
 	std::cout << "Your ClapTrap player " << YELLOW << _name << RESET << " starts with:" << std::endl;
 	std::cout << "[" << _hitPoints << "] HitPoints," <<std::endl;
 	std::cout << "[" << _energyPoints << "] EnergyPoints," << std::endl;
