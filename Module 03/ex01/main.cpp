@@ -16,7 +16,7 @@ int	main()
 		ClapTrap	clapA;
 		ClapTrap	clapB(Name);
 
-		clapB.attack("CL4P-42");	// Attckes
+		clapB.attack("CL4P-42");	// Attackes
 		clapB.takeDamage(5);		// Takes damage 
 		clapB.beRepaired(3);		// Gets repaired, has now 8 hit points
 		clapB.takeDamage(8);		// Takes damage of 8 hit points
@@ -30,11 +30,11 @@ int	main()
 		ScavTrap	scavA;
 		ScavTrap	scavB(Name);
 
-		scavB.attack("SC4V-42");	// Attckes
+		scavB.attack("SC4V-42");	// Attackes
 		scavB.takeDamage(20);		// Takes damage 
 		scavB.beRepaired(15);		// Gets repaired, has now 95 hit points
 		scavB.guardGate();		// Guards gate
-		scavB.attack("SC4V-42");	// Attckes
+		scavB.attack("SC4V-42");	// Attackes
 		scavB.takeDamage(95);		// Takes damage
 		scavB.takeDamage(30);		// Can't take damage, has 0 hit points
 		scavB.attack("SC4V-42");	// Can't attack, has 0 hit points 
