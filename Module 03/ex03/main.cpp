@@ -5,18 +5,18 @@
 
 int	main()
 {
-	// std::string	Name;
+	std::string	Name;
 
-	// std::cout << GREEN << " --- " << RESET << "Please choose a name for your player"
-	// << GREEN << " ---" << RESET << std::endl;
-	// std::cout << GREEN << ">> " << RESET;
-	// getline(std::cin, Name);
+	std::cout << GREEN << " --- " << RESET << "Please choose a name for your player"
+	<< GREEN << " ---" << RESET << std::endl;
+	std::cout << GREEN << ">> " << RESET;
+	getline(std::cin, Name);
 	
 	{
 		std::cout << BLUE << BOLD << " --- TESTING CLAPTRAP ---\n" << RESET << std::endl;
 	
 		ClapTrap	clapA;
-		ClapTrap	clapB("Name");
+		ClapTrap	clapB(Name);
 
 		clapB.attack("CL4P-42");	// Attackes
 		clapB.takeDamage(5);		// Takes damage 
@@ -30,12 +30,12 @@ int	main()
 		std::cout << BLUE << BOLD << "\n\n --- TESTING SCAVTRAP ---\n" << RESET << std::endl;
 
 		ScavTrap	scavA;
-		ScavTrap	scavB("Name");
+		ScavTrap	scavB(Name);
 
 		scavB.attack("SC4V-42");	// Attackes
 		scavB.takeDamage(20);		// Takes damage 
 		scavB.beRepaired(15);		// Gets repaired, has now 95 hit points
-		scavB.guardGate();			// Guards gate
+		scavB.guardGate();		// Guards gate
 		scavB.attack("SC4V-42");	// Attackes
 		scavB.takeDamage(95);		// Takes damage
 		scavB.takeDamage(30);		// Can't take damage, has 0 hit points
@@ -48,7 +48,7 @@ int	main()
 		std::cout << BLUE << BOLD << "\n\n --- TESTING FRAGTRAP ---\n" << RESET << std::endl;
 
 		FragTrap	fragA;
-		FragTrap	fragB("Name");
+		FragTrap	fragB(Name);
 
 		fragB.attack("FR4G-42");	// Attackes
 		fragB.takeDamage(20);		// Takes damage 
@@ -66,20 +66,20 @@ int	main()
 		std::cout << BLUE << BOLD << "\n\n --- TESTING DIAMONDTRAP ---\n" << RESET << std::endl;
 
 		DiamondTrap	diamondA;
-		DiamondTrap	diamondB("Name");;
+		DiamondTrap	diamondB(Name);;
 
-		diamondB.attack("DI4M-42");		// Attackes
-		diamondB.takeDamage(20);		// Takes damage 
-		diamondB.beRepaired(15);		// Gets repaired, has now 95 hit points
-		diamondB.highFivesGuys();		// Gives High five
-		diamondB.attack("DI4M-42");		// Attackes
-		diamondB.guardGate();			// Guards gate
-		diamondB.whoAmI();			// Who am I?
-		diamondB.takeDamage(95);		// Takes damage
-		diamondB.takeDamage(30);		// Can't take damage, has 0 hit points
-		diamondB.attack("DI4M-42");		// Can't attack, has 0 hit points 
-		diamondB.highFivesGuys();		// Can't give High five, has 0 hit points
-		diamondB.guardGate();			// Guards gate
+		diamondB.attack("DI4M-42");	// Attackes
+		diamondB.takeDamage(20);	// Takes damage 
+		diamondB.beRepaired(15);	// Gets repaired, has now 95 hit points
+		diamondB.highFivesGuys();	// Gives High five
+		diamondB.attack("DI4M-42");	// Attackes
+		diamondB.guardGate();		// Guards gate
+		diamondB.whoAmI();		// Who am I?
+		diamondB.takeDamage(95);	// Takes damage
+		diamondB.takeDamage(30);	// Can't take damage, has 0 hit points
+		diamondB.attack("DI4M-42");	// Can't attack, has 0 hit points 
+		diamondB.highFivesGuys();	// Can't give High five, has 0 hit points
+		diamondB.guardGate();		// Guards gate
 		
 		std::cout << std::endl;
 	}
