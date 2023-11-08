@@ -16,7 +16,7 @@ int	main()
 		ClapTrap	clapA;
 		ClapTrap	clapB(Name);
 
-		clapB.attack("CL4P-42");	// Attckes
+		clapB.attack("CL4P-42");	// Attackes
 		clapB.takeDamage(5);		// Takes damage 
 		clapB.beRepaired(3);		// Gets repaired, has now 8 hit points
 		clapB.takeDamage(8);		// Takes damage of 8 hit points
@@ -30,11 +30,11 @@ int	main()
 		FragTrap	fragA;
 		FragTrap	fragB(Name);
 
-		fragB.attack("FR4G-42");	// Attckes
+		fragB.attack("FR4G-42");	// Attackes
 		fragB.takeDamage(20);		// Takes damage 
 		fragB.beRepaired(15);		// Gets repaired, has now 95 hit points
 		fragB.highFivesGuys();		// Gives High five
-		fragB.attack("FR4G-42");	// Attckes
+		fragB.attack("FR4G-42");	// Attackes
 		fragB.takeDamage(95);		// Takes damage
 		fragB.takeDamage(30);		// Can't take damage, has 0 hit points
 		fragB.attack("FR4G-42");	// Can't attack, has 0 hit points 
