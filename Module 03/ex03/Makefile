@@ -4,7 +4,9 @@ NAME 		= ex03
 # Compiler and flags
 CC			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
-CPPFLAGS	+= -g -fsanitize=address
+CPPFLAGS	+= -Wshadow
+#CPPFLAGS	+= -Wno-shadow
+#CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
 SRC			= main.cpp \
