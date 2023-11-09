@@ -16,7 +16,7 @@ FragTrap::FragTrap(const std::string name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_damage = 30;
-	std::cout << "FragTrap Constructor called" << std::endl;
+	std::cout << "FragTrap Constructor called\n" << std::endl;
 	std::cout << "Your FragTrap player " << YELLOW << _name << RESET << " starts with:" << std::endl;
 	std::cout << "[" << _hitPoints << "] HitPoints," <<std::endl;
 	std::cout << "[" << _energyPoints << "] EnergyPoints," << std::endl;
