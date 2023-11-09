@@ -10,7 +10,7 @@ DiamondTrap::DiamondTrap(): ClapTrap()
 }
 
 // Constructor
-DiamondTrap::DiamondTrap(const std::string name): ClapTrap(name + "_clap_tarp")
+DiamondTrap::DiamondTrap(const std::string name): ClapTrap(name + "_clap_trap")
 {
 	_name = name;
 	_hitPoints = FragTrap::_hitPoints;		// 100
