@@ -1,8 +1,9 @@
 #include "DiamondTrap.hpp"
 
 // Default Constructor
-DiamondTrap::DiamondTrap(): ClapTrap()
+DiamondTrap::DiamondTrap()
 {
+	_name = "Default DiamondTrap";
 	_hitPoints = FragTrap::_hitPoints;		// 100
 	_energyPoints = ScavTrap::_energyPoints;	// 50
 	_damage = FragTrap::_damage;			// 30
@@ -10,8 +11,9 @@ DiamondTrap::DiamondTrap(): ClapTrap()
 }
 
 // Constructor
-DiamondTrap::DiamondTrap(const std::string name): ClapTrap(name + "_clap_trap")
+DiamondTrap::DiamondTrap(const std::string name)
 {
+	Claptrap::_name = name + "_clap_trap";
 	_name = name;
 	_hitPoints = FragTrap::_hitPoints;		// 100
 	_energyPoints = ScavTrap::_energyPoints;	// 50
@@ -30,7 +32,7 @@ DiamondTrap::~DiamondTrap()
 }
 
 // Copy constructor
-DiamondTrap::DiamondTrap(const DiamondTrap& value): ClapTrap(value), ScavTrap(value), FragTrap(value)
+DiamondTrap::DiamondTrap(const DiamondTrap& value)
 {
 	*this = value;
 }
@@ -38,7 +40,11 @@ DiamondTrap::DiamondTrap(const DiamondTrap& value): ClapTrap(value), ScavTrap(va
 // Copy assignment operator
 DiamondTrap	&DiamondTrap::operator=(const DiamondTrap& value)
 {
-	ClapTrap::operator=(value);
+	// Perform a deep copy
+	_name = value._name;
+	_hitPoints = value._hitPoints;
+	_energyPoints = value._energyPoints;
+	_damage = value._damage;
 	return *this;
 }
 
