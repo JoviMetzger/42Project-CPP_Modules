@@ -8,7 +8,7 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 ## 🌠Table of Contents
 
 - [Orthodox Canonical Form](#Orthodox-Canonical-Form)
-- [Public, Private, Protected Access Specifiers](#Public,-Private,-Protected-Access-Specifiers)
+- [Public, Private, Protected Access Specifiers](#Public-Private-Protected-Access-Specifiers)
 - [Deep copy & Shallow copy](#Deep-copy--Shallow-copy)
 - [Stack & Heap allocation](#Stack--Heap-allocation)
 - [Reference & Pointer](#Reference--Pointer)
