@@ -7,13 +7,13 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 
 ## 🌠Table of Contents
 
-- [C++ Modules](#C-Modules)
 - [Orthodox Canonical Form](#Orthodox-Canonical-Form)
 - [Deep copy & Shallow copy](#Deep-copy--Shallow-copy)
 - [Stack & Heap allocation](#Stack--Heap-allocation)
 - [Reference & Pointer](#Reference--Pointer)
 - [const](#const)
 - [Floating-Point & Fixed-Point](#Floating-Point--Fixed-Point)
+- [C++ Modules](#C-Modules)
 
 
 ## 🌠Useful Resources
@@ -25,6 +25,219 @@ These webpages provide a comprehensive resource for C++, containing all the esse
 - [programiz](https://www.programiz.com/cpp-programming) 
 - [geeksforgeeks](https://www.geeksforgeeks.org/c-plus-plus/)
 - [learncpp](https://www.learncpp.com/)
+<br>
+
+## 🌠Orthodox Canonical Form
+
+Implement the four required member functions:
+- `Default constructor`
+- `Copy constructor`
+- `Copy assignment operator`
+- `Destructor`
+
+### 🎆 Default Constructor:
+
+***Constructor();***
+- A default constructor is a special member function of a class <br>
+  that is called when an object is created without any arguments. <br>
+- It initializes the object's data members, <br>
+  to a default value (usually 0 or a specified value). <br>
+- It's called automatically when you create an object of the class <br>
+  without providing any explicit constructor arguments.
+
+### 🎆 Copy Constructor:
+
+***Constructor(const Constructor& value);***
+- A copy constructor is a member function that creates a new object <br>
+  by copying the values of another object of the same class.
+- It's used to initialize a new object with the same data as an existing object.
+
+### 🎆 Copy Assignment Operator Overload:
+
+***Constructor& operator(const Constructor& value);***
+- The copy assignment operator *(operator=)* is a member function <br>
+  that allows you to assign the value of one object <br>
+  to another object of the same class.
+- It's used to make a deep copy of one object into another. <br>
+- It is typically invoked when you use the assignment operator, <br>
+  like obj1 = obj2, and ensures that obj1 now holds a copy of obj2's data.
+
+**❗NOTE:❗** <br>
+`obj1 = obj2:` *Should work.* <br>
+`obj1 = obj2 = obj3:` *Should work.* <br>
+`obj1 = obj1:` *Should **NOT** work.* <br>
+
+### 🎆 Destructor:
+
+***~Constructor();***
+- A destructor is a special member function that is called when <br>
+  an object is destroyed or goes out of scope.
+- It is used to perform cleanup operations, <br>
+  such as releasing resources or deallocating memory, <br>
+  and is the opposite of a constructor.
+<br>
+
+## 🌠Deep copy & Shallow copy
+
+### 🌘 Deep Copy:
+- A deep copy creates a new object that is a duplicate of the original object, <br>
+and it recursively copies all the objects referenced by the original object.
+- Deep copy ensures that the copy is fully independent of the original object. 
+- **Any changes made to the copied object or its internal data won't affect the original object.**
+
+### 🌘 Shallow Copy:
+- A shallow copy, creates a new object that is a copy of the original object, <br>
+but it doesn't recursively copy the objects referenced by the original.
+- Instead, a shallow copy maintains references to the same objects as the original.
+- Shallow copies are often faster and use less memory than deep copies <br>
+because they don't replicate all the data and objects. 
+- **Any changes in the copied object can affect the original object and vice versa.**
+<br>
+
+*In summary, the key distinction is that a deep copy creates a completely independent duplicate,* <br> 
+*while a shallow copy shares some of the underlying data with the original object.*
+<br>
+<br>
+
+## 🌠Stack & Heap allocation
+
+### 🌛 Allocate on the Heap:
+- The **heap** is created on the heap using dynamic memory allocation, <br>
+  typically through the `new` operator in C++. 
+- This means that the memory for the **heap** object is allocated on the heap, <br>
+  and you need to manually deallocate it when you're done with it using `delete`. 
+- Heap-allocated objects have a longer lifetime and exist <br>
+  until explicitly freed by the programmer.
+Example:
+```c++
+int	main()
+{
+	Heap *newHeap = new Heap("Bob");
+	delete newHeap;
+	return 0;
+}
+```
+
+### 🌛 Allocate on the Stack:
+- Stack-allocated objects are automatically managed by the program's execution stack. 
+- They have a shorter lifetime and are typically limited to the scope in which they are defined. 
+- When the scope ends *(e.g., when the function returns)*, <br>
+  the stack-allocated objects are automatically destroyed.
+Example:
+```c++
+int	main()
+{
+	Stack newStack = Stack("Bob");
+	return 0;
+}
+```
+<br>
+
+## 🌠Reference & Pointer
+
+### 🪐Syntax:
+- 🟣 `Pointers` are declared using the `*` symbol - (int* ptr;), <br> 
+      and they need to be dereferenced to access the value they point to `*ptr = 42;`.
+- 🟠 `References` are declared using the `&` symbol - (int& ref = someInt;), <br>
+      and you access the referenced value directly using the reference variable `ref = 42;`.
+<br>
+
+### 🪐Initialization:
+- 🟣 `Pointers` can be declared without initialization and can be assigned a value later.
+      **Or** can be assigned a special value, `nullptr`, to indicate that they don't point to any valid object. <br> 
+      ***This allows for the representation of the absence of a value.***
+- 🟠 `References` must be initialized when declared, and once initialized, <br> 
+      they cannot be changed to refer to a different object.  <br>
+      ***This enforces that references always refer to a valid object.***
+<br>
+
+## 🌠const
+
+- `const int fixed()`: This declares a member function fixed that returns a const int, <br> 
+  indicating that the integer returned by the function is constant and cannot be modified.
+
+- `int fixed(const int x)`: This declares a member function fixed that takes a constant integer parameter x, <br> 
+  meaning that x cannot be modified within the function.
+
+- `int fixed() const`: This declares a member function fixed that is marked as const, <br> 
+  indicating that the function can be called on const objects of the class and ensures that <br> 
+  the function does not modify the state of the object it is called on.
+<br> 
+
+## 🌠Floating-Point & Fixed-Point
+
+### 🌗 Precision:
+  - ◻️`Floating-Point:` Numbers offer a variable level of precision. <br> 
+    They use a fixed number of bits for the **mantissa** and another set of bits for the **exponent**. <br> 
+    This allows them to represent a wide range of values but with varying precision.
+  - ◼️`Fixed-Point:` Numbers have a fixed number of decimal places. <br> 
+    This means you specify a fixed precision for your numbers, and all numbers have the same precision.
+### 🌗 Range:
+  - ◻️`Floating-Point:` Numbers can represent a wide range of values, <br> 
+    both very small (close to zero) and very large, thanks to the exponent.
+  - ◼️`Fixed-Point:` The range is constrained to a predefined interval, <br> 
+    determined by the number of bits allocated for the integer and fractional parts.
+### 🌗 Storage:
+  - ◻️`Floating-Point:` The number does not reserve a specific number of bits for the integer part <br> 
+    or the fractional part. 
+    Instead it reserves a certain number of bits for the number *(the mantissa or significand)* <br> 
+    and a certain number of bits to say where within that number the decimal place sits *(the exponent)*. <br> 
+    **~For example:** <br>
+    A floating point number that took up 10 digits with 2 digits reserved for the exponent ***might represent***: <br> 
+    ***Largest value***: `9.9999999e+50` *(10^50)*, <br>
+    ***Smallest non-zero value***: `0.0000001e-49` *(10^-49)*
+
+    ```bash
+    9.9999999e+50
+    ^^^^^^^^^^^^^
+    - Significand (9.9999999)
+    - Exponent (50)
+    ```
+  - ◼️`Fixed-Point:` The number has a specific number of bits *(or digits)* reserved for <br> 
+    the integer part *(the part to the left of the decimal point)* and a specific number of bits reserved for <br> 
+    the fractional part *(the part to the right of the decimal point)*. <br> 
+    No matter how large or small your number is, it will always use the same number of bits for each portion. <br> 
+    **~For example:** <br>
+    If your fixed point format was in decimal IIIII.FFFFF then: <br>
+    ***Largest number*** - `99999.99999`, <br>
+    ***Smallest non-zero number*** - `00000.00001`
+
+    ```bash
+    99999.99999
+    IIIII.FFFFF
+    ^^^^^^^^^^^
+    - Fractional digits (FFFFF)
+    - Integer digits (IIIII)
+    ```
+### 🌗 Usage:
+  - ◻️`Floating-Point:` Suitable for scientific calculations, simulations, and applications <br> 
+    where a wide range of values and precision is required.
+  - ◼️`Fixed-Point:` Suitable for applications where you need a consistent level of precision <br> 
+    and don't want to deal with the variability and potential rounding errors of floating-point numbers.
+
+### 🌗 Floating-Point level of precision:
+Floating-point represent real numbers *(numbers with decimal points)*. <br>
+A Floating-point number is composed of two main parts.
+1. `Mantissa:` The first part is called the **"mantissa"**, which stores the significant digits of the number. <br>
+  It represents the actual value you want to work with.
+2. `Exponent:` The second part is the **"exponent"**, which indicates the scale or magnitude of the number. <br> 
+  It shows where the decimal point should be placed in the mantissa.
+3. `Sign:` Floating-point numbers can be positive or negative, <br> 
+  so there's also a sign bit to represent the sign of the number.
+
+![image](https://www.c-programming-simple-steps.com/images/xIEEE-754-float-representation.png.pagespeed.ic.wRFQquB-9H.webp)
+<br>
+
+### 🌗 Difference between a Floating-Point, Fixed-Point, float and double:
+
+- **Floating-point** numbers include both float and double.
+- *Float* and *double* are standard floating-point data types, <br> 
+  designed to represent real numbers with variable precision.
+  <br>
+  <br>
+- **Fixed-point** numbers don't have predefined data types. 
+- Fixed-point numbers are typically implemented using integer data types *(e.g., int, long)* <br> 
+  with a specific interpretation of the position of the decimal point.
 <br>
 
 ## 🌠C++ Modules
@@ -300,215 +513,3 @@ In this exercise, you apply the concepts you've learned in the previous exercise
 <br>
 
 
-## 🌠Orthodox Canonical Form
-
-Implement the four required member functions:
-- `Default constructor`
-- `Copy constructor`
-- `Copy assignment operator`
-- `Destructor`
-
-### 🎆 Default Constructor:
-
-***Constructor();***
-- A default constructor is a special member function of a class <br>
-  that is called when an object is created without any arguments. <br>
-- It initializes the object's data members, <br>
-  to a default value (usually 0 or a specified value). <br>
-- It's called automatically when you create an object of the class <br>
-  without providing any explicit constructor arguments.
-
-### 🎆 Copy Constructor:
-
-***Constructor(const Constructor& value);***
-- A copy constructor is a member function that creates a new object <br>
-  by copying the values of another object of the same class.
-- It's used to initialize a new object with the same data as an existing object.
-
-### 🎆 Copy Assignment Operator Overload:
-
-***Constructor& operator(const Constructor& value);***
-- The copy assignment operator *(operator=)* is a member function <br>
-  that allows you to assign the value of one object <br>
-  to another object of the same class.
-- It's used to make a deep copy of one object into another. <br>
-- It is typically invoked when you use the assignment operator, <br>
-  like obj1 = obj2, and ensures that obj1 now holds a copy of obj2's data.
-
-**❗NOTE:❗** <br>
-`obj1 = obj2:` *Should work.* <br>
-`obj1 = obj2 = obj3:` *Should work.* <br>
-`obj1 = obj1:` *Should **NOT** work.* <br>
-
-### 🎆 Destructor:
-
-***~Constructor();***
-- A destructor is a special member function that is called when <br>
-  an object is destroyed or goes out of scope.
-- It is used to perform cleanup operations, <br>
-  such as releasing resources or deallocating memory, <br>
-  and is the opposite of a constructor.
-<br>
-
-## 🌠Deep copy & Shallow copy
-
-### 🌘 Deep Copy:
-- A deep copy creates a new object that is a duplicate of the original object, <br>
-and it recursively copies all the objects referenced by the original object.
-- Deep copy ensures that the copy is fully independent of the original object. 
-- **Any changes made to the copied object or its internal data won't affect the original object.**
-
-### 🌘 Shallow Copy:
-- A shallow copy, creates a new object that is a copy of the original object, <br>
-but it doesn't recursively copy the objects referenced by the original.
-- Instead, a shallow copy maintains references to the same objects as the original.
-- Shallow copies are often faster and use less memory than deep copies <br>
-because they don't replicate all the data and objects. 
-- **Any changes in the copied object can affect the original object and vice versa.**
-<br>
-
-*In summary, the key distinction is that a deep copy creates a completely independent duplicate,* <br> 
-*while a shallow copy shares some of the underlying data with the original object.*
-<br>
-<br>
-
-## 🌠Stack & Heap allocation
-
-### 🌛 Allocate on the Heap:
-- The **heap** is created on the heap using dynamic memory allocation, <br>
-  typically through the `new` operator in C++. 
-- This means that the memory for the **heap** object is allocated on the heap, <br>
-  and you need to manually deallocate it when you're done with it using `delete`. 
-- Heap-allocated objects have a longer lifetime and exist <br>
-  until explicitly freed by the programmer.
-Example:
-```c++
-int	main()
-{
-	Heap *newHeap = new Heap("Bob");
-	delete newHeap;
-	return 0;
-}
-```
-
-### 🌛 Allocate on the Stack:
-- Stack-allocated objects are automatically managed by the program's execution stack. 
-- They have a shorter lifetime and are typically limited to the scope in which they are defined. 
-- When the scope ends *(e.g., when the function returns)*, <br>
-  the stack-allocated objects are automatically destroyed.
-Example:
-```c++
-int	main()
-{
-	Stack newStack = Stack("Bob");
-	return 0;
-}
-```
-<br>
-
-## 🌠Reference & Pointer
-
-### 🪐Syntax:
-- 🟣 `Pointers` are declared using the `*` symbol - (int* ptr;), <br> 
-      and they need to be dereferenced to access the value they point to `*ptr = 42;`.
-- 🟠 `References` are declared using the `&` symbol - (int& ref = someInt;), <br>
-      and you access the referenced value directly using the reference variable `ref = 42;`.
-<br>
-
-### 🪐Initialization:
-- 🟣 `Pointers` can be declared without initialization and can be assigned a value later.
-      **Or** can be assigned a special value, `nullptr`, to indicate that they don't point to any valid object. <br> 
-      ***This allows for the representation of the absence of a value.***
-- 🟠 `References` must be initialized when declared, and once initialized, <br> 
-      they cannot be changed to refer to a different object.  <br>
-      ***This enforces that references always refer to a valid object.***
-<br>
-
-## 🌠const
-
-- `const int fixed()`: This declares a member function fixed that returns a const int, <br> 
-  indicating that the integer returned by the function is constant and cannot be modified.
-
-- `int fixed(const int x)`: This declares a member function fixed that takes a constant integer parameter x, <br> 
-  meaning that x cannot be modified within the function.
-
-- `int fixed() const`: This declares a member function fixed that is marked as const, <br> 
-  indicating that the function can be called on const objects of the class and ensures that <br> 
-  the function does not modify the state of the object it is called on.
-<br> 
-
-## 🌠Floating-Point & Fixed-Point
-
-### 🌗 Precision:
-  - ◻️`Floating-Point:` Numbers offer a variable level of precision. <br> 
-    They use a fixed number of bits for the **mantissa** and another set of bits for the **exponent**. <br> 
-    This allows them to represent a wide range of values but with varying precision.
-  - ◼️`Fixed-Point:` Numbers have a fixed number of decimal places. <br> 
-    This means you specify a fixed precision for your numbers, and all numbers have the same precision.
-### 🌗 Range:
-  - ◻️`Floating-Point:` Numbers can represent a wide range of values, <br> 
-    both very small (close to zero) and very large, thanks to the exponent.
-  - ◼️`Fixed-Point:` The range is constrained to a predefined interval, <br> 
-    determined by the number of bits allocated for the integer and fractional parts.
-### 🌗 Storage:
-  - ◻️`Floating-Point:` The number does not reserve a specific number of bits for the integer part <br> 
-    or the fractional part. 
-    Instead it reserves a certain number of bits for the number *(the mantissa or significand)* <br> 
-    and a certain number of bits to say where within that number the decimal place sits *(the exponent)*. <br> 
-    **~For example:** <br>
-    A floating point number that took up 10 digits with 2 digits reserved for the exponent ***might represent***: <br> 
-    ***Largest value***: `9.9999999e+50` *(10^50)*, <br>
-    ***Smallest non-zero value***: `0.0000001e-49` *(10^-49)*
-
-    ```bash
-    9.9999999e+50
-    ^^^^^^^^^^^^^
-    - Significand (9.9999999)
-    - Exponent (50)
-    ```
-  - ◼️`Fixed-Point:` The number has a specific number of bits *(or digits)* reserved for <br> 
-    the integer part *(the part to the left of the decimal point)* and a specific number of bits reserved for <br> 
-    the fractional part *(the part to the right of the decimal point)*. <br> 
-    No matter how large or small your number is, it will always use the same number of bits for each portion. <br> 
-    **~For example:** <br>
-    If your fixed point format was in decimal IIIII.FFFFF then: <br>
-    ***Largest number*** - `99999.99999`, <br>
-    ***Smallest non-zero number*** - `00000.00001`
-
-    ```bash
-    99999.99999
-    IIIII.FFFFF
-    ^^^^^^^^^^^
-    - Fractional digits (FFFFF)
-    - Integer digits (IIIII)
-    ```
-### 🌗 Usage:
-  - ◻️`Floating-Point:` Suitable for scientific calculations, simulations, and applications <br> 
-    where a wide range of values and precision is required.
-  - ◼️`Fixed-Point:` Suitable for applications where you need a consistent level of precision <br> 
-    and don't want to deal with the variability and potential rounding errors of floating-point numbers.
-
-### 🌗 Floating-Point level of precision:
-Floating-point represent real numbers *(numbers with decimal points)*. <br>
-A Floating-point number is composed of two main parts.
-1. `Mantissa:` The first part is called the **"mantissa"**, which stores the significant digits of the number. <br>
-  It represents the actual value you want to work with.
-2. `Exponent:` The second part is the **"exponent"**, which indicates the scale or magnitude of the number. <br> 
-  It shows where the decimal point should be placed in the mantissa.
-3. `Sign:` Floating-point numbers can be positive or negative, <br> 
-  so there's also a sign bit to represent the sign of the number.
-
-![image](https://www.c-programming-simple-steps.com/images/xIEEE-754-float-representation.png.pagespeed.ic.wRFQquB-9H.webp)
-<br>
-
-### 🌗 Difference between a Floating-Point, Fixed-Point, float and double:
-
-- **Floating-point** numbers include both float and double.
-- *Float* and *double* are standard floating-point data types, <br> 
-  designed to represent real numbers with variable precision.
-  <br>
-  <br>
-- **Fixed-point** numbers don't have predefined data types. 
-- Fixed-point numbers are typically implemented using integer data types *(e.g., int, long)* <br> 
-  with a specific interpretation of the position of the decimal point.
-<br>
