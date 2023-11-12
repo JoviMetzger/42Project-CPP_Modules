@@ -1,12 +1,11 @@
 #ifndef DIAMONDTRAP_HPP
 # define DIAMONDTRAP_HPP
 
-#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
 // Derived class
-class	DiamondTrap : public ScavTrap, public FragTrap
+class	DiamondTrap : public FragTrap, public ScavTrap
 {
 	private:
 		std::string	_name;
