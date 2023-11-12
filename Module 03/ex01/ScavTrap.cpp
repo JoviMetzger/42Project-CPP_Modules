@@ -1,8 +1,9 @@
 #include "ScavTrap.hpp"
 
 // Default Constructor
-ScavTrap::ScavTrap(): ClapTrap()
+ScavTrap::ScavTrap()
 {
+	_name = "Default ScavTrap;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_damage = 20;
@@ -10,7 +11,7 @@ ScavTrap::ScavTrap(): ClapTrap()
 }
 
 // Constructor
-ScavTrap::ScavTrap(const std::string name) : ClapTrap(name) 
+ScavTrap::ScavTrap(const std::string name)
 {
 	_name = name;
 	_hitPoints = 100;
@@ -29,16 +30,20 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap Destructor called" << std::endl;
 }
 
-// Copy constructor - Used to initialize a new object
-ScavTrap::ScavTrap(const ScavTrap& value): ClapTrap(value)
+// Copy constructor
+ScavTrap::ScavTrap(const ScavTrap& value)
 {
 	*this = value;
 } 
 
-// Copy assignment operator - Used to make a deep copy of one object
+// Copy assignment operator 
 ScavTrap	&ScavTrap::operator=(const ScavTrap& value)
 {
-	ClapTrap::operator=(value);
+	// Perform a deep copy
+	_name = value._name;
+	_hitPoints = value._hitPoints;
+	_energyPoints = value._energyPoints;
+	_damage = value._damage;
 	return *this;
 }
 
