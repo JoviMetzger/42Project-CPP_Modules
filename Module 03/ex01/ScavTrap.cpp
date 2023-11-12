@@ -39,11 +39,7 @@ ScavTrap::ScavTrap(const ScavTrap& value)
 // Copy assignment operator 
 ScavTrap	&ScavTrap::operator=(const ScavTrap& value)
 {
-	// Perform a deep copy
-	_name = value._name;
-	_hitPoints = value._hitPoints;
-	_energyPoints = value._energyPoints;
-	_damage = value._damage;
+	ClapTrap::operator=(value);
 	return *this;
 }
 
