@@ -3,7 +3,7 @@
 
 #include "ClapTrap.hpp"
 
-// Derived class
+// Derived class & Base class for DiamondTrap
 class	FragTrap : virtual public ClapTrap
 {
 	public:
