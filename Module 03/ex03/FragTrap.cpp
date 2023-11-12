@@ -1,8 +1,9 @@
 #include "FragTrap.hpp"
 
 // Default Constructor
-FragTrap::FragTrap() : ClapTrap()
+FragTrap::FragTrap()
 {
+	_name = "Default FragTrap";
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_damage = 30;
@@ -10,7 +11,7 @@ FragTrap::FragTrap() : ClapTrap()
 }
 
 // Constructor
-FragTrap::FragTrap(const std::string name) : ClapTrap(name)
+FragTrap::FragTrap(const std::string name)
 {
 	_name = name;
 	_hitPoints = 100;
@@ -29,16 +30,20 @@ FragTrap::~FragTrap()
 	std::cout << "FragTrap Destructor called" << std::endl;
 }
 
-// Copy constructor - Used to initialize a new object
-FragTrap::FragTrap(const FragTrap& value) : ClapTrap(value)
+// Copy constructor
+FragTrap::FragTrap(const FragTrap& value)
 {
 	*this = value;
 }
 
-// Copy assignment operator - Used to make a deep copy of one object
+// Copy assignment operator
 FragTrap	&FragTrap::operator=(const FragTrap& value)
 {
-	ClapTrap::operator=(value);
+	// Perform a deep copy
+	_name = value._name;
+	_hitPoints = value._hitPoints;
+	_energyPoints = value._energyPoints;
+	_damage = value._damage;
 	return *this;
 }
 
