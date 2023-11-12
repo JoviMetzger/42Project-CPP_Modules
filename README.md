@@ -381,7 +381,7 @@ This exercise focuses on program behavior control using the switch statement and
   <br>
 	
 ## Module 02
-Tis exercises provide a structured progression of learning, starting from building a basic class and gradually extending its capabilities to solve more complex problems in the context of geometric calculations and computer graphics.
+This exercises provide a structured progression of learning, starting from building a basic class and gradually extending its capabilities to solve more complex problems in the context of geometric calculations and computer graphics.
 
 ### 🔸Exercise 00 - My First Class in Orthodox Canonical Form
 This program introduces you to the Orthodox Canonical Form.<br>
@@ -432,10 +432,49 @@ In this exercise, you apply the concepts you've learned in the previous exercise
 <details>
   <summary><strong>Module 03:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Inheritance)</em></summary>
   <br>
-  <br>
-  <br>
+	
+## Module 03
+This exercises offers a structured learning journey, providing insights into the mechanics of inheritance and the nuances of multiple inheritance.
 
-</br>
+### 🔸Exercise 00 - Aaaaand... OPEN!
+This exercise guides you in creating the `ClapTrap` class, which incorporates private attributes with predefined default values and public member functions.<br>
+**You'll learn or practice:**
+1. Defining constructors and a destructor.
+2. Managing class attributes.
+3. Displaying informative messages during the class's operations.
+
+<br>
+
+### 🔸Exercise 01 - Serena, my love!
+This exercise introduces the derived class `ScavTrap`, inheriting from the base class ClapTrap. <br>
+**You'll learn or practice:**
+1. Customizing and overriding member functions within the derived class.
+2. Maintaining the correct order of construction and destruction.
+3. Expanding the class with new attributes and functionality.
+
+<br>
+
+### 🔸Exercise 02 - Repetitive work
+This exercise expands your knowledge by creating another derived class, `FragTrap`, which inherits from ClapTrap. 
+<br>
+**You'll learn or practice:**
+1. Distinguishing the derived class from the base class with custom construction and destruction messages.
+2. Ensuring proper class inheritance and conducting comprehensive testing.
+
+<br>
+
+### 🔸Exercise 03 - Now it’s weird!
+In the final exercise, you'll create a hybrid class named `DiamondTrap` that inherits from both FragTrap and ScavTrap. 
+<br>
+**You'll learn or practice:**
+1. Multiple inheritance, allowing a class to inherit attributes and functionality from two different base classes.
+2. Hndling the intricacies of maintaining the ClapTrap subobject and adding additional unique features.
+
+<br>
+
+➡️  [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2003)  ⬅️
+<br>
+<br>
 
 </details>
 
