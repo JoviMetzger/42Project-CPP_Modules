@@ -8,13 +8,14 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 ## 🌠Table of Contents
 
 - [Orthodox Canonical Form](#Orthodox-Canonical-Form)
+- [Public, Private, Protected Access Specifiers](#Public,-Private,-Protected-Access-Specifiers)
 - [Deep copy & Shallow copy](#Deep-copy--Shallow-copy)
 - [Stack & Heap allocation](#Stack--Heap-allocation)
 - [Reference & Pointer](#Reference--Pointer)
 - [const](#const)
 - [Floating-Point & Fixed-Point](#Floating-Point--Fixed-Point)
 - [Inheritance & Multiple Inheritance](#Inheritance--Multiple-Inheritance)
-- [Inheritance (operator=)](#Inheritance-(operator=))
+- [Inheritance (operator=)](#Inheritance-operator)
 - [Virtual Class](#Virtual-Class)
 - [C++ Modules](#C-Modules)
 <br>
@@ -79,6 +80,8 @@ Implement the four required member functions:
   such as releasing resources or deallocating memory, <br>
   and is the opposite of a constructor.
 <br>
+
+## 🌠Public, Private, Protected Access Specifiers
 
 ## 🌠Deep copy & Shallow copy
 
