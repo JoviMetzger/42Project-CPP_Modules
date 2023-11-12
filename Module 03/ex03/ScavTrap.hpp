@@ -5,7 +5,7 @@
 #include "ClapTrap.hpp"
 
 // Derived class
-class	ScavTrap : public virtual ClapTrap
+class	ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap();					// Default Constructor
