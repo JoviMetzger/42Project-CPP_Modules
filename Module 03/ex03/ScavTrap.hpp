@@ -4,7 +4,7 @@
 #include <iostream>
 #include "ClapTrap.hpp"
 
-// Derived class
+// Derived class & Base class for DiamondTrap
 class	ScavTrap : virtual public ClapTrap
 {
 	public:
