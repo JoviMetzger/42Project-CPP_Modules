@@ -39,11 +39,7 @@ FragTrap::FragTrap(const FragTrap& value)
 // Copy assignment operator
 FragTrap	&FragTrap::operator=(const FragTrap& value)
 {
-	// Perform a deep copy
-	_name = value._name;
-	_hitPoints = value._hitPoints;
-	_energyPoints = value._energyPoints;
-	_damage = value._damage;
+	ClapTrap::operator=(value);
 	return *this;
 }
 
