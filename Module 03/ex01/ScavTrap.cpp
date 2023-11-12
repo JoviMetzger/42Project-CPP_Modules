@@ -3,7 +3,7 @@
 // Default Constructor
 ScavTrap::ScavTrap()
 {
-	_name = "Default ScavTrap;
+	_name = "Default ScavTrap";
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_damage = 20;
