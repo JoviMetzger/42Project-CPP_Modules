@@ -13,6 +13,9 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 - [Reference & Pointer](#Reference--Pointer)
 - [const](#const)
 - [Floating-Point & Fixed-Point](#Floating-Point--Fixed-Point)
+- [Inheritance & Multiple Inheritance](#Inheritance--Multiple-Inheritance)
+- [Inheritance (operator=)](#Inheritance-(operator=))
+- [Virtual Class](#Virtual-Class)
 - [C++ Modules](#C-Modules)
 <br>
 
@@ -239,6 +242,12 @@ A Floating-point number is composed of two main parts.
 - Fixed-point numbers are typically implemented using integer data types *(e.g., int, long)* <br> 
   with a specific interpretation of the position of the decimal point.
 <br>
+
+## 🌠Inheritance & Multiple Inheritance
+
+## 🌠Inheritance (operator=)
+
+## 🌠Virtual Class
 
 ## 🌠C++ Modules
 
