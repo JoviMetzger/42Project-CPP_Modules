@@ -4,7 +4,7 @@
 #include "ClapTrap.hpp"
 
 // Derived class
-class	FragTrap : public virtual ClapTrap
+class	FragTrap : virtual public ClapTrap
 {
 	public:
 		FragTrap();					// Default Constructor
