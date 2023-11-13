@@ -335,14 +335,14 @@ class Child : public Parent1, public Parent2 // Derived class
 ```
 <br>
 
-❗ For more insights into multiple inheritance, you can explore detailed explanations <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on the subject at [Geeksforgeeks](https://www.geeksforgeeks.org/multiple-inheritance-in-c/)
+❗ For more insights into multiple inheritance, you can explore detailed explanations <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on the subject at [Geeksforgeeks](https://www.geeksforgeeks.org/multiple-inheritance-in-c/).
 
 <br>
 
 ## 🌠Inheritance (operator=)
 ❄️ **Option A:** <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this implementation, you perform a **deep copy** by manually copying each member variable <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from the source object to the target object. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This approach ensures that the two objects are entirely independent of each other. <br>
-&nbsp;&nbsp;**~For example:**
+&nbsp;&nbsp;**For example:**
 ```c++
 ClassA& ClassA::operator=(const ClassA& value)
 {
@@ -358,7 +358,7 @@ ClassA& ClassA::operator=(const ClassA& value)
 
 ❄️ **Option B:** <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this implementation, the assignment operator delegates the assignment operation <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to a `base class`, BaseClass, by calling its assignment operator. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is commonly used when a `derived class` DerivedClass inherits from a base class BaseClass. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By invoking the base class's assignment operator, you effectively reuse <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the assignment logic defined in the base class. <br>
-&nbsp;&nbsp;**~For example:**
+&nbsp;&nbsp;**For example:**
 ```c++
 DerivedClass& DerivedClass::operator=(const DerivedClass& value)
 {
