@@ -83,22 +83,19 @@ Implement the four required member functions:
 
 ## 🌠Public, Private, Protected Access Specifiers
 
-The **public**, **private**, and **protected** access specifiers are used to control the visibility and accessibility of class members *(such as variables and functions)* within a class and its derived classes.
+The **public**, **private**, and **protected** access specifiers are used to control the visibility and accessibility of class members *(variables & functions)* within a class and its derived classes.
 
 ### 💿 Public:
 Members declared as public are **accessible from anywhere in the program**, both within the class and outside the class. <br>
-They are typically used for the interface of the class, which defines how the class can be used by external code.<br>
-Public members are part of the class's public interface, and their behavior and data are intended to be used by external code.
+They are typically used for the interface of the class, which defines how the class can be used by external code. <br>
 
 ### 💿 Private:
 Members declared as private are **only accessible within the class** where they are defined. <br>
 They are not accessible from external code or derived classes. <br> 
-Private members are used to encapsulate the internal implementation details of the class. <br>
 
 ### 💿 Protected:
 Members declared as protected are **accessible within the class where they are defined and within derived classes**. <br>
 They are not directly accessible from external code, but they can be accessed by derived classes. <br>
-Protected members are often used when you want to provide some level of access to derived classes while still hiding them from external code. <br>
 **Example:** <br>
 ```cpp
 class MyBaseClass 
@@ -118,9 +115,6 @@ class MyDerivedClass : public MyBaseClass
       }
 };
 ```
-<br>
-
-*To summarize, public members are for the public interface of a class, private members are for encapsulating internal details, and protected members provide a level of access to derived classes <br> while still keeping them hidden from external code.*
 <br>
 <br>
 
@@ -289,52 +283,56 @@ A Floating-point number is composed of two main parts.
 
 ## 🌠Inheritance
 Inheritance is a fundamental concept in **object-oriented programming** *(OOP)*, and it plays a central role in C++. <br>
-It allows you to create a new class *(called a derived or child class)* based on an existing class *(called a base or parent class)*. <br> Inheritance enables the child class to inherit the properties and behaviors *(i.e., data members and member functions)* of the parent class, <br> which promotes code reuse and the creation of a hierarchical structure in your program.<br>
+It allows you to create a new class *(derived or child class)* based on an existing class *(base or parent class)*. <br> Inheritance enables the child class to inherit the properties and behaviors *(i.e., data members & member functions)* of the parent class, which promotes code reuse and the creation of a hierarchical structure in your program.<br>
 
 In C++, there are different types of inheritance, including `single inheritance`, `multiple inheritance`, and `multilevel inheritance`. <br>
 
 ### ☁️ Single Inheritance:
-Single inheritance means that a derived class inherits from a single base class. <br>This is the simplest form of inheritance, and it is commonly used to model an "is-a" relationship, where the derived class "is a" specialization of the base class.<br> **For example:** <br>
+Single inheritance is the simplest form of inheritance and means that a derived class inherits from a single base class.<br> **For example:** <br>
+*The `Dog` class derives from the `Animal` class and inherits the `eat` method.*<br>
 ```cpp
 class Animal 
 {
-  public:
-      void eat();
+	public:
+		void eat();
 };
 
 class Dog : public Animal 
 {
-  public:
-      void bark();
+	public:
+		void bark();
 };
 ```
-*In this example, the `Dog` class derives from the `Animal` class and inherits the `eat` method.*
 <br>
 
 ### ☁️ Multiple Inheritance:
 Multiple inheritance allows a derived class to inherit from multiple base classes. <br>In other words, a single derived class can have attributes and behaviors from more than one parent class. <br>
 **For example:** <br>
+*The `Child` class inherits both `function1` from `Parent1` and `function2` from `Parent2`* <br>
 ```cpp
 class Parent1 
 {
-  public:
-      void function1() { /* ... */ }
+	public:
+		void function1();
 };
 
 class Parent2 
 {
-  public:
-      void function2() { /* ... */ }
+  	public:
+		void function2();
 };
 
 class Child : public Parent1, public Parent2 
 {
-  public:
-      void childFunction() { /* ... */ }
+ 	public:
+		void childFunction()
+		{
+			function1();
+			function2();
+		}
 };
 
 ```
-*In this example, the `Child` class inherits both `function1` from `Parent1` and `function2` from `Parent2`, <br>in addition to its unique member function.* <br>
 
 <br>
 ❗ For more insights into multiple inheritance, you can explore detailed explanations on the subject at [Geeksforgeeks](https://www.geeksforgeeks.org/multiple-inheritance-in-c/) 
@@ -342,7 +340,7 @@ class Child : public Parent1, public Parent2
 
 
 ## 🌠Inheritance (operator=)
-❄️ **Option A:** <b>In this implementation, you perform a **deep copy** by manually copying each member variable from the source object to the target object. <br>This approach ensures that the two objects are entirely independent of each other. <br>
+❄️ **Option A:** <b> In this implementation, you perform a **deep copy** by manually copying each member variable from the source object to the target object. <br>This approach ensures that the two objects are entirely independent of each other. <br>
 ***Snippet code:***
 ```c++
 ClassA& ClassA::operator=(const ClassA& value)
@@ -357,7 +355,7 @@ ClassA& ClassA::operator=(const ClassA& value)
 ```
 <br>
 
-❄️ **Option B:** <br>In this implementation, the assignment operator delegates the assignment operation to a `base class`, BaseClass, by calling its assignment operator. <br>This is commonly used when a `derived class` DerivedClass inherits from a base class BaseClass. <br>By invoking the base class's assignment operator, you effectively reuse the assignment logic defined in the base class. <br>
+❄️ **Option B:** <br> In this implementation, the assignment operator delegates the assignment operation to a `base class`, BaseClass, by calling its assignment operator. <br>This is commonly used when a `derived class` DerivedClass inherits from a base class BaseClass. <br>By invoking the base class's assignment operator, you effectively reuse the assignment logic defined in the base class. <br>
 ***Snippet code:***
 ```c++
 DerivedClass& DerivedClass::operator=(const DerivedClass& value)
