@@ -83,6 +83,46 @@ Implement the four required member functions:
 
 ## 🌠Public, Private, Protected Access Specifiers
 
+The **public**, **private**, and **protected** access specifiers are used to control the visibility and <br>
+accessibility of class members *(such as variables and functions)* within a class and its derived classes.
+
+#### 💿 Public:
+Members declared as public are ***accessible from anywhere in the program***, both within the class and outside the class. <br>
+They are typically used for the interface of the class, which defines how the class can be used by external code.<br>
+Public members are part of the class's public interface, and their behavior and data are intended to be used by external code.
+
+#### 💿 Private:
+Members declared as private are ***only accessible within the class*** where they are defined. <br>
+They are not accessible from external code or derived classes. <br> 
+Private members are used to encapsulate the internal implementation details of the class. <br>
+
+#### 💿 Protected:
+Members declared as protected are ***accessible within the class where they are defined and within derived classes***. <br<>>
+They are not directly accessible from external code, but they can be accessed by derived classes. <br>
+Protected members are often used when you want to provide some level of access to derived classes while still hiding them from external code. <br>
+**Example:** <br>
+```cpp
+class MyBaseClass 
+{
+  protected:
+      int   protectedVar;
+      void  protectedFunction();
+};
+
+class MyDerivedClass : public MyBaseClass 
+{
+  public:
+      void accessProtected() 
+      {
+          protectedVar = 42;    // Accessible in derived class.
+          protectedFunction();  // Accessible in derived class.
+      }
+};
+```
+<br>
+*To summarize, public members are for the public interface of a class, private members are for encapsulating <br>internal details, and protected members provide a level of access to derived classes <br> while still keeping them hidden from external code.*
+<br>
+
 ## 🌠Deep copy & Shallow copy
 
 ### 🌘 Deep Copy:
@@ -247,10 +287,134 @@ A Floating-point number is composed of two main parts.
 <br>
 
 ## 🌠Inheritance & Multiple Inheritance
+❄️ **Option A:** In this implementation, you perform a **deep copy** by manually copying each member variable <br> from the source object to the target object. This approach ensures that the two objects are entirely independent of each other. <br>
+***Snippet code:***
+```c++
+ClassA& ClassA::operator=(const ClassA& value)
+{
+    // Perform a deep copy
+    _name = value._name;
+    _points = value._points;
+    _energy = value._energy;
+    _damage = value._damage;
+    return *this;
+}
+```
+<br>
+
+❄️ **Option B:** In this implementation, the assignment operator delegates the assignment operation to a `base class`, BaseClass, by calling its assignment operator. <br> This is commonly used when a `derived class` DerivedClass inherits from a base class BaseClass. <br>By invoking the base class's assignment operator, you effectively reuse the assignment logic defined in the base class. <br>
+***Snippet code:***
+```c++
+DerivedClass& DerivedClass::operator=(const DerivedClass& value)
+{
+    BaseClass::operator=(value);
+    return *this;
+}
+```
+<br>
+
+**The key difference:**
+*`Option A:` manually copies each member, making it a deep copy.*
+*`Option B:` relies on the base class's assignment operator to handle the assignment, which can simplify the code and ensure consistency if the base class's assignment logic is correct.*
+<br>
 
 ## 🌠Inheritance (operator=)
+Inheritance is a fundamental concept in **object-oriented programming** *(OOP)*, and it plays a central role in C++. <br>
+It allows you to create a new class *(called a derived or child class)* based on an existing class *(called a base or parent class)*. <br> Inheritance enables the child class to inherit the properties and behaviors *(i.e., data members and member functions)* of the parent class, <br> which promotes code reuse and the creation of a hierarchical structure in your program.<br>
+
+In C++, there are different types of inheritance, including `single inheritance`, `multiple inheritance`, and `multilevel inheritance`. <br>
+
+#### ☁️ Single Inheritance:
+Single inheritance means that a derived class inherits from a single base class. <br>This is the simplest form of inheritance, and it is commonly used to model an "is-a" relationship, <br> where the derived class "is a" specialization of the base class.<br> **For example:** <br>
+```cpp
+class Animal 
+{
+  public:
+      void eat();
+};
+
+class Dog : public Animal 
+{
+  public:
+      void bark();
+};
+```
+In this example, the `Dog` class derives from the `Animal` class and inherits the `eat` method.
+<br>
+
+#### ☁️ Multiple Inheritance:
+Multiple inheritance allows a derived class to inherit from multiple base classes. <br>In other words, a single derived class can have attributes and behaviors from more than one parent class. <br>
+**For example:** <br>
+```cpp
+class Parent1 
+{
+  public:
+      void function1() { /* ... */ }
+};
+
+class Parent2 
+{
+  public:
+      void function2() { /* ... */ }
+};
+
+class Child : public Parent1, public Parent2 
+{
+  public:
+      void childFunction() { /* ... */ }
+};
+
+```
+In this example, the `Child` class inherits both `function1` from `Parent1` and `function2` from `Parent2`, <br>in addition to its unique member function. <br>
+
+<br>
+For moreinsights into multiple inheritance, you can explore detailed explanations on the subject at [Geeksforgeeks](https://www.geeksforgeeks.org/multiple-inheritance-in-c/). 
+<br>
 
 ## 🌠Virtual Class
+In object-oriented programming, a `virtual base class` is a base class that is declared as **"virtual"** in a class hierarchy. <br> This concept is used to address issues that can arise in multiple inheritance scenarios,<br> particularly when you have a class hierarchy with diamond-shaped inheritance patterns. <br> <br>
+
+#### ✖️Diamond Inheritance Problem:
+*You have a class hierarchy like this:*
+```markdown
+
+      BaseClass
+      /       \
+     /         \
+  Class_A   Class_B
+     \         /
+      \       /
+       Class_C
+
+```
+- In this hierarchy, both `Class_A` and `Class_B` inherit from `BaseClass`, and `Class_C` inherits from <br> both `Class_A` and `Class_B`. This creates a diamond-shaped inheritance pattern. <br>
+- The issue with this setup is that when you create an instance of `Class_C`, it inherits `BaseClass` from <br>both `Class_A` and `Class_B`. This can lead to ambiguity and problems when trying to access members *(variables or functions)* from BaseClass. <br>
+
+#### ✔️Virtual Inheritance Solution:
+To resolve the diamond inheritance problem and ensure that there's only one instance of the` BaseClass` <br>shared among `Class_A` and `Class_B`, you should use virtual inheritance. <br>
+```cpp
+class BaseClass 
+{
+    // ... (no changes)
+};
+
+class Class_A : virtual public BaseClass // Use virtual inheritance
+{ 
+    // ... (no changes)
+};
+
+class Class_B : virtual public BaseClass // Use virtual inheritance
+{
+    // ... (no changes)
+};
+
+class Class_C : public Class_A, public Class_B 
+{
+    // ... (rest of the code)
+};
+
+```
+<br>
 
 ## 🌠C++ Modules
 
