@@ -86,16 +86,16 @@ Implement the four required member functions:
 The **public**, **private**, and **protected** access specifiers are used <br> to control the visibility and accessibility of class members <br> *(variables & functions)* within a class and its derived classes.
 
 ### 💿 Public:
-Members declared as public are **accessible from anywhere in <br> the program**, both within the class and outside the class. <br>
-They are typically used for the interface of the class, <br> which defines how the class can be used by external code. <br>
+&nbsp;&nbsp;&nbsp;Members declared as public are **accessible from anywhere in <br> &nbsp;&nbsp;&nbsp; the program**, both within the class and outside the class. <br>
+&nbsp;&nbsp;&nbsp;They are typically used for the interface of the class, <br>&nbsp;&nbsp;&nbsp; which defines how the class can be used by external code. <br>
 
 ### 💿 Private:
-Members declared as private are **only accessible within <br> the class** where they are defined. <br>
-They are not accessible from external code or derived classes. <br> 
+&nbsp;&nbsp;&nbsp;Members declared as private are **only accessible within <br> &nbsp;&nbsp;&nbsp; the class** where they are defined. <br>
+&nbsp;&nbsp;&nbsp;They are not accessible from external code or derived classes. <br> 
 
 ### 💿 Protected:
-Members declared as protected are **accessible within the class <br> where they are defined and within derived classes**. <br>
-They are not directly accessible from external code, <br> but they can be accessed by derived classes. <br>
+&nbsp;&nbsp;&nbsp;Members declared as protected are **accessible within the class <br>&nbsp;&nbsp;&nbsp; where they are defined and within derived classes**. <br>
+&nbsp;&nbsp;&nbsp;They are not directly accessible from external code, <br>&nbsp;&nbsp;&nbsp; but they can be accessed by derived classes. <br>
 **Example:** <br>
 ```cpp
 class MyBaseClass 
@@ -282,13 +282,13 @@ A Floating-point number is composed of two main parts.
 <br>
 
 ## 🌠Inheritance
-Inheritance is a fundamental concept in **object-oriented programming** *(OOP)*, <br> and it plays a central role in C++. <br>
-It allows you to create a new class *(derived or child class)* based on an existing class *(base or parent class)*. <br> Inheritance enables the child class to inherit the properties and behaviors *(data members & member functions)* <br> of the parent class, which promotes code reuse and the creation <br> of a hierarchical structure in your program.<br>
+Inheritance is a fundamental concept in **object-oriented programming** *(OOP)*, and it plays a central role in C++. <br>
+It allows you to create a new class *(derived or child class)* based on an existing class *(base or parent class)*. <br> Inheritance enables the child class to inherit the properties and behaviors <br> *(data members & member functions)* of the parent class, which promotes code reuse and the creation <br> of a hierarchical structure in your program.<br>
 
 In C++, there are different types of inheritance, including `single inheritance`, `multiple inheritance`, <br> and `multilevel inheritance`. <br>
 
 ### ☁️ Single Inheritance:
-Single inheritance is the simplest form of inheritance <br> and means that a derived class inherits from a single base class.<br> **~For example:** <br>
+Single inheritance is the simplest form of inheritance and means that a derived class inherits from a single base class.<br> **~For example:** <br>
 *The `Dog` class derives from the `Animal` class and inherits the `eat` method.*<br>
 ```cpp
 class Animal 
@@ -303,10 +303,9 @@ class Dog : public Animal
 	   void bark();
 };
 ```
-<br>
 
 ### ☁️ Multiple Inheritance:
-Multiple inheritance allows a derived class to inherit from multiple base classes. <br>In other words, a single derived class can have attributes and behaviors <br> from more than one parent class. <br>
+Multiple inheritance allows a derived class to inherit from multiple base classes. <br>In other words, a single derived class can have attributes and behaviors from more than one parent class. <br>
 **~For example:** <br>
 *The `Child` class inherits both `function1` from `Parent1` and `function2` from `Parent2`* <br>
 ```cpp
@@ -336,14 +335,14 @@ class Child : public Parent1, public Parent2
 
 <br>
 
-❗ For more insights into multiple inheritance, you can explore detailed explanations on the subject at [Geeksforgeeks](https://www.geeksforgeeks.org/multiple-inheritance-in-c/)
+❗ For more insights into multiple inheritance, you can explore detailed explanations <br>&nbsp; on the subject at [Geeksforgeeks](https://www.geeksforgeeks.org/multiple-inheritance-in-c/)
 
 <br>
 <br> 
 
 ## 🌠Inheritance (operator=)
 ❄️ **Option A:** <br> 
-In this implementation, you perform a **deep copy** by manually copying each member variable from the source object to the target object. <br>This approach ensures that the two objects are entirely independent of each other. <br>
+&nbsp;&nbsp; In this implementation, you perform a **deep copy** by manually copying each member variable from the source object to the target object. <br>&nbsp;&nbsp; This approach ensures that the two objects are entirely independent of each other. <br>
 **~For example:**
 ```c++
 ClassA& ClassA::operator=(const ClassA& value)
@@ -359,7 +358,7 @@ ClassA& ClassA::operator=(const ClassA& value)
 <br>
 
 ❄️ **Option B:** <br> 
-In this implementation, the assignment operator delegates the assignment operation <br> to a `base class`, BaseClass, by calling its assignment operator. <br>This is commonly used when a `derived class` DerivedClass inherits from a base class BaseClass. <br>By invoking the base class's assignment operator, you effectively reuse <br>the assignment logic defined in the base class. <br>
+&nbsp;&nbsp; In this implementation, the assignment operator delegates the assignment operation <br>&nbsp;&nbsp; to a `base class`, BaseClass, by calling its assignment operator. <br>&nbsp;&nbsp; This is commonly used when a `derived class` DerivedClass inherits from a base class BaseClass. <br>&nbsp;&nbsp; By invoking the base class's assignment operator, you effectively reuse <br>&nbsp;&nbsp; the assignment logic defined in the base class. <br>
 **~For example:**
 ```c++
 DerivedClass& DerivedClass::operator=(const DerivedClass& value)
@@ -371,50 +370,50 @@ DerivedClass& DerivedClass::operator=(const DerivedClass& value)
 <br>
 
 **The key difference:** <br>
-*`Option A:` manually copies each member, making it a deep copy.* <br>
-*`Option B:` relies on the base class's assignment operator to handle the assignment, which can simplify the code.*
+- *`Option A:` manually copies each member, making it a deep copy.* <br>
+- *`Option B:` relies on the base class's assignment operator to handle the assignment, which can simplify the code.*
 <br>
 <br>
 <br>
 
 ## 🌠Virtual Class
-In object-oriented programming, a `virtual base class` is a base class that is declared as **"virtual"** in a class hierarchy. <br> This concept is used to address issues that can arise in multiple inheritance scenarios, <br> particularly when you have a class hierarchy with diamond-shaped inheritance patterns. <br> <br>
+In object-oriented programming, a `virtual base class` is a base class that <br> is declared as **"virtual"** in a class hierarchy. <br> This concept is used to address issues that can arise in multiple inheritance scenarios, <br> particularly when you have a class hierarchy with diamond-shaped inheritance patterns. <br> <br>
 
 ### ✖️ Diamond Inheritance Problem:
 *You have a class hierarchy like this:*
 ```bash
 
-      BaseClass
+     BaseClass_⚫
       /       \
      /         \
-  Class_A   Class_B
+  Class_🔴   Class_🔵
      \         /
       \       /
-       Class_C
+       Class_🟡
 
 ```
-- In this hierarchy, both `Class_A` and `Class_B` inherit from `BaseClass`, <br> and `Class_C` inherits from both `Class_A` and `Class_B`. <br>This creates a diamond-shaped inheritance pattern. <br>
-- The issue with this setup is that when you create an instance of `Class_C`, it inherits `BaseClass` from both `Class_A` and `Class_B`. <br> This can lead to [ambiguity](https://dictionary.cambridge.org/dictionary/english/ambiguity) and problems when trying to access members *(variables or functions)* from BaseClass. <br>
+- In this hierarchy, both `Class_🔴` and `Class_🔵` inherit from `BaseClass_⚫`, <br> and `Class_🟡` inherits from both `Class_🔴` and `Class_🔵`. <br>This creates a diamond-shaped inheritance pattern. <br>
+- The **issue with this setup** is that when you create an instance of `Class_🟡`, it inherits `BaseClass_⚫` from both `Class_🔴` and `Class_🔵`. <br> This can lead to [ambiguity](https://dictionary.cambridge.org/dictionary/english/ambiguity) and problems when trying to access members *(variables or functions)* from BaseClass. <br>
 
 ### ✔️ Virtual Inheritance Solution:
-To resolve the diamond inheritance problem and ensure that there's only one instance of the` BaseClass` shared among `Class_A` and `Class_B`, you should use virtual inheritance. <br>
+To resolve the diamond inheritance problem and ensure that there's only one instance of the ` BaseClass_⚫` shared among `Class_🔴` and `Class_🔵`, you should use virtual inheritance. <br>
 ```cpp
-class BaseClass 
+class BaseClass_⚫
 {
     // ... (rest of the code)
 };
 
-class Class_A : virtual public BaseClass   // Use virtual inheritance
+class Class_🔴 : virtual public BaseClass_⚫   // Use virtual inheritance
 { 
     // ... (rest of the code)
 };
 
-class Class_B : virtual public BaseClass   // Use virtual inheritance
+class Class_🔵 : virtual public BaseClass_⚫   // Use virtual inheritance
 {
     // ... (rest of the code)
 };
 
-class Class_C : public Class_A, public Class_B 
+class Class_🟡 : public Class_🔴, public Class_🔵 
 {
     // ... (rest of the code)
 };
