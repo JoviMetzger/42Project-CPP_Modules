@@ -58,7 +58,7 @@ void	ClapTrap::attack(const std::string& target)
 	else
 	{
 		std::cout << "🤖 ClapTrap " << _name << PURPLE " attacks " << RESET 
-		<< target << ", cousing " << _damage << " points of damage!" << std::endl;
+		<< target << ", causing " << _damage << " points of damage!" << std::endl;
 		_energyPoints -= 1;
 	}
 }
@@ -74,8 +74,6 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	else if(_hitPoints > 0)
 	{
 		_hitPoints -= amount;
-		if (_hitPoints < 0) 
-			_hitPoints = 0;
 		std::cout << "👊 ClapTrap " << _name << " takes " << amount 
 		<< " points of " << PURPLE "damage" << RESET << "!" << std::endl;
 	}
@@ -83,12 +81,12 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (_hitPoints <= 0)
+	if (_hitPoints == 0)
 	{
 		std::cout << "❌ ClapTrap " << _name << PURPLE << " can't be repaired." 
 		<< RESET << " No hit points left!" << std::endl;
 	}
-	else if (_energyPoints <= 0)
+	else if (_energyPoints == 0)
 	{
 		std::cout << "❌ ClapTrap " << _name << PURPLE << " can't be repaired." 
 		<< RESET << " No energy points left!" << std::endl;
