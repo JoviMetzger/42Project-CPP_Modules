@@ -58,7 +58,7 @@ Implement the four required member functions:
 
 ### 🎇 Copy Assignment Operator Overload:
 
-***Constructor& operator(const Constructor& value);***
+***Constructor& operator=(const Constructor& value);***
 - The copy assignment operator *(operator=)* is a member function <br>
   that allows you to assign the value of one object <br>
   to another object of the same class.
