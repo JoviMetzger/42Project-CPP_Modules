@@ -286,7 +286,7 @@ Inheritance is a fundamental concept in **object-oriented programming** *(OOP)*,
 - It allows you to create a new class *(derived or child class)* based on an existing class *(base or parent class)*. <br>
 - Inheritance enables the child class to inherit the properties and behaviors <br> *(data members & member functions)* of the parent class, which promotes code reuse and the creation <br> of a hierarchical structure in your program.<br>
 
-- In C++, there are different types of inheritance, including `single inheritance`, `multiple inheritance`, <br> and `multilevel inheritance`. <br>
+- In C++, there are different types of inheritance, including `single inheritance`, `multiple inheritance`, and `multilevel inheritance`. <br>
 
 ### ☁️ Single Inheritance:
 Single inheritance is the simplest form of inheritance and means that a derived class inherits from a single base class.<br> **~For example:** <br>
