@@ -3,12 +3,15 @@ NAME		= ex00
 
 # Compiler and flags
 CC		= c++
-CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
-#CPPFLAGS	+= -g -fsanitize=address
+CPPFLAGS	= -Wall -Wextra -std=c++98
+#CPPFLAGS	= -Werror
+CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
 SRC		= main.cpp \
-		  Poly.cpp \
+		  Animal.cpp \
+		  Cat.cpp \
+		  Dog.cpp \
 
 # Object Directory
 OBJDIR		= obj
