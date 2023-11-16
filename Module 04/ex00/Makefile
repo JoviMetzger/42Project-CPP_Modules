@@ -8,13 +8,18 @@ CPPFLAGS	= -Wall -Wextra -std=c++98
 CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
-SRC		= main.cpp \
-		  Animal.cpp \
-		  Cat.cpp \
-		  Dog.cpp \
+SRC		= ./src/main.cpp \
+		  ./src/Animal.cpp \
+		  ./src/Cat.cpp \
+		  ./src/Dog.cpp \
+		  ./src/WrongAnimal.cpp \
+		  ./src/WrongCat.cpp
 
 # Object Directory
 OBJDIR		= obj
+
+# Header files
+HEADERDIR	= ./header
 
 # Objects files
 OBJ		= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
@@ -35,9 +40,17 @@ $(NAME):$(OBJ)
 		$(CC) $(CPPFLAGS) -o $(NAME) $(OBJ)
 		@echo "$(CORAL) $(UNDER) $(BOLD) $(ITALIC) ✨Compilation Done✨   $(RESET)"
 
-$(OBJDIR)/%.o: %.cpp
+$(OBJDIR)/%.o: ./src/%.cpp
 		@mkdir -p $(OBJDIR)
-		$(CC) $(CPPFLAGS) -c $< -o $@
+		$(CC) $(CPPFLAGS) -I $(HEADERDIR) -c $< -o $@
+
+# Define dependencies between source and header files
+$(OBJDIR)/main.o: ./header/*.hpp
+$(OBJDIR)/Animal.o: ./header/Animal.hpp
+$(OBJDIR)/Cat.o: ./header/Cat.hpp ./header/Animal.hpp
+$(OBJDIR)/Dog.o: ./header/Dog.hpp ./header/Animal.hpp
+$(OBJDIR)/WrongAnimal.o: ./header/WrongAnimal.hpp
+$(OBJDIR)/WrongCat.o: ./header/WrongCat.hpp
 
 # Clean
 clean:
