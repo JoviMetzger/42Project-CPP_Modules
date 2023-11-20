@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "../header/Animal.hpp"
 
 // Constructor
 Animal::Animal()
