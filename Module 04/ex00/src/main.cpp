@@ -1,8 +1,8 @@
-#include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "../header/Animal.hpp"
+#include "../header/Cat.hpp"
+#include "../header/Dog.hpp"
+#include "../header/WrongAnimal.hpp"
+#include "../header/WrongCat.hpp"
 
 // COLORS
 # define BLUE "\e[1;34m"
