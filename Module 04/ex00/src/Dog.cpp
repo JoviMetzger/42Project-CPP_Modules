@@ -1,4 +1,4 @@
-#include "Dog.hpp"
+#include "../header/Dog.hpp"
 
 // Constructor
 Dog::Dog()
