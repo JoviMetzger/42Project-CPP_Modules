@@ -44,13 +44,13 @@ $(OBJDIR)/%.o: ./src/%.cpp
 		@mkdir -p $(OBJDIR)
 		$(CC) $(CPPFLAGS) -I $(HEADERDIR) -c $< -o $@
 
-# Define dependencies between source and header files
-$(OBJDIR)/main.o: ./header/*.hpp
-$(OBJDIR)/Animal.o: ./header/Animal.hpp
-$(OBJDIR)/Cat.o: ./header/Cat.hpp ./header/Animal.hpp
-$(OBJDIR)/Dog.o: ./header/Dog.hpp ./header/Animal.hpp
-$(OBJDIR)/WrongAnimal.o: ./header/WrongAnimal.hpp
-$(OBJDIR)/WrongCat.o: ./header/WrongCat.hpp
+# # Define dependencies between source and header files
+# $(OBJDIR)/main.o: ./header/*.hpp
+# $(OBJDIR)/Animal.o: ./header/Animal.hpp
+# $(OBJDIR)/Cat.o: ./header/Cat.hpp ./header/Animal.hpp
+# $(OBJDIR)/Dog.o: ./header/Dog.hpp ./header/Animal.hpp
+# $(OBJDIR)/WrongAnimal.o: ./header/WrongAnimal.hpp
+# $(OBJDIR)/WrongCat.o: ./header/WrongCat.hpp
 
 # Clean
 clean:
