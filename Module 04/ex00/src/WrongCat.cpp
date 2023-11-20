@@ -1,4 +1,4 @@
-# include "WrongCat.hpp"
+# include "../header/WrongCat.hpp"
 
 // Constructor
 WrongCat::WrongCat()
