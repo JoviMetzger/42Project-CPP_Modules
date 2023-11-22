@@ -51,14 +51,16 @@ int	main()
 
 		std::cout << "First idea of animal[3]: " << animal[3]->getBrain().getIdea(0) << std::endl;
 		std::cout << "Second idea of animal[3]: " << animal[3]->getBrain().getIdea(1) << std::endl;
-		std::cout << "Third idea of animal[3] (is empty): " 
-		<< animal[5]->getBrain().getIdea(2) << std::endl;		// Won't segfault
+		std::cout << "Third idea of animal[3] (is empty): " << animal[5]->getBrain().getIdea(2) << std::endl;		// Won't segfault
 
 		std::cout << std::endl;
 		std::cout << "First idea of animal[2]: " << animal[2]->getBrain().getIdea(0) << std::endl;
 		std::cout << "Second idea of animal[2]: " << animal[2]->getBrain().getIdea(1) << std::endl;
-		std::cout << "Third idea of animal[2] (is empty): " 
-		<< animal[2]->getBrain().getIdea(2) << std::endl;		// Won't segfault
+		std::cout << "Third idea of animal[2] (is empty): " << animal[2]->getBrain().getIdea(2) << std::endl;		// Won't segfault
+
+		std::cout << std::endl;
+		std::cout << "First idea of animal[4]: " << animal[4]->getBrain().getIdea(0) << std::endl;
+		std::cout << "Second idea of animal[4]: " << animal[4]->getBrain().getIdea(1) << std::endl;
 		
 		// Deleting every Animal
 		std::cout << BLUE << "\n ----- Destructing -----" << RESET << std::endl;
