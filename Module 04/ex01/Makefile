@@ -3,16 +3,22 @@ NAME		= ex01
 
 # Compiler and flags
 CC		= c++
-CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
-#CPPFLAGS	+= -g -fsanitize=address
+CPPFLAGS	= -Wall -Wextra -std=c++98
+#CPPFLAGS	= -Werror
+CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
-SRC		= main.cpp \
-		  Poly.cpp \
-		  Brain.cpp \
+SRC		= ./src/main.cpp \
+			./src/Animal.cpp \
+		  ./src/Brain.cpp \
+		  ./src/Cat.cpp \
+		  ./src/Dog.cpp \
 
 # Object Directory
 OBJDIR		= obj
+
+# Header files
+HEADERDIR	= ./header
 
 # Objects files
 OBJ		= $(addprefix $(OBJDIR)/, $(notdir $(SRC:.cpp=.o)))
@@ -29,13 +35,13 @@ RESET		= \033[0m
 # Targets
 all: $(NAME)
 	
-$(NAME): $(OBJ)
+$(NAME):$(OBJ) 
 		$(CC) $(CPPFLAGS) -o $(NAME) $(OBJ)
 		@echo "$(CORAL) $(UNDER) $(BOLD) $(ITALIC) ✨Compilation Done✨   $(RESET)"
 
-$(OBJDIR)/%.o: %.cpp
+$(OBJDIR)/%.o: ./src/%.cpp
 		@mkdir -p $(OBJDIR)
-		$(CC) $(CPPFLAGS) -c $< -o $@
+		$(CC) $(CPPFLAGS) -I $(HEADERDIR) -c $< -o $@
 
 # Clean
 clean:
@@ -49,3 +55,4 @@ fclean: clean
 re:		fclean all
 
 .PHONY: all clean fclean re
+
