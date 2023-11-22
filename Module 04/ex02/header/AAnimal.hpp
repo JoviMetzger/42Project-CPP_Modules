@@ -8,17 +8,17 @@
 class	AAnimal
 {
 	protected:
-		std::string     _type;
+		std::string	_type;
 	public:
-		AAnimal();       			// Default constructor
-		AAnimal(const AAnimal& value);    	// Copy constructor
+		AAnimal();					// Default constructor
+		AAnimal(const AAnimal& value);			// Copy constructor
 		AAnimal& operator=(const AAnimal& value);	// Copy assignment operator
-		virtual ~AAnimal();			// Destructor
+		virtual ~AAnimal();				// Destructor
 
 		AAnimal(const std::string& type);
 
 		// Member Functions
-		std::string		getType() const;
+		std::string	getType() const;
 		virtual void	makeSound() const;
 		virtual Brain	&getBrain(void) const = 0;
 };
