@@ -4,7 +4,7 @@
 AMateria::AMateria()
 {
 	std::cout << "AMateria: Default constructor called" << std::endl;
-	_type = "Default AMateria";
+	_type = "Default_AMateria";
 }
 
 AMateria::AMateria(const std::string& type)
@@ -45,5 +45,8 @@ std::string const &AMateria::getType() const
 // What materia is used on your Character trough the ICharacter interface;
 void AMateria::use(ICharacter& target)
 {
-	std::cout << "♻️  AMateria is being used on " << target.getName() << std::endl;
+	if (_type == "ice")
+		std::cout << "♻️  'ice' AMateria is being used on " << target.getName() << std::endl;
+	else
+		std::cout << "♻️  'cure' AMateria is being used on " << target.getName() << std::endl; 
 }

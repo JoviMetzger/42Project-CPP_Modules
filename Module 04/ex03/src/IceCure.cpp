@@ -32,17 +32,10 @@ Ice	&Ice::operator=(const Ice& value)
 }
 
 // ----- Member function -----
-// get the type of ice
-std::string const &Ice::getType() const
-{
-	return _type;
-}
-
 // clone/ make a copy/ double of ice
 Ice	*Ice::clone() const
 {
-	Ice *obj = new Ice;
-	return obj;
+	return (new Ice(*this));
 }
 
 // Dislayes a message that 'ice' has been used
@@ -83,20 +76,14 @@ Cure	&Cure::operator=(const Cure& value)
 }
 
 // ----- Member function -----
-std::string const &Cure::getType() const
-{
-	return _type;
-}
-
 // clone/ make a copy/ double of cure
 Cure *Cure::clone() const
 {
-	Cure *obj = new Cure;
-	return obj;
+	return (new Cure(*this));
 }
 
 // Dislayes a message that 'cure' has been used
 void Cure::use(ICharacter& target)
 {
-	std::cout << " heals " << target.getName() << "\'s wounds ✨" << std::endl;
+	std::cout << " heals " << target.getName() << "'s wounds ✨" << std::endl;
 }

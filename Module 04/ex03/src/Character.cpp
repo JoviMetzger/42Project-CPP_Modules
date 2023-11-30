@@ -1,9 +1,10 @@
 #include "../header/Character.hpp"
 
 // Constructor
-Character::Character(): _name("Default Character")
+Character::Character()
 {
 	std::cout << "Character: Default constructor called" << std::endl;
+	_name = "Default_Character";
 }
 
 Character::Character(std::string const name): _name(name)
@@ -28,6 +29,7 @@ Character::~Character()
 Character::Character(const Character& value)
 {
 	std::cout << "Character: Copy constructor called" << std::endl;
+	// *this = value;
 	for (int i = 0; i < 4; i++)
 	{
 		if (value._inventoryMateria[i])	// Deep copy
@@ -42,7 +44,10 @@ Character	&Character::operator=(const Character& value)
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventoryMateria[i])
+		{
 			delete _inventoryMateria[i];
+			_inventoryMateria[i] = NULL;
+		}
 		if (value._inventoryMateria[i])
 			_inventoryMateria[i] = value._inventoryMateria[i]->clone();
 	}
@@ -66,7 +71,7 @@ void Character::equip(AMateria* m)
 		std::cout << "❌ " << _name << " tried to equip nothing" << std::endl;
 		return ;
 	}
-	while (_inventoryMateria[i] != 0 && i < 4)
+	while (i < 4 && _inventoryMateria[i] != 0)
 		i++;
 	if (i >= 4)
 	{
@@ -97,11 +102,22 @@ void Character::use(int inventory_idx, ICharacter& target)
 {
 	if (inventory_idx < 0 || inventory_idx >= 4 || !_inventoryMateria[inventory_idx])
 	{
-		std::cout << "⭕ " << "Nothing found to use at index " << inventory_idx << std::endl;
+		std::cout << "❌ No Materia found to use at index " << inventory_idx << std::endl;
 		return ;
 	}
 	std::cout << getName();
-	_inventoryMateria[inventory_idx]->use(target);
+	if (_inventoryMateria[inventory_idx])
+    {
+        // Check if the pointer is valid before calling the use function
+        if (_inventoryMateria[inventory_idx])
+        {
+            _inventoryMateria[inventory_idx]->use(target);
+        }
+        else
+        {
+            std::cout << "❌ Materia at index " << inventory_idx << " is null" << std::endl;
+        }
+    }
 }
 
 // gets the Materia

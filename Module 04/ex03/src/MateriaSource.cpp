@@ -14,8 +14,11 @@ MateriaSource::~MateriaSource()
 	std::cout << "MateriaSource: Destructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
-		if (_inventoryMateria[i])
-			delete _inventoryMateria[i];
+		// if (_inventoryMateria[i])
+		// 	delete _inventoryMateria[i];
+		delete _inventoryMateria[i];
+        _inventoryMateria[i] = NULL; // Ensure the pointer is null after deletion
+    
 	}
 }
 
@@ -59,7 +62,6 @@ void MateriaSource::learnMateria(AMateria* m)
 	}
 	_inventoryMateria[i] = m;
 	std::cout << "❇️  Materia '" << m->getType() << "' learned" << std::endl;
-
 }
 
 // Creates a new Materia
@@ -67,7 +69,7 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 {
     int i = 0;
 
-	while (_inventoryMateria[i] && _inventoryMateria[i]->getType() != type && i < 4)
+	while (i < 4 && (_inventoryMateria[i] == NULL && _inventoryMateria[i]->getType() != type))
 		i++;
 	if (i >= 4 || !_inventoryMateria[i])
 	{
@@ -75,5 +77,11 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 		return NULL;
 	}
 	std::cout << "🟢 Materia " << type << " created" << std::endl;
-	return (_inventoryMateria[i]->clone());
+	// AMateria* clonedMateria = _inventoryMateria[i]->clone();
+    // delete _inventoryMateria[i]; // Free the original object
+    // _inventoryMateria[i] = NULL; // Set the pointer to null to avoid double deletion
+    
+    // return clonedMateria;
+	return _inventoryMateria[i]->clone();
+	
 }

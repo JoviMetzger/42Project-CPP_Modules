@@ -12,7 +12,7 @@
 class   Character : public ICharacter
 {
     private:
-        std::string const _name;
+        std::string _name;
         AMateria *(_inventoryMateria[4]);
     public:
         Character();					// Default constructor

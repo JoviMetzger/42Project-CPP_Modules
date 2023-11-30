@@ -16,7 +16,6 @@ class   Ice : public AMateria
 		~Ice();				                // Destructor
         
         // Member functions
-        std::string const &getType() const;
         Ice* clone() const;
         void use(ICharacter& target);
 
@@ -34,7 +33,6 @@ class   Cure : public AMateria
 		~Cure();				            // Destructor
         
         // Member functions
-        std::string const &getType() const;
         Cure* clone() const;
         void use(ICharacter& target);
 };
