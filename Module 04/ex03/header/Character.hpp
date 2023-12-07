@@ -9,26 +9,25 @@
  *  - ICharacter is the interface of Character
  *  - That's why ICharacter has no 'own functions', it inherits them from Character
  */
-class   Character : public ICharacter
+class	Character : public ICharacter
 {
-    private:
-        std::string _name;
-        AMateria *(_inventoryMateria[4]);
-    public:
-        Character();					// Default constructor
-		Character(const Character& value);			// Copy constructor
+	private:
+		std::string	_name;
+		AMateria	*(_inventoryMateria[4]);
+	public:
+		Character();					// Default constructor
+		Character(const Character& value);		// Copy constructor
 		Character& operator=(const Character& value);	// Copy assignment operator
-		~Character();				// Destructor
+		~Character();					// Destructor
 
-        Character(std::string const name);
+		Character(std::string const name);
 
-        // Member functions
-        std::string const & getName() const;
-        void equip(AMateria* m);
-        void unequip(int idx);
-        void use(int idx, ICharacter& target);
-        AMateria    *getMateria(int i);
-
+		// Member functions
+		std::string const 	&getName() const;
+		void 			equip(AMateria* m);
+		void 			unequip(int idx);
+		void 			use(int idx, ICharacter& target);
+		AMateria		*getMateria(int i);
 };
 
 #endif

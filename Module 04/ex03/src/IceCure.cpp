@@ -44,6 +44,12 @@ void Ice::use(ICharacter& target)
 	std::cout << " shoots an ice bolt at " << target.getName() << " ☄️" << std::endl;
 }
 
+// Need this otherwise _type is getting overwritten and will always return NULL;
+std::string const &Ice::getType() const
+{
+        return _type;
+}
+
 // -------------------------------------------------------------------------------
 // ----------------------------------- Cure --------------------------------------
 // Constructor
@@ -86,4 +92,10 @@ Cure *Cure::clone() const
 void Cure::use(ICharacter& target)
 {
 	std::cout << " heals " << target.getName() << "'s wounds ✨" << std::endl;
+}
+
+// Need this otherwise _type is getting overwritten and will always return NULL;
+std::string const &Cure::getType() const
+{
+        return _type;
 }

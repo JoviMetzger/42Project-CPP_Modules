@@ -14,11 +14,11 @@ MateriaSource::~MateriaSource()
 	std::cout << "MateriaSource: Destructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
-		// if (_inventoryMateria[i])
-		// 	delete _inventoryMateria[i];
-		delete _inventoryMateria[i];
-        _inventoryMateria[i] = NULL; // Ensure the pointer is null after deletion
-    
+		if (_inventoryMateria[i])
+		{
+			delete _inventoryMateria[i];
+			_inventoryMateria[i] = NULL;
+		}
 	}
 }
 
@@ -42,7 +42,7 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource& value)
 		if (_inventoryMateria[i])
 			delete _inventoryMateria[i];
 		if (value._inventoryMateria[i])
-			_inventoryMateria[i] = value._inventoryMateria[i]->clone();
+			_inventoryMateria[i] = (value._inventoryMateria[i]->clone());
 	}
 	return *this;
 }
@@ -53,7 +53,7 @@ void MateriaSource::learnMateria(AMateria* m)
 {
 	int i = 0;
 
-	while (_inventoryMateria[i] != 0 && i < 4)
+	while (i < 4 && _inventoryMateria[i] != 0)
 		i++;
 	if (i >= 4)
 	{
@@ -67,21 +67,16 @@ void MateriaSource::learnMateria(AMateria* m)
 // Creates a new Materia
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-    int i = 0;
+	int i = 0;
 
-	while (i < 4 && (_inventoryMateria[i] == NULL && _inventoryMateria[i]->getType() != type))
-		i++;
-	if (i >= 4 || !_inventoryMateria[i])
-	{
-		std::cout << "❌ " << type << " materia does not exist" << std::endl;
-		return NULL;
-	}
-	std::cout << "🟢 Materia " << type << " created" << std::endl;
-	// AMateria* clonedMateria = _inventoryMateria[i]->clone();
-    // delete _inventoryMateria[i]; // Free the original object
-    // _inventoryMateria[i] = NULL; // Set the pointer to null to avoid double deletion
+       	while (i < 4 && (!_inventoryMateria[i] || _inventoryMateria[i]->getType() != type))
+	       	i++;
+    if (i >= 4 || !_inventoryMateria[i])
+    {
+        std::cout << "❌ " << type << " materia does not exist" << std::endl;
+        return NULL;
+    }
     
-    // return clonedMateria;
-	return _inventoryMateria[i]->clone();
-	
+    std::cout << "🟢 Materia " << type << " created" << std::endl;
+    return _inventoryMateria[i]->clone();
 }

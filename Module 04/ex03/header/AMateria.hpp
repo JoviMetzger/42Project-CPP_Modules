@@ -4,24 +4,24 @@
 # include <iostream>
 # include "ICharacter.hpp"
 
-class ICharacter;
+class	ICharacter;
 
-class   AMateria
+class	AMateria
 {
-    protected:
-        std::string _type;
-    public:
-        AMateria();					// Default constructor
-		AMateria(const AMateria& value);			// Copy constructor
+	protected:
+		std::string	_type;
+	public:
+		AMateria();					// Default constructor
+		AMateria(const AMateria& value);		// Copy constructor
 		virtual ~AMateria();				// Destructor
-		AMateria& operator=(const AMateria& value);	// Copy assignment operator // Not behing used
+		AMateria& operator=(const AMateria& value);	// Copy assignment operator
 
-        AMateria(std::string const & type);
-        
-        // Member functions
-        std::string const & getType() const; //Returns the materia type
-        virtual AMateria* clone() const = 0;
-        virtual void use(ICharacter& target);
+		AMateria(std::string const & type);
+
+		// Member functions
+		virtual std::string const &getType() const;	//Returns the materia type
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
 };
 
 #endif
