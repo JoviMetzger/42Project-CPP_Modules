@@ -7,8 +7,8 @@
 class	AMateria;
 
 /* NOTE:
- *  - ICharacter is the interface of Character
- *  - That's why ICharacter has no 'own functions', it inherits them from Character
+ *	- ICharacter is the interface of Character
+ *	- Character implements these functions 
  */
 class	ICharacter
 {
@@ -16,10 +16,10 @@ class	ICharacter
 		virtual ~ICharacter() {};	// Destructor
 		
 		// Member functions
-		virtual std::string const & getName() const = 0;
-		virtual void equip(AMateria* m) = 0;
-		virtual void unequip(int idx) = 0;
-		virtual void use(int idx, ICharacter& target) = 0;
+		virtual std::string const	&getName() const = 0;			// Pure virtual
+		virtual void			equip(AMateria* m) = 0;			// Pure virtual
+		virtual void			unequip(int idx) = 0;			// Pure virtual
+		virtual void			use(int idx, ICharacter& target) = 0;	// Pure virtual
 };
 
 #endif

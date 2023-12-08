@@ -46,7 +46,7 @@ std::string const &AMateria::getType() const
 void AMateria::use(ICharacter& target)
 {
 	if (_type == "ice")
-		std::cout << "♻️  'ice' AMateria is being used on " << target.getName() << std::endl;
+		std::cout << "♻️  'ice' AMateria is being used on " << target.getName();
 	else
-		std::cout << "♻️  'cure' AMateria is being used on " << target.getName() << std::endl; 
+		std::cout << "♻️  'cure' AMateria is being used on " << target.getName(); 
 }

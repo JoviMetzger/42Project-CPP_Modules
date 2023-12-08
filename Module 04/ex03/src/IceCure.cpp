@@ -47,7 +47,7 @@ void Ice::use(ICharacter& target)
 // Need this otherwise _type is getting overwritten and will always return NULL;
 std::string const &Ice::getType() const
 {
-        return _type;
+    return _type;
 }
 
 // -------------------------------------------------------------------------------
@@ -97,5 +97,5 @@ void Cure::use(ICharacter& target)
 // Need this otherwise _type is getting overwritten and will always return NULL;
 std::string const &Cure::getType() const
 {
-        return _type;
+    return _type;
 }

@@ -7,13 +7,13 @@
 
 
 /* NOTE:
- *  - IMateriaSource is the interface of MateriaSource
- *  - That's why IMateriaSource has no 'own functions', it inherits them from MateriaSource
+ *	- IMateriaSource is the interface of MateriaSource
+ *	- MateriaSource implements these functions as required by the IMateriaSource interface.
  */
 class	MateriaSource : public IMateriaSource
 {
 	private:
-		AMateria	*(_inventoryMateria[4]);
+		AMateria	*(_inventoryMateria[4]);		// 4 AMateria slots at most
 	public:
 		MateriaSource();					// Default constructor
 		MateriaSource(const MateriaSource& value);		// Copy constructor
@@ -21,8 +21,8 @@ class	MateriaSource : public IMateriaSource
 		~MateriaSource();					// Destructor
 
 		// Member functions
-		void learnMateria(AMateria*);
-		AMateria* createMateria(std::string const & type);
+		void		learnMateria(AMateria*);
+		AMateria*	createMateria(std::string const & type);
 };
 
 #endif

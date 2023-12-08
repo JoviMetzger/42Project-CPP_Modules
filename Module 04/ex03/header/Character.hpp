@@ -6,14 +6,14 @@
 # include "ICharacter.hpp"
 
 /* NOTE:
- *  - ICharacter is the interface of Character
- *  - That's why ICharacter has no 'own functions', it inherits them from Character
+ *	- ICharacter is the interface of Character
+ *	- Character implements these functions as required by the ICharacter interface.
  */
 class	Character : public ICharacter
 {
 	private:
 		std::string	_name;
-		AMateria	*(_inventoryMateria[4]);
+		AMateria	*(_inventoryMateria[4]);	// 4 AMateria slots at most
 	public:
 		Character();					// Default constructor
 		Character(const Character& value);		// Copy constructor

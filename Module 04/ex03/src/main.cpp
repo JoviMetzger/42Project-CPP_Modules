@@ -112,9 +112,9 @@ int main()
 		charles->use(3, *bob);
 		std::cout << std::endl;
 
+		std::cout << "----- TEST -----" <<std::endl;
 		charles_copy->use(0, *bob);
 		charles_copy->use(1, *bob);
-		std::cout << "----- TEST -----" <<std::endl;
 		charles_copy->use(2, *bob);
 		charles_copy->use(3, *bob);
 		std::cout << std::endl;

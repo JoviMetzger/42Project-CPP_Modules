@@ -18,7 +18,7 @@ class	Ice : public AMateria
 		// Member functions
 		Ice			*clone() const;
 		void			use(ICharacter& target);
-		std::string const	&getType() const;
+		std::string const	&getType() const; 
 };
 
 // Cure class

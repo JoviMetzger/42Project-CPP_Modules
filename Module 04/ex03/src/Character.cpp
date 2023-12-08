@@ -7,8 +7,9 @@ Character::Character()
 	_name = "Default_Character";
 }
 
-Character::Character(std::string const name): _name(name)
+Character::Character(std::string const name)
 {
+	_name = name;
 	std::cout << "Character: Constructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		_inventoryMateria[i] = 0;
@@ -32,7 +33,10 @@ Character::Character(const Character& value)
 	for (int i = 0; i < 4; i++)
 	{
 		if (value._inventoryMateria[i])	// Deep copy
+		{
 			_inventoryMateria[i] = value._inventoryMateria[i]->clone();
+			_name = value._name;
+		}
 		else
 			_inventoryMateria[i] = NULL;
 	}
@@ -75,13 +79,12 @@ std::string const &Character:: getName() const
 // Equips the materia (inventory of 4 slots);
 void Character::equip(AMateria* m)
 {
+	int i = 0;
 	if (!m)
 	{
 		std::cout << "❌ " << _name << " tried to equip nothing" << std::endl;
 		return ;
 	}
-
-	int i = 0;
 	while (i < 4 && _inventoryMateria[i] != 0)
 		i++;
 	if (i >= 4)
@@ -116,75 +119,21 @@ void Character::unequip(int inventory_idx)
 // What index of the inventory (slot of Materias) has been used 
 void Character::use(int inventory_idx, ICharacter& target)
 {
-	// if (inventory_idx < 0 || inventory_idx >= 4 || !_inventoryMateria[inventory_idx])
-	// {
-	// 	std::cout << "❌ No Materia found to use at index " << inventory_idx << std::endl;
-	// 	return ;
-	// }
-	// std::cout << getName(); // ----------------------> NOT displaying name -> fix
-
-	// // Check if the pointer is valid before calling the use function
-	// if (_inventoryMateria[inventory_idx])
-	// {
-	// 	_inventoryMateria[inventory_idx]->use(target);
-	// }
-	// else
-	// {
-	// 	std::cout << "❌ Materia at index " << inventory_idx << " is null" << std::endl;
-	// }
-
-	//--------------------------------
-	// if (inventory_idx < 0 || inventory_idx >= 4 || !_inventoryMateria[inventory_idx])
-    // {
-    //     std::cout << "❌ No Materia found to use at index " << inventory_idx << std::endl;
-    //     return;
-    // }
-
-    // if (_inventoryMateria[inventory_idx] == NULL)
-    // {
-    //     std::cout << "❌ Materia at index " << inventory_idx << " is null" << std::endl;
-    //     return;
-    // }
-
-    // std::cout << getName() << " is using Materia at index " << inventory_idx << std::endl;
-    // _inventoryMateria[inventory_idx]->use(target);
-
-	// //-----------------------------------------
-	// if (inventory_idx < 0 || inventory_idx >= 4)
-    // {
-    //     std::cout << "❌ Invalid index: " << inventory_idx << std::endl;
-    //     return;
-    // }
-
-    // if (!_inventoryMateria[inventory_idx])
-    // {
-    //     std::cout << "❌ No Materia found to use at index " << inventory_idx << std::endl;
-    //     return;
-    // }
-
-    // if (_inventoryMateria[inventory_idx] == NULL)
-    // {
-    //     std::cout << "❌ Materia at index " << inventory_idx << " is null" << std::endl;
-    //     return;
-    // }
-
-    // std::cout << getName() << " is using Materia at index " << inventory_idx << std::endl;
-    // _inventoryMateria[inventory_idx]->use(target);
-
-	//-------------------------------------------------
-	if (inventory_idx < 0 || inventory_idx >= 4) 
-	{
-        	std::cout << "❌ Invalid index: " << inventory_idx << std::endl;
-       		return;
-    	}
-	if (!_inventoryMateria[inventory_idx])
-	{
-        	std::cout << "❌ No Materia found to use at index " << inventory_idx << std::endl;
-        	return;
-    	}
-
-    	std::cout << getName() << " is using Materia at index " << inventory_idx << std::endl;
+	if (inventory_idx < 0 || inventory_idx >= 4)
+    {
+        std::cout << "❌ No Materia found to use at index " << inventory_idx << std::endl;
+        return ;
+    }
+    if (!_inventoryMateria[inventory_idx])
+    {
+        std::cout << "❌ Materia at index " << inventory_idx << " is null" << std::endl;
+        return;
+    }
+    _inventoryMateria[inventory_idx]->AMateria::use(target);
+	std::cout << " at index " << inventory_idx << std::endl;
+	std::cout << getName();
 	_inventoryMateria[inventory_idx]->use(target);
+
 }
 
 // gets the Materia

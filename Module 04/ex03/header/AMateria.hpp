@@ -19,9 +19,9 @@ class	AMateria
 		AMateria(std::string const & type);
 
 		// Member functions
-		virtual std::string const &getType() const;	//Returns the materia type
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		virtual std::string const	&getType() const;	//Returns the materia type
+		virtual AMateria*		clone() const = 0;	// Pure virtual
+		virtual void			use(ICharacter& target);
 };
 
 #endif
