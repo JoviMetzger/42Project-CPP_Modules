@@ -35,7 +35,7 @@ Dog	&Dog::operator=(const Dog& value)
 // Member function
 Brain&	Dog::getBrain() const
 {
-	return *this->_DogBrain;
+	return *_DogBrain;
 }
 
 void	Dog::makeSound() const
