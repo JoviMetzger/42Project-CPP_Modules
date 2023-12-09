@@ -20,7 +20,7 @@ class	AAnimal
 		// Member Functions
 		std::string	getType() const;
 		virtual void	makeSound() const;
-		virtual Brain	&getBrain(void) const = 0;
+		virtual Brain	&getBrain(void) const = 0;	// Pure virtual
 };
 
 #endif
