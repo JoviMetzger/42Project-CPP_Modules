@@ -1,12 +1,13 @@
 #include "../header/AMateria.hpp"
 
-// Constructor
+// Default Constructor
 AMateria::AMateria()
 {
 	std::cout << "AMateria: Default constructor called" << std::endl;
 	_type = "Default_AMateria";
 }
 
+// Constructor
 AMateria::AMateria(const std::string& type)
 {
 	std::cout << "AMateria: Constructor called" << std::endl;
@@ -36,13 +37,13 @@ AMateria	&AMateria::operator=(const AMateria& value)
 }
 
 // ----- Member function -----
-// Gets the Materia type;
+// Retrieves the Materia type
 std::string const &AMateria::getType() const
 {
 	return _type;
 }
 
-// What materia is used on your Character trough the ICharacter interface;
+// What materia is used on the Character trough the ICharacter interface
 void AMateria::use(ICharacter& target)
 {
 	if (_type == "ice")

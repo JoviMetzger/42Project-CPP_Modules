@@ -32,22 +32,27 @@ Ice	&Ice::operator=(const Ice& value)
 }
 
 // ----- Member function -----
-// clone/ make a copy/ double of ice
+// Creates a new instance of 'Ice' as a clone of the current object
 Ice	*Ice::clone() const
 {
+	// Returns a pointer to the newly created 'Ice' object
 	return (new Ice(*this));
 }
 
-// Dislayes a message that 'ice' has been used
+// Dislayes a message that 'ice' Materia has been used
 void Ice::use(ICharacter& target)
 {
 	std::cout << " shoots an ice bolt at " << target.getName() << " ☄️" << std::endl;
 }
 
-// Need this otherwise _type is getting overwritten and will always return NULL;
+/* - Returns type.
+ * - Allows access to the _type value from outside the class
+ *   without allowing modification.
+ * - Else _type will get overwritten and will return NULL.
+ */
 std::string const &Ice::getType() const
 {
-    return _type;
+       	return _type;
 }
 
 // -------------------------------------------------------------------------------
@@ -82,20 +87,25 @@ Cure	&Cure::operator=(const Cure& value)
 }
 
 // ----- Member function -----
-// clone/ make a copy/ double of cure
+// Creates a new instance of 'Cure' as a clone of the current object
 Cure *Cure::clone() const
 {
+	// Returns a pointer to the newly created 'Cure' object
 	return (new Cure(*this));
 }
 
-// Dislayes a message that 'cure' has been used
+// Dislayes a message that 'cure' Materia has been used
 void Cure::use(ICharacter& target)
 {
 	std::cout << " heals " << target.getName() << "'s wounds ✨" << std::endl;
 }
 
-// Need this otherwise _type is getting overwritten and will always return NULL;
+/* - Returns type.
+ * - Allows access to the _type value from outside the class
+ *   without allowing modification. 
+ * - Else _type will get overwritten and will return NULL.
+ */
 std::string const &Cure::getType() const
 {
-    return _type;
+	return _type;
 }

@@ -7,8 +7,8 @@
 
 
 /* NOTE:
- *	- IMateriaSource is the interface of MateriaSource
- *	- MateriaSource implements these functions as required by the IMateriaSource interface.
+ * - IMateriaSource is the interface of MateriaSource.
+ * - MateriaSource implements these functions as required by the IMateriaSource interface.
  */
 class	MateriaSource : public IMateriaSource
 {
@@ -22,7 +22,7 @@ class	MateriaSource : public IMateriaSource
 
 		// Member functions
 		void		learnMateria(AMateria*);
-		AMateria*	createMateria(std::string const & type);
+		AMateria	*createMateria(std::string const & type);
 };
 
 #endif

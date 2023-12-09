@@ -6,8 +6,8 @@
 # include "ICharacter.hpp"
 
 /* NOTE:
- *	- ICharacter is the interface of Character
- *	- Character implements these functions as required by the ICharacter interface.
+ * - ICharacter is the interface of Character.
+ * - Character implements these functions as required by the ICharacter interface.
  */
 class	Character : public ICharacter
 {
@@ -20,14 +20,14 @@ class	Character : public ICharacter
 		Character& operator=(const Character& value);	// Copy assignment operator
 		~Character();					// Destructor
 
-		Character(std::string const name);
+		Character(std::string const name);		// Constructor
 
 		// Member functions
-		std::string const 	&getName() const;
 		void 			equip(AMateria* m);
 		void 			unequip(int idx);
 		void 			use(int idx, ICharacter& target);
 		AMateria		*getMateria(int i);
+		std::string const 	&getName() const;
 };
 
 #endif

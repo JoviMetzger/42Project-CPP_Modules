@@ -7,13 +7,13 @@
 class	AMateria;
 
 /* NOTE:
- *	- ICharacter is the interface of Character
- *	- Character implements these functions 
+ * - ICharacter is the interface of Character.
+ * - Character implements these functions.
  */
 class	ICharacter
 {
 	public:
-		virtual ~ICharacter() {};	// Destructor
+		virtual ~ICharacter() {};						// Destructor
 		
 		// Member functions
 		virtual std::string const	&getName() const = 0;			// Pure virtual
