@@ -103,6 +103,8 @@ int	main()
 			std::cout << std::endl;
 
 			*dogA = *dogB;		// Assignment of operator for dog
+			std::cout << std::endl;
+
 			delete dogA;
 			delete dogB;
 			std::cout << std::endl;
@@ -113,6 +115,8 @@ int	main()
 			std::cout << std::endl;
 
 			*catA = *catB;		// Assignment of operator for cat
+			std::cout << std::endl;
+
 			delete catA;
 			delete catB;
 		}
