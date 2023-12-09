@@ -40,10 +40,10 @@ int main()
 		delete me;
 		delete src;
 	}
-	std::cout << BLUE << "\n -------------------- Extra Test -------------------- \n" RESET << std::endl;
+	std::cout << BLUE << "\n\n -------------------- Extra Test -------------------- \n" RESET << std::endl;
 	{
 		// Constructors
-		std::cout << BLUE << "\n ---------- CONSTRUCTORS ----------" << RESET << std::endl;
+		std::cout << BLUE << " ---------- CONSTRUCTORS ----------" << RESET << std::endl;
 		IMateriaSource* src = new MateriaSource();
 		ICharacter* frank = new Character("Frank");
 		std::cout << std::endl;
