@@ -37,5 +37,5 @@ void	WrongAnimal::makeSound() const
 
 std::string	WrongAnimal::getType() const
 {
-	return (_type);
+	return _type;
 }
