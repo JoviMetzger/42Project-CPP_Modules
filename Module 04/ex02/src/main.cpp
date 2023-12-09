@@ -85,6 +85,7 @@ int	main()
 		std::cout << "I am " << cat->getType() << std::endl;
 		dog->makeSound();		// Outputs the dog sound
 		cat->makeSound();		// Outputs the cat sound
+		std::cout << std::endl;
 
 		delete cat;
 		delete dog;
