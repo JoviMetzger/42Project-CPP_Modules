@@ -81,7 +81,7 @@ int main()
 
 		// Deep copy
 		std::cout << BLUE << "\n ---------- DEEP COPY ----------" << RESET << std::endl;
-		std::cout << BLUE << " Creating a new character" << RESET << std::endl;
+		std::cout << " ----- Creating a new character -----" << std::endl;
 
 		// Creating a new Character + creating materia
 		Character	*mia = new Character("Mia");
@@ -104,7 +104,7 @@ int main()
 		std::cout << std::endl;
 
 		// Testing the deep copy with its original source character
-		std::cout << BLUE << "\n Testing the deep copy with its original source character" << RESET << std::endl;
+		std::cout << "\n ----- Testing the deep copy with its original source character -----" << std::endl;
 		AMateria *tmp4 = mia_copy->getMateria(1);
 		mia->unequip(0);			// this shows that they have different materia pointers equipped
 		mia_copy->unequip(1);
