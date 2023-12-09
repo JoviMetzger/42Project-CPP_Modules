@@ -35,7 +35,7 @@ Cat	&Cat::operator=(const Cat& value)
 // Member function
 Brain&	Cat::getBrain() const
 {
-	return *this->_CatBrain;
+	return *_CatBrain;
 }
 
 void	Cat::makeSound() const
