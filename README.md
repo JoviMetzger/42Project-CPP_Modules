@@ -668,12 +668,12 @@ In the final exercise, you'll create a hybrid class named `DiamondTrap` that inh
   <br>
 
 ## Module 04
-This module focuses on mastering object-oriented concepts such as classes, inheritance, polymorphism, memory management, and abstract classes/interfaces. Each exercise progressively builds upon the previous one, introducing new challenges and reinforcing concepts.
+This module focuses on mastering object-oriented concepts such as classes, inheritance, polymorphism, memory management, and abstract classes/interfaces. <br>Each exercise progressively builds upon the previous one, introducing new challenges and reinforcing concepts.
 
 ### 🔸Exercise 00 - Polymorphism
 In this exercise you need to implements basic polymorphism. <br> 
 You will make a Animal base class with Dog and Cat derived classes, <br> 
-for each class you need to implementing makeSound().
+for each class you need to implementing makeSound(). <br>
 Introduces WrongCat inheriting from WrongAnimal to demonstrate overriding behaviors.<br>
 **You'll learn or practice:**
 1. **Polymorphism:** Implementing inheritance, overriding functions, and utilizing base class pointers for derived class objects.
@@ -683,7 +683,7 @@ Introduces WrongCat inheriting from WrongAnimal to demonstrate overriding behavi
 <br>
 
 ### 🔸Exercise 01 - I don’t want to set the world on fire
-This exercise focuses on memory allocation, deallocation, ensuring deep copying, and managing object destruction through inheritance. You'll handle dynamic memory for objects *(like the Brain class)*, ensure proper deep copying for derived classes *(Dog, Cat)*, and implement destructors to prevent memory leaks.
+This exercise focuses on memory allocation, deallocation, ensuring deep copying, and managing object destruction through inheritance. You'll handle dynamic memory for objects *(like the Brain class)*, ensure proper deep copying for derived classes *(Dog, Cat)*, and implement destructors to prevent memory leaks.<br>
 **You'll learn or practice:**
 1. **Memory Allocation and Deallocation:** Managing memory for objects with dynamic memory *(Brain class).*
 2. **Deep Copy:** Ensuring objects of derived classes *(Dog, Cat)* are properly deep-copied.
