@@ -21,7 +21,6 @@ Dog::Dog(const Dog& value)
 {
 	std::cout << "Dog: Copy constructor called" << std::endl; 
 	_DogBrain = new Brain(*value._DogBrain);	// Perform a deep copy
-	*this = value;
 }
 
 // Copy assignment operator
