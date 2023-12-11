@@ -21,7 +21,6 @@ Cat::Cat(const Cat& value)
 {
 	std::cout << "Cat: Copy constructor called" << std::endl;
 	_CatBrain = new Brain(*value._CatBrain);	// Perform a deep copy
-	*this = value;
 }
 
 // Copy assignment operator
