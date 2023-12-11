@@ -21,6 +21,8 @@ class	Character : public ICharacter
 		~Character();					// Destructor
 
 		Character(std::string const name);		// Constructor
+		static AMateria *_floor[100];			// For storing the unequip inventory
+		static int      _index;				// index for _floor array
 
 		// Member functions
 		void 			equip(AMateria* m);
