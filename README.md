@@ -666,10 +666,51 @@ In the final exercise, you'll create a hybrid class named `DiamondTrap` that inh
 <details>
   <summary><strong>Module 04:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Subtype polymorphism, abstract classes, interfaces)</em></summary>
   <br>
-  <br>
-  <br>
 
-</br>
+## Module 04
+This module focuses on mastering object-oriented concepts such as classes, inheritance, polymorphism, memory management, and abstract classes/interfaces. Each exercise progressively builds upon the previous one, introducing new challenges and reinforcing concepts.
+
+### 🔸Exercise 00 - Polymorphism
+In this exercise you need to implements basic polymorphism. <br> 
+You will make a Animal base class with Dog and Cat derived classes, <br> 
+for each class you need to implementing makeSound().
+Introduces WrongCat inheriting from WrongAnimal to demonstrate overriding behaviors.<br>
+**You'll learn or practice:**
+1. **Polymorphism:** Implementing inheritance, overriding functions, and utilizing base class pointers for derived class objects.
+2. **Inheritance:** Creating base and derived classes *(Animal, Dog, Cat)* to showcase inheritance relationships.
+3. **Virtual Functions:** Implementing and utilizing virtual functions *(makeSound())*.
+
+<br>
+
+### 🔸Exercise 01 - I don’t want to set the world on fire
+This exercise focuses on memory allocation, deallocation, ensuring deep copying, and managing object destruction through inheritance. You'll handle dynamic memory for objects *(like the Brain class)*, ensure proper deep copying for derived classes *(Dog, Cat)*, and implement destructors to prevent memory leaks.
+**You'll learn or practice:**
+1. **Memory Allocation and Deallocation:** Managing memory for objects with dynamic memory *(Brain class).*
+2. **Deep Copy:** Ensuring objects of derived classes *(Dog, Cat)* are properly deep-copied.
+3. **Destructors:** Implementing proper destructors to prevent memory leaks.
+
+<br>
+
+### 🔸Exercise 02 - Abstract class
+This exercise involves preventing direct instantiation of the base class Animal by creating an abstract class. <br>
+**You'll learn or practice:**
+1. **Abstract Classes:** Creating an abstract base class *(Animal)* to prevent direct instantiation.
+2. **Class Design:** Ensuring functionality remains intact while preventing direct instantiation.
+
+<br>
+
+### 🔸Exercise 03 - Interface & recap
+Implement interfaces using pure abstract classes and recap concepts. <br>
+**You'll learn or practice:**
+1. **Pure Abstract Classes:** Implementing interfaces using pure abstract classes (*AMateria, ICharacter)*.
+2. **Interface Design:** Designing interfaces and concrete classes that adhere to them *(Ice, Cure)*.
+3. **Memory Management with Interfaces:** Managing object interactions and memory when using interfaces.
+
+<br>
+
+➡️  [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2004)  ⬅️
+<br>
+<br>
 
 </details>
 
