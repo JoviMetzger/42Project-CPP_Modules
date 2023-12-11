@@ -1,5 +1,8 @@
 #include "../header/Character.hpp"
 
+AMateria* Character::_floor[100] = {NULL};
+int Character::_index = 0;
+
 // Default Constructor
 Character::Character()
 {
@@ -118,9 +121,9 @@ void Character::unequip(int inventory_idx)
 		std::cout << "❌ " << _name << " has nothing equipped at slot " << inventory_idx << std::endl;
 	else
 	{
-		AMateria *ptr = _inventoryMateria[inventory_idx];
-		std::cout << "✅ " << _name << " unequipped " << ptr->getType() << " at slot "<< inventory_idx << std::endl;
-		_inventoryMateria[inventory_idx] = 0;
+		 _floor[_index] = _inventoryMateria[inventory_idx];	// storing it in _floor
+		std::cout << "✅ " << _name << " unequipped " << _inventoryMateria[inventory_idx]->getType() << " at slot " << inventory_idx << std::endl;
+		_inventoryMateria[inventory_idx] = NULL;		// setting _inventoryMateria[inventory_idx] to NULL, because we are not allowed to delete it
 	}
 }
 
