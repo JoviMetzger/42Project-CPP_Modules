@@ -153,4 +153,53 @@ int main()
 		delete frank;
 		delete src;
 	}
+	std::cout << BLUE << "\n\n ---------- test for a specific leaks ----------" << RESET << std::endl;
+	{
+		IMateriaSource* test = new MateriaSource();
+		std::cout << std::endl;
+
+		test->learnMateria(new Ice());
+		test->learnMateria(new Cure());
+		std::cout << std::endl;
+
+		ICharacter* leak = new Character("LEAK");
+		std::cout << std::endl; 
+		
+		//------------------------------------------------------------
+		/* The unequip() member function must NOT delete the Materia!
+		 * Handle the Materias your character left on the floor as you like.
+		 * Save the addresses before calling unequip(), or anything else, but
+		 * don’t forget that you have to avoid memory leaks.
+		 */
+		AMateria* tmp;
+		tmp = test->createMateria("ice");
+		leak->equip(tmp);
+		tmp = test->createMateria("cure");
+		leak->equip(tmp);
+		tmp = test->createMateria("ice");
+		leak->equip(tmp);
+		tmp = test->createMateria("cure");
+		leak->equip(tmp);
+		std::cout << std::endl;
+
+		leak->use(0, *leak);			// AMateria slot is 'ice'
+		leak->use(1, *leak);			// AMateria slot is 'cure'
+		leak->use(2, *leak);			// AMateria slot is 'ice' 
+		leak->use(3, *leak);			// AMateria slot is 'cure' 
+		std::cout << std::endl;
+
+		leak->unequip(0);			// unequip Materia slot(0) - 'ice'
+		tmp = test->createMateria("cure");	// create a new Materia at alot(0) - 'cure'
+		leak->equip(tmp);
+
+		std::cout << std::endl;
+		leak->use(0, *leak);			// AMateria slot is 'cure'
+		leak->use(1, *leak);			// AMateria slot is 'cure'
+		leak->use(2, *leak);			// AMateria slot is 'ice' 
+		leak->use(3, *leak);			// AMateria slot is 'cure' 
+		std::cout << std::endl;
+
+		delete leak;
+		delete test;
+	}
 }
