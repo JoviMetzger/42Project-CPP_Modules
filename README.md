@@ -10,6 +10,7 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 - [Orthodox Canonical Form](#Orthodox-Canonical-Form)
 - [Public, Private, Protected Access Specifiers](#Public-Private-Protected-Access-Specifiers)
 - [Deep copy & Shallow copy](#Deep-copy--Shallow-copy)
+- [clone()](#clone())
 - [Stack & Heap allocation](#Stack--Heap-allocation)
 - [Reference & Pointer](#Reference--Pointer)
 - [const](#const)
@@ -137,6 +138,20 @@ because they don't replicate all the data and objects.
 
 *In summary, the key distinction is that a deep copy creates a completely independent duplicate,* <br> 
 *while a shallow copy shares some of the underlying data with the original object.*
+<br>
+<br>
+
+## 🌠clone()
+
+The `clone()` method is fundamental in creating precise replicas of objects. <br>
+In object-oriented programming, this method generates a new object that retains <br>
+the same state as the original. However, it's essential to note that **clone()** <br>
+might not uniformly create new instances for every data component within the object.
+
+- ♊ ***A basic clone*** typically replicates the **top-level** object and its references.
+  &nbsp;In contrast, a deep copy duplicates the entire structure, including nested objects, ensuring an independent duplicate.
+
+- ♊ Changes made in one object reflect in both.
 <br>
 <br>
 
