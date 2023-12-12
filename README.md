@@ -444,9 +444,9 @@ class Class_🟡 : public Class_🔴, public Class_🔵
 ## 🌠Virtual Functions
 
 ### 🔆 Virtual Function:
-- ***Usage:*** A virtual function in a base class is a function that can be overridden in derived classes.
+- **Usage:** A virtual function in a base class is a function that can be overridden in derived classes.
 - **Implementation:** It has an implementation in the base class, but it can be overridden in derived classes to provide a different implementation.
-- **Example:** In a Shape base class with a virtual function draw(), various shapes like Circle and Square can override this function to draw themselves differently while sharing the same base function name.
+- **Example:** In a Shape base class with a virtual function draw(), various shapes like Circle and Square can override this function to draw themselves differently while sharing the same base function name.<br>
 **"It's handy when you want different versions of something in your program to behave slightly differently."**
 
 ***Virtual Function Example:***
@@ -546,7 +546,6 @@ int main()
     return 0;
 }
 ```
-<br>
 
 **Key Distinction:** *virtual function has a default implementation in the base class but can be overridden, while a pure virtual function has no implementation in the base class and must be overridden in the derived classes to provide functionality.*
 <br>
