@@ -141,6 +141,7 @@ because they don't replicate all the data and objects.
 <br>
 <br>
 
+
 ## 🌠clone()
 
 The `clone()` method is fundamental in creating precise replicas of objects. <br>
