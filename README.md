@@ -497,11 +497,11 @@ int main()
 <br>
 
 ### 🔆 Pure Virtual Function:
-Classes containing pure `virtual functions` are known as `abstract classes`.
+Classes containing pure `virtual functions` are known as `abstract classes`.<br>
 Abstract classes cannot be instantiated directly; they are meant to be inherited by derived classes.
-- **Usage:** A pure virtual function in a base class is a function that must be overridden in derived classes; it is declared in a base class but has no implementation in the base class (no function body).
+- **Usage:** A pure virtual function in a base class is a function that must be overridden in derived classes; it is declared in a base class but has no implementation in the base class *(no function body)*.
 - **Implementation:** It has no implementation in the base class and must be overridden by derived classes.<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's a function declared with = 0 `virtual void func() = 0;`.
+  It's a function declared with = 0 `virtual void func() = 0;`.
 - **Example:** In a Vehicle base class with a pure virtual function start(), all derived vehicles like Car and Bike must implement their specific way of starting the vehicle. They cannot be instantiated directly because the base class lacks an implementation for this critical functionality.
 
 ***Pure Virtual Function Example:***
