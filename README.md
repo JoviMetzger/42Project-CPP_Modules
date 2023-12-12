@@ -18,6 +18,7 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 - [Inheritance](#Inheritance)
 - [Inheritance (operator=)](#Inheritance-operator)
 - [Virtual Class](#Virtual-Class)
+- [Virtual Functions](#Virtual-Functions)
 - [C++ Modules](#C-Modules)
 <br>
 
@@ -437,6 +438,120 @@ class Class_🟡 : public Class_🔴, public Class_🔵
 };
 
 ```
+<br>
+<br>
+
+## 🌠Virtual Functions
+
+### 🔆 Virtual Function:
+- **Usage:** A virtual function in a base class is a function that can be overridden in derived classes.
+- **Implementation:** It has an implementation in the base class, but it can be overridden in derived classes to provide a different implementation.
+- **Example:** In a Shape base class with a virtual function draw(), various shapes like Circle and Square can override this function to draw themselves differently while sharing the same base function name.
+**"It's handy when you want different versions of something in your program to behave slightly differently."**
+<br>
+
+***Virtual Function Example:***
+```c++
+// Base class
+class Shape 
+{
+  public:
+      virtual void draw() // Virtual function - has a body
+      {
+          std::cout << "Drawing a shape." << std::endl;
+      }
+};
+
+// Derived classes
+class Circle : public Shape 
+{
+  public:
+      void draw() // draw()-Circle will overwrite draw()-Shape
+      {
+          std::cout << "Drawing a circle." << std::endl;
+      }
+};
+
+class Square : public Shape 
+{
+  public:
+      void draw() // draw()-Square will overwrite draw()-Shape
+      {
+          std::cout << "Drawing a square." << std::endl;
+      }
+};
+
+int main() 
+{
+    Circle circle;
+    Square square;
+    Shape* shape1 = &circle;
+    Shape* shape2 = &square;
+
+    // Calls the overridden draw functions
+    shape1->draw(); // Output: "Drawing a circle."
+    shape2->draw(); // Output: "Drawing a square."
+
+    return 0;
+}
+```
+<br>
+
+### 🔆 Pure Virtual Function:
+Classes containing pure `virtual functions` are known as `abstract classes`.
+Abstract classes cannot be instantiated directly; they are meant to be inherited by derived classes.
+- **Usage:** A pure virtual function in a base class is a function that must be overridden in derived classes; it is declared in a base class but has no implementation in the base class (no function body).
+- **Implementation:** It has no implementation in the base class and must be overridden by derived classes. It's a function declared with = 0 `virtual void func() = 0;`.
+- **Example:** In a Vehicle base class with a pure virtual function start(), all derived vehicles like Car and Bike must implement their specific way of starting the vehicle. They cannot be instantiated directly because the base class lacks an implementation for this critical functionality.
+<br>
+
+***Pure Virtual Function Example:***
+```c++
+// Base class
+class Vehicle 
+{
+  public:
+      virtual void start() = 0; // Pure virtual function - has no body - no implementation
+};
+
+// Derived classes
+class Car : public Vehicle 
+{
+  public:
+      void start() // Implementation of the pure virtual function for Car 
+      {
+          std::cout << "Car started." << std::endl;
+      }
+};
+
+class Bike : public Vehicle 
+{
+  public:
+      void start() // Implementation of the pure virtual function for Bike
+      {
+          std::cout << "Bike started." << std::endl;
+      }
+};
+
+int main() 
+{
+    Car myCar;
+    Bike myBike;
+    Vehicle* vehicle1 = &myCar;
+    Vehicle* vehicle2 = &myBike;
+
+    // Calls the overridden start functions
+    vehicle1->start();  // Output: "Car started." 
+    vehicle2->start();  // Output: "Bike started." 
+
+    return 0;
+}
+```
+<br>
+<br>
+
+**Key Distinction:** *virtual function has a default implementation in the base class but can be overridden, while a pure virtual function has no implementation in the base class and must be overridden in the derived classes to provide functionality.*
+<br>
 <br>
 
 ## 🌠C++ Modules
