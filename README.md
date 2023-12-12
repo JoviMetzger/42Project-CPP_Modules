@@ -455,7 +455,7 @@ class Class_🟡 : public Class_🔴, public Class_🔵
 class Shape 
 {
   public:
-      virtual void draw() // Virtual function - has a body
+      virtual void draw() // Virtual function - has a function body
       {
           std::cout << "Drawing a shape." << std::endl;
       }
@@ -500,7 +500,7 @@ int main()
 Classes containing pure `virtual functions` are known as `abstract classes`.
 Abstract classes cannot be instantiated directly; they are meant to be inherited by derived classes.
 - **Usage:** A pure virtual function in a base class is a function that must be overridden in derived classes; it is declared in a base class but has no implementation in the base class (no function body).
-- **Implementation:** It has no implementation in the base class and must be overridden by derived classes.
+- **Implementation:** It has no implementation in the base class and must be overridden by derived classes.<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's a function declared with = 0 `virtual void func() = 0;`.
 - **Example:** In a Vehicle base class with a pure virtual function start(), all derived vehicles like Car and Bike must implement their specific way of starting the vehicle. They cannot be instantiated directly because the base class lacks an implementation for this critical functionality.
 
@@ -510,7 +510,7 @@ Abstract classes cannot be instantiated directly; they are meant to be inherited
 class Vehicle 
 {
   public:
-      virtual void start() = 0; // Pure virtual function - has no body - no implementation
+      virtual void start() = 0; // Pure virtual function - has no function body - no implementation
 };
 
 // Derived classes
