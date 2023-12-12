@@ -150,7 +150,7 @@ the same state as the original. However, it's essential to note that **clone()**
 might not uniformly create new instances for every data component within the object.
 
 - ***A basic clone*** typically replicates the **top-level** object and its references. <br>
-  In contrast, a deep copy duplicates the entire structure, including nested objects, ensuring an independent duplicate.
+  In contrast, a deep copy duplicates the entire structure, including nested objects, <br>ensuring an independent duplicate.
 
 - Changes made in one object reflect in both.
 <br>
