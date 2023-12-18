@@ -15,13 +15,13 @@ int	main()
 		Bureaucrat frank("Frank", 2);
 
 		std::cout << frank;
-		frank.incrementGrade();					// Frank's grade now 1
+		frank.incrementGrade();				// Frank's grade now 1
 		std::cout << frank;
-		frank.incrementGrade();					// throws exeption too high
+		frank.incrementGrade();				// throws exeption: too high
 	}
-	catch(const std::exception& exeption)
+	catch (const std::exception& exeption)
 	{
-		std::cerr << exeption.what() << std::endl;		// cerr: standard error
+		std::cerr << exeption.what() << std::endl;	// cerr: standard error
 	}
 	// Test the GardeDecrement()
 	std::cout << BLUE << "\n ----- Test the GardeDecrement() -----" << RESET << std::endl;
@@ -32,9 +32,9 @@ int	main()
 		std::cout << bob;
 		bob.decrementGrade();				// Bob's grade now 150
 		std::cout << bob;
-		bob.decrementGrade();				 // throws exeption too low
+		bob.decrementGrade();				// throws exeption: too low
 	}
-	catch(const std::exception& exeption)
+	catch (const std::exception& exeption)
 	{
 		std::cerr << exeption.what() << std::endl;	// cerr: standard error
 	}
@@ -44,7 +44,7 @@ int	main()
 	{
 		Bureaucrat gustav("Gustav", 999);
 	}
-	catch(const std::exception& exeption)
+	catch (const std::exception& exeption)
 	{
 		std::cerr << exeption.what() << std::endl;	// cerr: standard error
 	}
@@ -52,7 +52,7 @@ int	main()
 	{
 		Bureaucrat gustav("Gustav", 0);
 	}
-	catch(const std::exception& exeption)
+	catch (const std::exception& exeption)
 	{
 		std::cerr << exeption.what() << std::endl;	// cerr: standard error
 	}
