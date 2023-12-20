@@ -51,7 +51,7 @@ int	main(void)
 		}
 		catch (const std::exception &e)
 		{
-			std::cerr << e.what() << std::endl;
+			std::cerr << e.what() << std::endl;		// cerr: standard error
 		}
 
 		// Sign forms
