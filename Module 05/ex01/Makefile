@@ -9,8 +9,8 @@ CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
 SRC		= ./src/main.cpp \
-			./src/\
-			./src/ \
+			./src/Form.cpp\
+			./src/Bureaucrat.cpp \
 		  	./src/ \
 		  	./src/\
 
