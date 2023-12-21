@@ -87,19 +87,6 @@ void Bureaucrat::decrementGrade()
 		throw GradeTooLowException();
 }
 
-// Exception classes
-// GradeTooHigh message
-const char* Bureaucrat::GradeTooHighException::what() const throw()
-{
-	return ("Grade too high, invalid Grade!");	
-} 
-
-// GradeTooLow message
-const char* Bureaucrat::GradeTooLowException::what() const throw()
-{
-	return ("Grade too low, invalid Grade!");
-}
-
 // signes the form
 void Bureaucrat::signForm(Form& form)
 {
@@ -112,4 +99,17 @@ void Bureaucrat::signForm(Form& form)
 	{
 		std::cout << getName() << " couldn't sign " << form.getName() << " because " << exception.what() << std::endl;
 	}
+}
+
+// Exception classes
+// GradeTooHigh message
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("Grade too high, invalid Grade!");	
+} 
+
+// GradeTooLow message
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("Grade too low, invalid Grade!");
 }
