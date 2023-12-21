@@ -12,7 +12,7 @@ Form::Form()
 	_gradeToExecute = 0;
 }
 
-// Default Constructor
+// Constructor
 Form::Form (const std::string& name, int gradeToSign, int gradeToExecute)
 {
 	if (gradeToSign < 1 || gradeToExecute < 1)
