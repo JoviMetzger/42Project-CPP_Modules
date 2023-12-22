@@ -9,10 +9,11 @@ CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
 SRC		= ./src/main.cpp \
-			./src/ \
-		  	./src/ \
-		  	./src/ \
-		  	./src/\
+			./src/Bureaucrat.cpp \
+		  	./src/AForm.cpp \
+		  	./src/ShrubberyCreationForm.cpp \
+		  	./src/RobotomyRequestForm.cpp \
+			./src/PresidentialPardonForm.cpp
 
 # Object Directory
 OBJDIR		= obj
