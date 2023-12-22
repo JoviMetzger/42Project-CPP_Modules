@@ -3,7 +3,7 @@
 
 # include <iostream>
 
-class AForm;
+class	AForm;
 
 // Base class
 class	Bureaucrat
