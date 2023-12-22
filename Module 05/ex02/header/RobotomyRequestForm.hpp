@@ -6,7 +6,7 @@
 
 class	AForm;
 
-class	RobotomyRequestForm:  public AForm
+class	RobotomyRequestForm : public AForm
 {
 	private:
 		std::string	_target;
