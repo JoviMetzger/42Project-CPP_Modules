@@ -82,26 +82,3 @@ int	main(void)
 	delete unknownForm;
 	return (0);	
 }
-
-// int main()
-// {
-// 	Intern	intern;
-// 	AForm	*rrf;
-
-// 	rrf = intern.makeForm("robotomy request", "Bender");
-// 	std::cout << *rrf << std::endl;
-// 	std::cout << std::endl;
-
-// 	rrf = intern.makeForm("shrubbery creation", "Bender0.2");
-// 	std::cout << *rrf << std::endl;
-// 	std::cout << std::endl;
-
-// 	rrf = intern.makeForm("presidential pardon", "Bender0.42");
-// 	std::cout << *rrf << std::endl;
-// 	std::cout << std::endl;
-	
-// 	rrf = intern.makeForm("WrongForm", "BenderWrong");
-// 	delete rrf;
-
-// 	return 0;
-// }
