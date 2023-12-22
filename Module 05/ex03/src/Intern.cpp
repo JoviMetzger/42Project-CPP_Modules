@@ -60,7 +60,7 @@ AForm *Intern::makeForm(const std::string &name, const std::string &target)
                 newForm[2] = &Intern::PresidentialPardon
 	};
 
-    // Looks for the correct form
+	// Looks for the correct form
 	for (int i = 0; i < 3; i++)
 	{
 		if (FormName[i] == name)
