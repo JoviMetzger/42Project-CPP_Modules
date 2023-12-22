@@ -21,27 +21,27 @@ class	AForm
 
 		AForm(const std::string &name, int gradeToSign, int gradeToExecute);	// Constructor
 
-        // Member Function
-        void		beSigned(int bureaucratGrade);
-        std::string	getName() const;
-	int		getGrade() const;
-        bool		isSigned() const;
-        int		getGradeToSign() const;
-        int		getGradeToExecute() const;
-        virtual void	execute(Bureaucrat const &executor) const = 0;			// Pure virtual
+		// Member Function
+        	void		beSigned(int bureaucratGrade);
+        	std::string	getName() const;
+		int		getGrade() const;
+       		bool		isSigned() const;
+        	int		getGradeToSign() const;
+        	int		getGradeToExecute() const;
+        	virtual void	execute(Bureaucrat const &executor) const = 0;		// Pure virtual
 
-        // exception classes that inherits from the standard std::exception class
-        class GradeTooHighException : public std::exception
-        {
-		public:
-			virtual const char *what() const throw();                 
-        };
-
-        class GradeTooLowException : public std::exception
-        {
-		public:
-			virtual const char *what() const throw();
-        };
+	        // exception classes that inherits from the standard std::exception class
+	        class GradeTooHighException : public std::exception
+	        {
+			public:
+				virtual const char *what() const throw();                 
+	        };
+	
+	        class GradeTooLowException : public std::exception
+	        {
+			public:
+				virtual const char *what() const throw();
+	        };
 };
 
 // Printing operator<<
