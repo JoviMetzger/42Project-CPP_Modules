@@ -19,10 +19,10 @@ int	main(void)
 	// Constructors
 	std::cout << BLUE << " ----- Constructors -----" << RESET << std::endl;
 	Intern	intern;
-	AForm	*robotomyForm;
-	AForm	*ShrubberyForm;
-	AForm	*presidentialForm;
-	AForm	*unknownForm;
+	AForm	*robotomyForm = NULL;
+	AForm	*ShrubberyForm = NULL;
+	AForm	*presidentialForm = NULL;
+	AForm	*unknownForm = NULL; 
 
 	std::cout << BLUE << "\n ----- Tesing Intern -----" << RESET << std::endl;
 
@@ -62,8 +62,9 @@ int	main(void)
 		std::cout << exception.what() << std::endl;
 	}
 
-	// Testing UnknownForm: NOTE:
-	// You only use an exeption if you know something will go wrong.
+	// Testing UnknownForm
+	// Attempt to access memory that is not valid or not allocated.
+	// NOTE: You only use an exeption if you know something will go wrong.
 	std::cout << "\n ----- Testing UnknownForm -----" << std::endl;
 	try
 	{
@@ -76,9 +77,11 @@ int	main(void)
 	}
 
 	std::cout << BLUE << "\n ----- Destructors -----" << RESET << std::endl;
-	delete robotomyForm;
-	delete ShrubberyForm;
-	delete presidentialForm;
-	delete unknownForm;
-	return (0);	
+	// First checking if it's NULL. 
+	if (robotomyForm) delete robotomyForm;
+	if (ShrubberyForm) delete ShrubberyForm;
+	if (presidentialForm) delete presidentialForm;
+	if (unknownForm) delete unknownForm;		/* If intern.makeForm() fails to create the form (as expected since it's an unknown form),
+							   it may return NULL. Deleting a NULL will cause a segmentation fault. */
+	return (0);
 }

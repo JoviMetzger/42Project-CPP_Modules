@@ -129,4 +129,3 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("Grade too low, invalid Grade!");
 }
-

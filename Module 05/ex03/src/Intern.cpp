@@ -23,11 +23,6 @@ Intern::Intern(const Intern& value)
 Intern	&Intern::operator=(const Intern& value)
 {
 	std::cout << "Intern: Copy assignment operator called" << std::endl;
-	if (this != &value)	
-	{
-		// Perform a deep copy
-		
-	}
 	return *this;
 }
 
@@ -60,14 +55,14 @@ AForm *Intern::makeForm(const std::string &name, const std::string &target)
                 newForm[2] = &Intern::PresidentialPardon
 	};
 
-	// Looks for the correct form
+    // Looks for the correct form
 	for (int i = 0; i < 3; i++)
 	{
 		if (FormName[i] == name)
 		{
 			std::cout << "Intern creates " << name << std::endl;
 			return ((this->*newForm[i])(target));
-		}
+		}			
 	}
 	throw Intern::InternException();
 }
