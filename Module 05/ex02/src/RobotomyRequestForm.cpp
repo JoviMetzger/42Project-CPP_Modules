@@ -25,7 +25,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 }
 
 // Copy constructor
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& value)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& value) : AForm(value)
 {
 	std::cout << "RobotomyRequestForm: Copy constructor called" << std::endl; 
 	*this = value;
