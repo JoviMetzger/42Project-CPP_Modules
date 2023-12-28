@@ -23,6 +23,10 @@ Intern::Intern(const Intern& value)
 Intern	&Intern::operator=(const Intern& value)
 {
 	std::cout << "Intern: Copy assignment operator called" << std::endl;
+	if (this != &value)	
+	{
+		// Perform a deep copy
+	}
 	return *this;
 }
 
