@@ -25,7 +25,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 }
 
 // Copy constructor
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& value)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& value) : AForm(value)
 {
 	std::cout << "ShrubberyCreationForm: Copy constructor called" << std::endl; 
 	*this = value;
