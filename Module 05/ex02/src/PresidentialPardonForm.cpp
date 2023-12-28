@@ -23,7 +23,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 }
 
 // Copy constructor
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& value)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& value) : AForm(value)
 {
 	std::cout << "PresidentialPardonForm: Copy constructor called" << std::endl;
 	*this = value;
