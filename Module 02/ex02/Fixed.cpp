@@ -32,9 +32,9 @@ Fixed::Fixed(const float floatValue)
 }
 
 // --------- Assignment Operator ---------
-/* Overload of the insertion operator - Control the way Fixed objects are printed
- *	'value.toFloat()' sends the floating-point value to the output stream 'out'.
- */
+// Overload of the insertion operator - Control the way Fixed objects are printed
+//	'value.toFloat()' sends the floating-point value to the output stream 'out'.
+//
 std::ostream& operator<<(std::ostream& out, const Fixed& value)
 {
 	out << value.toFloat();
