@@ -13,7 +13,7 @@
 
 // 1 (highest possible grade)
 // 150 (lowest possible grade)
-// ShrubberyCreationForm: Required grades: 137
+// ShrubberyCreationForm: Required grades: 145
 // RobotomyRequestForm: Required grades: 45
 // PresidentialPardonForm: Required grades: 5
 int	main(void)
