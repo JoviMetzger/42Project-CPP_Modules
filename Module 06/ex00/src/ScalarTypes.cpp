@@ -95,27 +95,20 @@ void ScalarConverter::convert(const std::string &input)
 
 		if (input.find('.') != std::string::npos) // Input is a float or double
 		{
-			bool isFloat = false;
-			bool isDouble = false;
 			stream >> std::noskipws; // Avoid skipping whitespace
 			
 			// Check if 'f' is the last character in the input
-			if (input.back() == 'f')
-				isFloat = true;
-			else
-				isDouble = true;
-
-			if (isDouble) // Converts string value (double) to int
+			if (input.back() != 'f') // Converts string value (double) to int
 			{
-				std::istringstream(input) >> _int;t
+				std::istringstream(input) >> _int;
 				if (_int > std::numeric_limits<int>::min() && _int < std::numeric_limits<int>::max())
 					std::cout << "Int: " << _int << std::endl;
 				else
 					std::cout << "Int: impossible (out of int range)" << std::endl;
 			} 
-			else if (isFloat) // Converts string value (float) to int
+			else if (input.back() == 'f') // Converts string value (float) to int
 			{
-				std::istringstream(input) >> _int;t
+				std::istringstream(input) >> _int;
 				if (_int > std::numeric_limits<int>::min() && _int < std::numeric_limits<int>::max())
 					std::cout << "Int: " << _int << std::endl;
 				else
