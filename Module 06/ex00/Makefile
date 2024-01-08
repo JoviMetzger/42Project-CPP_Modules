@@ -4,7 +4,7 @@ NAME		= ex00
 # Compiler and flags
 CC		= c++
 CPPFLAGS	= -Wall -Wextra
-#CPPFLAGS	= -Werror
+#CPPFLAGS	+= -Werror
 CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
