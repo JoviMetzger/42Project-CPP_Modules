@@ -3,8 +3,8 @@ NAME		= ex01
 
 # Compiler and flags
 CC		= c++
-CPPFLAGS	= -Wall -Wextra -std=c++98
-#CPPFLAGS	= -Werror
+CPPFLAGS	= -Wall -Wextra
+#CPPFLAGS	+= -Werror
 CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files

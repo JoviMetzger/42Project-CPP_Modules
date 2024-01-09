@@ -2,18 +2,35 @@
 # define SERIALIZATION_HPP
 
 # include <iostream>
+# include <cstdint>
 
-class	Serialization
+// Data structure
+struct	Data 
+{
+	std::string _dataValue;
+	Data(std::string value)
+	{
+		_dataValue = value;
+	}
+	std::string getDataValue()
+	{
+		return (_dataValue);
+	}
+};
+
+// Serializer class
+class	Serializer
 {
 	private:
-		std::string	_name;
+		// Private constructor to prevent instantiation
+		Serializer();					// Default constructor
+		Serializer(const Serializer& value);		// Copy constructor
+		Serializer& operator=(const Serializer& value);	// Copy assignment operator
+		~Serializer();					// Destructor
 	public:
-		Serialization();									          // Default constructor
-		Serialization(const Serialization& value);					   // Copy constructor
-		Serialization& operator=(const Serialization& value);		 // Copy assignment operator
-		~Serialization();								          // Destructor
-
-        // Member Function
+		// Static methods
+		static uintptr_t serialize(Data* ptr);
+		static Data* deserialize(uintptr_t raw);
 };
 
 #endif
