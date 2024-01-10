@@ -8,14 +8,24 @@
 
 int	main(void)
 {
-	Base* obj = generate();
-	identify(obj);
+    // prints the actual type of the object
+    std::cout << BLUE << "Testing identify(Base* p)" << RESET << std::endl;
+	{
+        Base* obj = generate();
+        identify(obj);
 
-	Base* obj2 = generate();
-	identify(*obj2);
+        delete obj;
+        std::cout << std::endl;
+    }
+    // prints the actual type of the object
+    std::cout << BLUE << "Testing identify(Base& p)" << RESET << std::endl;
+    {
+        Base* obj2 = generate();
+        identify(*obj2);
 
-	delete obj;
-	delete obj2;
+        delete obj2;
+        std::cout << std::endl;
+    }
 
 	return (0);
 } 

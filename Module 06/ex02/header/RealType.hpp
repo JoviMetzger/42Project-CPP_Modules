@@ -9,7 +9,7 @@
 class	Base
 {
 	public:
-		virtual ~Base();	// Destructor
+		virtual ~Base() {};	// Virtual Destructor
 };
 
 // A class

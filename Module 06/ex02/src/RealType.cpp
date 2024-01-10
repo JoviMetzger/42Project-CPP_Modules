@@ -1,21 +1,14 @@
 #include "../header/RealType.hpp"
 
-// Destructor
-Base::~Base()
-{
-	std::cout << "Destructor called" << std::endl;
-}
-
 // It randomly instanciates A, B or C and returns the instance as a Base pointer.
 Base *generate(void)
 {
-	srand(static_cast<unsigned int>(time(NULL)));
-	int random_num = rand() % 3;
+	srand(time(0)); // Need to call this before calling std::rand()
 
-	switch (random_num)
+	switch ((std::rand() % 4))
 	{
 		case 0:
-			return (new A_Class());
+            return (new A_Class());
 		case 1:
 			return (new B_Class());
 		case 2:
@@ -26,6 +19,7 @@ Base *generate(void)
 }
 
 // It prints the actual type of the object pointed to by p: "A", "B" or "C".
+// dynamic_cast returns nullptr for pointers if the conversion is not possible (attempting to cast to an incorrect derived type).
 void identify(Base* p)
 {
 	if (dynamic_cast<A_Class*>(p))
@@ -34,10 +28,36 @@ void identify(Base* p)
 		std::cout << "B" << std::endl;
 	else if (dynamic_cast<C_Class*>(p))
 		std::cout << "C" << std::endl;
+    else
+        std::cout << "Wrong value!" << std::endl;
 }
 
 // It prints the actual type of the object pointed to by p: "A", "B" or "C".
+// dynamic_cast throws a std::bad_cast exception for references if the conversion is not possible (attempting to cast to an incorrect derived type).
 void identify(Base& p)
 {
-	identify(&p); // Calls the pointer version
+    // Class A
+    try {
+        (void) dynamic_cast<A_Class&>(p);
+		std::cout << "A" << std::endl;
+    } catch(const std::exception& e) {
+        std::cerr << e.what() << '\n';
+    }
+    
+    // Class B
+    try {
+        (void) dynamic_cast<B_Class&>(p);
+		std::cout << "B" << std::endl;
+    } catch(const std::exception& e) {
+        std::cerr << e.what() << '\n';
+    }
+
+    // Class C
+    try {
+        (void) dynamic_cast<C_Class&>(p);
+		std::cout << "C" << std::endl;
+    } catch(const std::exception& e) {
+        std::cerr << e.what() << '\n';
+    }
+
 }
