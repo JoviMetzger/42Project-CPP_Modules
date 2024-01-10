@@ -2,19 +2,29 @@
 # define REALTYPE_HPP
 
 # include <iostream>
+# include <cstdlib>
+# include <ctime>
 
-class	Realtype
+// Base class
+class	Base
 {
-	private:
-		std::string	_name;
 	public:
-		Realtype();									// Default constructor
-		Realtype(const Realtype& value);			// Copy constructor
-		Realtype& operator=(const Realtype& value);	// Copy assignment operator
-		~Realtype();									// Destructor
-
-		// Member Functions
-
+		virtual ~Base();	// Destructor
 };
+
+// A class
+class	A_Class : public Base {};
+
+// B class
+class	B_Class : public Base {};
+
+// C class
+class	C_Class : public Base {};
+
+
+// Functions
+Base *generate(void);
+void identify(Base* p);
+void identify(Base& p);
 
 #endif
