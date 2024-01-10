@@ -8,6 +8,14 @@
 
 int	main(void)
 {
-	return (0);
-}  
+	Base* obj = generate();
+	identify(obj);
 
+	Base* obj2 = generate();
+	identify(*obj2);
+
+	delete obj;
+	delete obj2;
+
+	return (0);
+} 
