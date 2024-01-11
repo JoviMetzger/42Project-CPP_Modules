@@ -7,12 +7,13 @@
 
 class	ScalarConverter
 {
-	public:
+	private:
+		// Private constructor to prevent instantiation
 		ScalarConverter();						// Default constructor
 		ScalarConverter(const ScalarConverter& value);			// Copy constructor
 		ScalarConverter& operator=(const ScalarConverter& value);	// Copy assignment operator
 		~ScalarConverter();						// Destructor
-
+	public:
 		static void convert(const std::string &input);			// Convert Fuction
 };
 
