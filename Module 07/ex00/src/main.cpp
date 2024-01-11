@@ -23,8 +23,7 @@ T min(T a, T b)
 	{
 		std::cout << "Equal";
 		return (0);
-	}
-		
+	}	
 }
 
 // ---------- Max() -----------
