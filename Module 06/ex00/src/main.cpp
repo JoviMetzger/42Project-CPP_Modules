@@ -31,9 +31,9 @@ int	main()
 		ScalarConverter::convert("4.2");	// double
 		std::cout << std::endl;
 	}
-	std::cout << BLUE << ">>>>> INPUT: 234456778994453355354576 <<<<<" << RESET << std::endl;
+	std::cout << BLUE << ">>>>> INPUT: 234456778994453355354576535526738582048639573 <<<<<" << RESET << std::endl;
 	{
-		ScalarConverter::convert("234456778994453355354576");	// Max Int
+		ScalarConverter::convert("234456778994453355354576535526738582048639573");	// Max Int & Max Float
 		std::cout << std::endl;
 	}
 	std::cout << BLUE << ">>>>> INPUT: 66 <<<<<" << RESET << std::endl;
