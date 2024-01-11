@@ -10,11 +10,15 @@ void ScalarConverter::convert(const std::string &input)
 
 	std::istringstream stream(input);
 
+	// stream.clear();	- Resets these error flags, allowing further operations on the stream to be attempted.
+	// stream.str(input);	- Replaces the current contents of the stream buffer with the content specified by the string 'input'.
+
 	// _______________________________________________________________________________
 	// Atempt to convert to char
-	if (input.size() == 1)
+	if (input.size() == 1) // For single characters
 	{
-		if (isdigit(input[0]))		// If the single character is a number, output the ascii value.
+		// If the single character is a number, output the ascii value.
+		if (isdigit(input[0]))
 		{
 			int num = std::stoi(input);
 			if (!isprint(num))	// ascii value is not printable
@@ -22,181 +26,114 @@ void ScalarConverter::convert(const std::string &input)
 			else
 				std::cout << "Char: " << _char << std::endl;
 		}
-		else	// Output the single character
+		else
 		{
+			// Output the single character
 			_char = input[0];
 			std::cout << "Char: " << _char << std::endl;
 		}
 	}
 	else
 	{
-		try 
+		if (correctNumberInput(input))	// Check if the correct number input
 		{
-			if (correctNumberInput(input))	// Check if the correct number input
+			// try/catch for overflow
+			try 
 			{
-				// Check if num is within the valid range for a char
 				int num = std::stoi(input);
-				if (num > std::numeric_limits<char>::min() && num < std::numeric_limits<char>::max())
+		
+				// Check if num is within the valid range for a char
+				if (num >= 0 && num <= 127)
 				{
-					// Output the ascii value.
 					_char = static_cast<char>(num);
-					if (!isprint(num))	// ascii value is not printable
-						std::cout << "Char: Non displayable" << std::endl;
+					if (!isprint(num))
+						std::cout << "Char: Non displayable" << std::endl; // ascii value is not printable
 					else
 						std::cout << "Char: " << _char << std::endl;
-				} 
-				else 
-					std::cout << "Char: impossible (out of char range)" << std::endl;
+				}
+				else
+					std::cout << "Char: impossible (out of ascii range)" << std::endl; // num is out off ascii range
 			}
-			else	// Input is not a single character, but a string
-				std::cout << "Char: impossible" << std::endl;
-		} catch (const std::out_of_range& exeption) {
-			std::cout << "Char: impossible (out of int range)" << std::endl;
+			catch (std::out_of_range& e) {
+				std::cout << "Char: impossible (out of ascii range)" << std::endl;
+			}
 		}
+		else
+			std::cout << "Char: impossible" << std::endl;
 	}
-	// _______________________________________________________________________________
 
+	// _______________________________________________________________________________
 	// Atempt to convert to int
-	stream.clear();		// Resets these error flags, allowing further operations on the stream to be attempted.
-	stream.str(input);	// Replaces the current contents of the stream buffer with the content specified by the string 'input'.
+	stream.clear();		
+	stream.str(input);	
 	
 	if (correctNumberInput(input)) // Checks for correct number input
 	{
+		// try/catch for overflow
+		try
+		{
+			_int = std::stoi(input); // If overflow: stoi() 'catches' it
 
-		if (input.find('.') != std::string::npos) // Input is a float or double
-		{
-			stream >> std::noskipws; // Avoid skipping whitespace
-			
-			// Check if 'f' is the last character in the input
-			if (input.back() != 'f') // Converts string value (double) to int
-			{
-				std::istringstream(input) >> _int;
-				if (_int > std::numeric_limits<int>::min() && _int < std::numeric_limits<int>::max())
-					std::cout << "Int: " << _int << std::endl;
-				else
-					std::cout << "Int: impossible (out of int range)" << std::endl;
-			} 
-			else if (input.back() == 'f') // Converts string value (float) to int
-			{
-				std::istringstream(input) >> _int;
-				if (_int > std::numeric_limits<int>::min() && _int < std::numeric_limits<int>::max())
-					std::cout << "Int: " << _int << std::endl;
-				else
-					std::cout << "Int: impossible (out of int range)" << std::endl;
-			}
-		}
-		else // String value is int
-		{
-			std::istringstream(input) >> _int; // Convert string to int
-			if (_int > std::numeric_limits<int>::min() && _int < std::numeric_limits<int>::max())
-				std::cout << "Int: " << _int << std::endl;
-			else
-				std::cout << "Int: impossible (out of int range)" << std::endl;
+			// Converts string value to int value
+			std::cout << "Int: " << _int << std::endl;
+
+		} 
+		catch (const std::exception& e) {
+			std::cout << "Int: impossible (out of int range)" << std::endl;
 		}
 	}
 	else
 		std::cout << "Int: impossible" << std::endl;
-	// _______________________________________________________________________________
 
+
+	// _______________________________________________________________________________
 	// Atempt to convert to float
-	stream.clear();		// Resets these error flags, allowing further operations on the stream to be attempted.
-	stream.str(input);	// Replaces the current contents of the stream buffer with the content specified by the string 'input'.
+	stream.clear();		
+	stream.str(input);	
 	
 	if (correctNumberInput(input)) // Checks for correct number input
 	{
-		stream >> std::noskipws >> _float;
-		if (input.back() == 'f') // String value is a float
+		// try/catch for overflow
+		try
 		{
+			_float = std::stof(input); // If overflow: stof() 'catches' it
+
 			// Converts string value to float value
-			if (_float > std::numeric_limits<float>::min() && _float < std::numeric_limits<float>::max())
-				std::cout << "Float: " << std::setprecision(1) << std::fixed << _float << "f" << std::endl;
-			else
-			{
-				if (input[0] == '-') // Outputs negative float number
-        			std::cout << "Float: " << std::setprecision(1) << std::fixed << _float << "f" << std::endl;
-				else
-					std::cout << "Float: impossible (out of int range)" << std::endl;
-			}
-		}
-		else
-		{
-			if (input.find('.') != std::string::npos) // String value is a double
-			{
-				// Converts string value to float value
-				if (_float > std::numeric_limits<float>::min() && _float < std::numeric_limits<float>::max())
-						std::cout << "Float: " << std::setprecision(1) << std::fixed << _float << "f" << std::endl;
-				else
-				{
-					if (_float == 0) // Specaial case for 0
-						std::cout << "Float: 0.0f" << std::endl;
-					else
-					{
-						if (input[0] == '-')  // Outputs negative float number
-							std::cout << "Float: " << std::setprecision(1) << std::fixed << _float << "f" << std::endl;
-						else
-							std::cout << "Float: impossible (out of int range)" << std::endl;
-					}
-				}
-			}
-			else
-				std::cout << "Float: " << std::setprecision(1) << std::fixed << _float << "f" << std::endl;
+			std::cout << "Float: " << std::setprecision(1) << std::fixed << _float << "f" << std::endl;
+		} 
+		catch (std::out_of_range& e) {
+			std::cout << "Float: impossible (out of float range)" << std::endl;	
 		}
 	}
 	else
 		std::cout << "Float: " << input << 'f' << std::endl;
-	// _______________________________________________________________________________
 
+
+	// _______________________________________________________________________________
 	// Atempt to convert to double
-	stream.clear();		// Resets these error flags, allowing further operations on the stream to be attempted.
-	stream.str(input);	// Replaces the current contents of the stream buffer with the content specified by the string 'input'.
-	
+	stream.clear();	
+	stream.str(input);
+
 	if (correctNumberInput(input)) // Checks for correct number input
 	{
-		stream >> _double;
-		if (input.back() == 'f') // String value is float
+		// try/catch for overflow
+		try
 		{
+			_double = std::stod(input); // If overflow: stod() 'catches' it
+
 			// Converts string value to double value
-			if (_double > std::numeric_limits<double>::min() && _double < std::numeric_limits<double>::max())
-				std::cout << "Double: " << std::setprecision(1) << std::fixed << _double << std::endl;
-			else
-			{
-				if (input[0] == '-') // Outputs negative double number
-					std::cout << "Double: " << std::setprecision(1) << std::fixed << _double << std::endl;
-				else
-					std::cout << "Double: impossible (out of int range)" << std::endl;
-			}
-		}
-		else
-		{
-			// Converts string value to double value
-			if (input.find('.') != std::string::npos)
-			{
-				if (_double > std::numeric_limits<double>::min() && _double < std::numeric_limits<double>::max())
-					std::cout << "Double: " << std::setprecision(1) << std::fixed << _double << std::endl;
-				else
-				{
-					if (_double == 0) // Specaial case for 0
-						std::cout << "Double: 0.0" << std::endl;
-					else
-					{
-						if (input[0] == '-') // Outputs negative double number
-							std::cout << "Double: " << std::setprecision(1) << std::fixed << _double << std::endl;
-						else
-							std::cout << "Double: impossible (out of int range)" << std::endl;
-					}
-				}
-			}
-			else
-				std::cout << "Double: " << std::setprecision(1) << std::fixed << _double << std::endl;
+			std::cout << "Double: " << std::setprecision(1) << std::fixed << _double << std::endl;
+		} 
+		catch (std::out_of_range& e) {
+			std::cout << "Double: impossible (out of double range)" << std::endl;
 		}
 	}
 	else
 		std::cout << "Double: " << input << std::endl;
-	// _______________________________________________________________________________
-
 }
 
 
+// correctNumberInput();
 // Checks if the input is a 'correct' int, float or double (int: x, float: x.xf, double: x.x)
 bool correctNumberInput(const std::string &input)
 {
