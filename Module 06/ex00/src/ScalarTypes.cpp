@@ -72,11 +72,8 @@ void ScalarConverter::convert(const std::string &input)
 		// try/catch for overflow
 		try
 		{
-			_int = std::stoi(input); // If overflow: stoi() 'catches' it
-
-			// Converts string value to int value
+			_int = static_cast<int>(std::stoi(input)); // If overflow: stoi() 'catches' it
 			std::cout << "Int: " << _int << std::endl;
-
 		} 
 		catch (const std::exception& e) {
 			std::cout << "Int: impossible (out of int range)" << std::endl;
@@ -96,9 +93,7 @@ void ScalarConverter::convert(const std::string &input)
 		// try/catch for overflow
 		try
 		{
-			_float = std::stof(input); // If overflow: stof() 'catches' it
-
-			// Converts string value to float value
+			_float = static_cast<float>(std::stof(input)); // If overflow: stof() 'catches' it
 			std::cout << "Float: " << std::setprecision(1) << std::fixed << _float << "f" << std::endl;
 		} 
 		catch (std::out_of_range& e) {
@@ -119,9 +114,7 @@ void ScalarConverter::convert(const std::string &input)
 		// try/catch for overflow
 		try
 		{
-			_double = std::stod(input); // If overflow: stod() 'catches' it
-
-			// Converts string value to double value
+			_double = static_cast<double>(std::stod(input)); // If overflow: stod() 'catches' it
 			std::cout << "Double: " << std::setprecision(1) << std::fixed << _double << std::endl;
 		} 
 		catch (std::out_of_range& e) {
