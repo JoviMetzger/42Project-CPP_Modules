@@ -1,35 +1,5 @@
 #include "../header/ScalarTypes.hpp"
 
-// Default Constructor
-ScalarConverter::ScalarConverter()
-{
-	std::cout << "Default constructor called" << std::endl;
-}
-
-// Destructor
-ScalarConverter::~ScalarConverter()
-{
-	std::cout << "Destructor called" << std::endl;
-}
-
-// Copy constructor
-ScalarConverter::ScalarConverter(const ScalarConverter& value)
-{
-	std::cout << "Copy constructor called" << std::endl; 
-	*this = value;
-}
-
-// Copy assignment operator
-ScalarConverter	&ScalarConverter::operator=(const ScalarConverter& value)
-{
-	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &value)	
-	{
-		// Perform a deep copy
-	}
-	return *this;
-}
-
 // Convert Function
 void ScalarConverter::convert(const std::string &input)
 {
