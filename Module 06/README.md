@@ -19,7 +19,7 @@ $ ./ex00
 
 ## 🌀 Exercise 01
 ### Description
-The exercise is about using `the reinterpret_cast`.
+The exercise is about using the `reinterpret_cast`.
 <br>
 ### Installation
 1. Compile the program:
