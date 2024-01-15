@@ -44,7 +44,7 @@ class	Array
 		}
 
 		// (4): Assignment= operator
-		Array &operator=(const Array& value)
+		Array &operator=(const Array& value) const
 		{
 			std::cout << "Assignment operator called" << std::endl;
 			if (this != &value)
@@ -60,7 +60,7 @@ class	Array
 		}
 
 		// (5): Subscript[] operator
-		T& operator[](unsigned int index)
+		T &operator[](unsigned int index) const
 		{
 			if (index >= _arraySize)
 				throw std::out_of_range("Index out of bounds");
