@@ -8,9 +8,9 @@
 // lenght: Length of the array
 // func: Function that will be call on every element of the array
 template <typename T, typename size_t, typename Function>
-void	iter(T *array, size_t lenght, Function func)
+void	iter(T *array, size_t length, Function func)
 {
-	for (size_t i = 0; i < lenght; ++i)
+	for (size_t i = 0; i < length; ++i)
 		func(array[i]);
 }
 
