@@ -555,7 +555,8 @@ int main()
 ## 🍄Type Casting
 
 **🌸 static_cast:** *- used on types* <br>
-It implicit conversions between types (such as int to float, or pointer to void*). It is unnecessary when casting upwards *(towards a base class)*, <br> 
+It implicit conversions between types (such as int to float, or pointer to void*). 
+It is unnecessary when casting upwards *(towards a base class)*,
 but when casting downwards it can be used as long as it doesn't cast through virtual inheritance. 
 
 **🏵️ dynamic_cast:** *- used on classes* <br>
