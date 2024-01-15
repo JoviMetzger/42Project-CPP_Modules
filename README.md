@@ -554,22 +554,23 @@ int main()
 
 ## 🍄Type Casting
 
-`static_cast:` - used on types <br>
+**🌸 static_cast:** *- used on types* <br>
 It implicit conversions between types (such as int to float, or pointer to void*). It is unnecessary when casting upwards *(towards a base class)*, <br> 
 but when casting downwards it can be used as long as it doesn't cast through virtual inheritance. 
 
-`dynamic_cast:` - used on classes <br>
+**🏵️ dynamic_cast:** *- used on classes* <br>
 It's used to convert pointers or references of a base class to pointers or references of a derived class. <br>
 Works only with **pointers or references** to polymorphic classes *(i.e., classes containing at least one virtual function)*. <br>
 The dynamic_cast will seek out the desired object and return it if possible. <br>
 - `dynamic_cast<Derived*>(basePointer) `*->* if the cast fails, it will return nullptr. <br>
 - `dynamic_cast<Derived&>(baseReference)` *->* if the cast fails, it will throw std::bad_cast, *(use try/catch)* <br>
+
 It doesn't work if you aren't using virtual inheritance and it will always fail to travel through protected or private inheritance *(can only go through public inheritance)*.
 
-`const_cast:` <br>
+**💮 const_cast:** <br>
 Can be used to remove or add const to a variable.
 
-`reinterpret_cast:` <br>
+**🌼 reinterpret_cast:** <br>
 It turns one type directly into another, such as casting the value from one pointer to another, or storing a pointer in an int, or all sorts of other nasty things.
 <br>
 <br>
