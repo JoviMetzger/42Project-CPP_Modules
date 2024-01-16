@@ -874,7 +874,7 @@ Implement interfaces using pure abstract classes and recap concepts. <br>
   <br>
 
 ## Module 05
-These exercises are about repetition and exceptions (throw exceptions), learing about try-catch blocks. 
+These exercises are about repetition and exceptions *(throw exceptions)*, learing about try-catch blocks. 
 
 ### 🔸Exercise 00 - Mommy, when I grow up, I want to be a bureaucrat!
 This exercise provides hands-on experience in designing a class with exception handling. <br>
