@@ -872,10 +872,47 @@ Implement interfaces using pure abstract classes and recap concepts. <br>
 <details>
   <summary><strong>Module 05:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Repetition and Exceptions)</em></summary>
   <br>
-  <br>
-  <br>
 
-</br>
+## Module 05
+These exercises are about repetition and exceptions (throw exceptions), learing about try-catch blocks. 
+
+### 🔸Exercise 00 - Mommy, when I grow up, I want to be a bureaucrat!
+This exercise provides hands-on experience in designing a class with exception handling. <br>
+**You'll learn or practice:**
+1. Learn to implement custom exceptions *(GradeTooHighException and GradeTooLowException)* to handle invalid grade scenarios during the instantiation and grade modification of a Bureaucrat.
+2.  Gain practical experience in using try and catch blocks to handle exceptions, ensuring robust error management in the program.
+
+<br>
+
+### 🔸Exercise 01 - Form up, maggots!
+ This exercise provides practical experience in designing classes that interact with each other, handling exceptions, and ensuring proper member function implementation.<br>
+**You'll learn or practice:**
+1. Practice throwing and catching exceptions in the context of class methods, understanding how to propagate errors appropriately.
+2. Understand how objects of different classes *(Form and Bureaucrat)* interact with each other through member function calls.
+3. Initialization and utilization of objects within an array.
+
+<br>
+
+### 🔸Exercise 02 - No, you need form 28B, not 28C...
+This exercise provides hands-on experience in designing and implementing abstract classes, handling exceptions in class hierarchies, and ensuring proper collaboration between classes. <br>
+**You'll learn or practice:**
+1.  Practice designing an **abstract class** *(AForm)* with private attributes, ensuring that it serves as a base class for concrete form implementations.
+
+<br>
+
+### 🔸Exercise 03 - At least this beats coffee-making
+This exercise provides hands-on experience in designing a **utility class**, working with dynamic object creation, pointers, and error handling. <br>
+**You'll learn or practice:**
+1. Practice designing a **utility class** *(Intern)* with a specific purpose—creating forms based on given parameters.
+2.  Learn to dynamically create objects *(forms)* within the **makeForm() function**, returning a pointer to the created object.
+3.  Understand the use of pointers to manage and manipulate dynamically allocated objects, specifically in the context of creating and returning form objects.
+4. Finding **alternatives to if/elseif/else** forests for efficient and maintainable code.
+
+<br>
+
+➡️  [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2005)  ⬅️
+<br>
+<br>
 
 </details>
 
@@ -884,10 +921,38 @@ Implement interfaces using pure abstract classes and recap concepts. <br>
 <details>
   <summary><strong>Module 06:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> C++ casts)</em></summary>
   <br>
-  <br>
-  <br>
 
-</br>
+## Module 06
+These exercises will teach you different **typecast methods** *(static_cast, dynamic_cast, reinterpret_cast)*, how to implement them. 
+
+### 🔸Exercise 00 - Conversion of scalar types
+This exercise provides practical insights into designing a class with static methods, handling different scalar types. <br>
+**You'll learn or practice:**
+1. Implement the conversion of a string representation to various scalar types (char, int, float, double).
+2. Practice validating and handling scenarios where a conversion may not make sense or overflows.
+
+<br>
+
+### 🔸Exercise 01 - Serialization
+This exercise provides hands-on experience in handling memory addresses, implementing serialization and deserialization logic. <br>
+**You'll learn or practice:**
+1. Learn to implement a class *(Serializer)* with a static method *(serialize)* that **converts a pointer to an unsigned integer** *(uintptr_t)*.
+2. Develop the counterpart static method *(deserialize)* that **converts an unsigned integer back to a pointer**.
+3. Learn about the potential risks and considerations when converting between pointers and unsigned integers.
+
+<br>
+
+### 🔸Exercise 02 - Identify real type
+This exercise provides practical exposure to polymorphism, virtual functions, and type identification without using the typeinfo header. <br>
+**You'll learn or practice:**
+1. Creating a function that prints the actual type of the object **pointed** to by a base pointer *(Base*)*.
+2. Creating a function that prints the actual type of the object **referenced** by a base reference *(Base&)*.
+
+<br>
+
+➡️  [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2006)  ⬅️
+<br>
+<br>
 
 </details>
 
@@ -896,10 +961,40 @@ Implement interfaces using pure abstract classes and recap concepts. <br>
 <details>
   <summary><strong>Module 07:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> C++ templates)</em></summary>
   <br>
-  <br>
-  <br>
 
-</br>
+## Module 07
+Each of these exercises in the C++ module teaches about how to use and implement templates functions and classes.
+
+### 🔸Exercise 00 - Start with a few functions
+This exercise provides a practical understanding of generic programming, enabling the creation of versatile functions that work seamlessly with different data types. <br>
+**You'll learn or practice:**
+1. Writing functions that can be called with any type of argument.
+2. Gaining proficiency in the syntax and structure of function templates.
+
+<br>
+
+### 🔸Exercise 01 - Iter
+This exercise emphasizes generic programming, showcasing how a single function template can be applied to arrays of different types.<br>
+**You'll learn or practice:**
+1. Practice dealing with memory addresses and understanding the nuances of working with arrays.
+2. Gain proficiency in using pointers to access and manipulate elements within an array.
+3. Understand how to pass a function as a parameter to your template, allowing for adaptable and versatile array processing.
+
+<br>
+
+### 🔸Exercise 02 - Array
+This exercise provides a comprehensive understanding of class templates in C++, focusing on dynamic memory allocation, proper implementation of constructors and operators, and ensuring safe array access through exception handling. <br>
+**You'll learn or practice:**
+1. Practice creating a class template *(Array)* capable of storing elements of any type *(T)*.
+2. Learn how to allocate memory dynamically using the **new[]** operator for flexible array sizing.
+3. Implement error handling by throwing an **std::exception**.
+4. Learn to implement different constructors and operators.
+
+<br>
+
+➡️  [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2007)  ⬅️
+<br>
+<br>
 
 </details>
 
@@ -918,7 +1013,7 @@ Implement interfaces using pure abstract classes and recap concepts. <br>
 ---
 
 <details>
-  <summary><strong>Module 09:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> )</em></summary>
+  <summary><strong>Module 09:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> STL)</em></summary>
   <br>
   <br>
   <br>
