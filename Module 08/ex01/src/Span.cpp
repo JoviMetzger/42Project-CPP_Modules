@@ -60,7 +60,7 @@ int Span::shortestSpan() const
 	std::sort(copyVecNum.begin(), copyVecNum.end());	// Sorts in ascending order.
 
 	int minSpan = copyVecNum[1] - copyVecNum[0];
-	for (size_t i = 2; i < copyVecNum.size(); ++i)
+	for (size_t i = 1; i < copyVecNum.size(); i++)
 	{
 		int span = copyVecNum[i] - copyVecNum[i - 1];
 		minSpan = std::min(minSpan, span);		// Updates minSpan to be the minimum.
