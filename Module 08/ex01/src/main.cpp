@@ -35,7 +35,7 @@ int	main()
 
 	try {
 
-		// less than 2 numbers
+		// Having less than 2 numbers
 		Span sp(5);
 		sp.addNumber(8);
 
