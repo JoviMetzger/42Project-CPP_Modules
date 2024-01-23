@@ -50,6 +50,15 @@ void Span::addNumber(int num)
 	_vecNumbers.push_back(num);				// Adds um to the _vecNumbers vector.
 }
 
+// Adds many numbers at once to the Span.
+void	Span::addManyNumbers(const std::vector<int> &nums)
+{
+	if (_vecNumbers.size() + nums.size() > _maxSize)
+		throw std::runtime_error("Span is full!");
+
+	_vecNumbers.insert(_vecNumbers.end(), nums.begin(), nums.end()); // Adds vector nums to the _vecNumbers vector.
+}
+
 // Finds the shortest span (difference) between any two numbers stored in the Span.
 int Span::shortestSpan() const
 {
