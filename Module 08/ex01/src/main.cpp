@@ -22,9 +22,13 @@ int	main()
 		std::cout << "Shortest Span: " << sp.shortestSpan() << std::endl;
 		std::cout << "Longest Span: " << sp.longestSpan() << std::endl;
 
-		// Adding numbers
-		sp.addNumber(1);
-		sp.addNumber(5);
+		// // Adding numbers single
+		// sp.addNumber(1);
+		// sp.addNumber(5);
+
+		// Adding numbers by vector
+		std::vector<int> moreNumbers = {1, 5};
+		sp.addManyNumbers(moreNumbers);
 
 		std::cout << "Shortest Span: " << sp.shortestSpan() << std::endl;
 		std::cout << "Longest Span: " << sp.longestSpan() << std::endl;
