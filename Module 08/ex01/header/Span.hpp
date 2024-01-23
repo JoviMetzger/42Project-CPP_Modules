@@ -20,6 +20,7 @@ class	Span
 
 		// Member function
 		void	addNumber(int num);
+		void	addManyNumbers(const std::vector<int> &nums);
 		int	shortestSpan() const;
 		int	longestSpan() const;
 };
