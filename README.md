@@ -1005,7 +1005,7 @@ This exercise provides a comprehensive understanding of class templates in C++, 
   <br>
 
 ## Module 08
-These exercises will teach you about containers and iteration through it. 
+These exercises will teach you about containers and iteration through them. 
 
 ### 🔸Exercise 00 - Easy find
 This exercise encompasses template programming, STL containers and algorithms, error handling. <br>
