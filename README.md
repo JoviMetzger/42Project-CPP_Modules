@@ -1003,10 +1003,37 @@ This exercise provides a comprehensive understanding of class templates in C++, 
 <details>
   <summary><strong>Module 08:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> Templated containers, iterators, algorithms)</em></summary>
   <br>
-  <br>
-  <br>
 
-</br>
+## Module 08
+These exercises will teach you about containers and iteration through it. 
+
+### 🔸Exercise 00 - Easy find
+This exercise encompasses template programming, STL containers and algorithms, error handling. <br>
+**You'll learn or practice:**
+1. Practice working with STL containers and applying algorithms like *'std::find'* to search for elements.
+2. Gain experience in error handling by deciding between throwing exceptions or returning error values.
+
+<br>
+
+### 🔸Exercise 01 - Span
+This exercise provides hands-on experience in exception handling, class design and implementation, algorithmic problem-solving, working with iterators. <br>
+**You'll learn or practice:**
+1. Managing the storage of elements, preventing overflows, and calculating spans.
+
+<br>
+
+### 🔸Exercise 02 - Mutated abomination
+This exercise provides hands-on experience in enhancing and extending standard containers, implementing iterators, working with C++ standard library features, and testing the modified container against other alternatives. <br>
+**You'll learn or practice:**
+1. Learn how to extend the functionality of an existing container *(std::stack in this case)* to make it iterable.
+2. Gain experience in implementing iterators for a container class.
+3. Practice using iterators to traverse and access elements within a container.
+
+<br>
+
+➡️  [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2008)  ⬅️
+<br>
+<br>
 
 </details>
 
