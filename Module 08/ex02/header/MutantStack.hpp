@@ -8,7 +8,6 @@
 template <class T, class Container= std::deque <T>>
 class	MutantStack : public std::stack<T>
 {
-	private:
 	public:
 		// Default Constructor
 		MutantStack() : std::stack<T>() {};
