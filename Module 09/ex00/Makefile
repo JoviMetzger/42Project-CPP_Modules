@@ -1,5 +1,5 @@
 # Executable
-NAME		= ex00
+NAME		= btc
 
 # Compiler and flags
 CC		= c++
