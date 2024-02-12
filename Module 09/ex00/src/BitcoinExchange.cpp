@@ -32,7 +32,7 @@ BitcoinDB	&BitcoinDB::operator=(const BitcoinDB& value)
 }
 
 //------------------------------------------------------------------------------
-// Member function
+// -- Member function --
 // Processes the input file, checks if file input is correct and does the calculations 
 void BitcoinDB::processInputLine(std::string line, std::ifstream& bitcoinDataFile)
 {
