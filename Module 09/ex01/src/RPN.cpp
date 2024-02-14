@@ -81,7 +81,7 @@ int	polishMathematical::calculations(const std::string& str)
 			}
 		}
 		else if (isspace(c))
-			continue;	 // Skip whitespace
+			continue; // Skip whitespace
 		else
 			throw std::runtime_error("Unknown character.");
 	}
