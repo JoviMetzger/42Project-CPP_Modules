@@ -8,7 +8,6 @@
 # include <sstream>
 
 // COLORS
-# define BLUE "\e[1;34m"
 # define RED "\e[1;91m"
 # define RESET "\033[0m"
 
