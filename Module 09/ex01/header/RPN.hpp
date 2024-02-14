@@ -4,25 +4,25 @@
 # include <iostream>
 # include <algorithm>
 # include <vector>
+# include <stdexcept>
+# include <sstream>
 
-class	Span
+// COLORS
+# define BLUE "\e[1;34m"
+# define RED "\e[1;91m"
+# define RESET "\033[0m"
+
+class	polishMathematical
 {
-	private:
-		unsigned int		_maxSize;
-		std::vector<int>	_vecNumbers;
 	public:
-		Span();					// Default Constructor
-		~Span();				// Destructor 
-		Span(const Span& value);		// Copy constructor
-		Span &operator=(const Span& value);	// Assignment= operator
-
-		Span(unsigned int N);			// Constructor
+		polishMathematical();						// Default Constructor
+		~polishMathematical();						// Destructor 
+		polishMathematical(const polishMathematical& value);		// Copy constructor
+		polishMathematical &operator=(const polishMathematical& value);	// Assignment= operator
 
 		// Member function
-		void	addNumber(int num);
-		void	addManyNumbers(const std::vector<int> &nums);
-		int	shortestSpan() const;
-		int	longestSpan() const;
+		int	calculations(const std::string& str);
+		bool	isOperator(char c);
 };
 
 #endif

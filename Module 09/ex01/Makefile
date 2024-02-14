@@ -1,5 +1,5 @@
 # Executable
-NAME		= ex01
+NAME		= RPN
 
 # Compiler and flags
 CC		= c++
