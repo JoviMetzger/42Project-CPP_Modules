@@ -10,7 +10,6 @@ int	main(int argc, char **argv)
 	polishMathematical rpn;
 
 	try {
-
 		// Checks arguments
 		if (argc != 2)
 			throw std::runtime_error("./RPN '<RPN expression>'.");
