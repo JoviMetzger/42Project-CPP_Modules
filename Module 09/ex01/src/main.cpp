@@ -12,7 +12,7 @@ int	main(int argc, char **argv)
 	try {
 		// Checks arguments
 		if (argc != 2)
-			throw std::runtime_error("./RPN '<RPN expression>'.");
+			throw std::runtime_error("./RPN '<RPN expression>'");
 
 		// Converts char** into string
 		std::string str = argv[1];
