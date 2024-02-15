@@ -40,8 +40,20 @@ bool	polishMathematical::isOperator(char c)
 // Does the Reverse Polish Notation calculation by using vectors(container)
 int	polishMathematical::calculations(const std::string& str)
 {
+	std::string string;
+	std::stringstream iss(str);
+	std::vector<std::string> _vecString;
 	std::vector<int> _vecStack;
 	bool firstLoop = false; 
+
+	// Checks if the number input is between 0 and 9
+	while (std::getline(iss, string, ' '))
+		_vecString.push_back(string);
+	for (size_t i = 0; i < _vecString.size(); i++)
+	{
+		if (_vecString[i].size() >= 2)
+			throw std::runtime_error("Input must be between 0 and 9");
+	}
 
 	for (char c : str)
 	{
@@ -51,7 +63,7 @@ int	polishMathematical::calculations(const std::string& str)
 		{
 			// Checks if the amount of operators is correct
 			if (_vecStack.size() < 2)
-				throw std::runtime_error("Too many operators.");
+				throw std::runtime_error("Too many operators");
 
 			// _vecStack.back() returns a reference to the last element in the vector stack.
 			// _vecStack.pop_back(): This function removes the last element of the vector stack.
@@ -83,12 +95,12 @@ int	polishMathematical::calculations(const std::string& str)
 		else if (isspace(c))
 			continue; // Skip whitespace
 		else
-			throw std::runtime_error("Unknown character.");
+			throw std::runtime_error("Unknown character");
 	}
 
 	// Checks if the amount of operators is correct
 	if (_vecStack.size() != 1)
-		throw std::runtime_error("Not enough operators.");
+		throw std::runtime_error("Not enough operators");
 
 	return _vecStack.back(); // Returns whats left in the vector (is the result)
 }
