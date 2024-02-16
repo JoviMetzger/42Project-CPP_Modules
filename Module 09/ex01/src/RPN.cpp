@@ -38,70 +38,75 @@ bool	polishMathematical::isOperator(char c)
 }
 
 // Does the Reverse Polish Notation calculation by using vectors(container)
-int	polishMathematical::calculations(const std::string& str)
+int	polishMathematical::calculations(const std::string& str) 
 {
+	std::stack<int> numStack;
+	std::stack<char> opStack;
 	std::string string;
 	std::stringstream iss(str);
-	std::vector<std::string> _vecString;
-	std::vector<int> _vecStack;
 	bool firstLoop = false; 
 
 	// Checks if the number input is between 0 and 9
 	while (std::getline(iss, string, ' '))
-		_vecString.push_back(string);
-	for (size_t i = 0; i < _vecString.size(); i++)
 	{
-		if (_vecString[i].size() >= 2)
+		if (string.size() >= 2)
 			throw std::runtime_error("Input must be between 0 and 9");
 	}
 
-	for (char c : str)
+	// Iterate through the string from end to start
+	for (auto it = str.rbegin(); it != str.rend(); ++it) 
 	{
+		char c = *it;			// Dereference the reverse iterator to get the character
+
 		if (isdigit(c))
-			_vecStack.push_back(c - '0'); // Convert char to int
+			numStack.push(c - '0');	// Convert char to int
 		else if (isOperator(c))
-		{
-			// Checks if the amount of operators is correct
-			if (_vecStack.size() < 2)
-				throw std::runtime_error("Too many operators");
-
-			// _vecStack.back() returns a reference to the last element in the vector stack.
-			// _vecStack.pop_back(): This function removes the last element of the vector stack.
-			// The 'int' gets assigned to the last element of the stack.
-			int operandOne = _vecStack.back(); _vecStack.pop_back();
-			int operandTwo = _vecStack.back(); _vecStack.pop_back();
-
-			// Swaps the values of 'operandOne' and 'operandTwo', else the output is wrong
-			// DOES NOT swap for the firstloop
-			if (!firstLoop)
-				std::swap(operandOne, operandTwo);
-			else
-				firstLoop = true;
-
-			// Applies the operator on the operands and pushes the result back to the vector
-			if (c == '+')
-				_vecStack.push_back(operandOne + operandTwo);
-			else if (c == '-')
-				_vecStack.push_back(operandOne - operandTwo);
-			else if (c == '*')
-				_vecStack.push_back(operandOne * operandTwo);
-			else if (c == '/')
-			{
-				if (operandTwo == 0) // can't divide something by zero
-					throw std::runtime_error("Undefined");
-				_vecStack.push_back(operandOne / operandTwo);
-			}
-		}
+			opStack.push(c);	// Pushes operaator (char) to stack
 		else if (isspace(c))
-			continue; // Skip whitespace
+			continue;		// Skip whitespace
 		else
 			throw std::runtime_error("Unknown character");
 	}
 
+	while (!opStack.empty()) 
+	{
+		// Checks if the amount of operators is correct
+		if (numStack.size() < 2)
+			throw std::runtime_error("Too many operators");
+
+		// top() returns a reference to the last element in the stack.
+		// pop(): This function removes the element of the stack. (the last element)
+		// The 'int' gets assigned to the last element of the stack.
+		int	operandTwo = numStack.top(); numStack.pop();
+		int	operandOne = numStack.top(); numStack.pop();
+		char	_opertor = opStack.top(); opStack.pop();
+
+		// Swaps the values of 'operandOne' and 'operandTwo', else the output is wrong
+		// DOES NOT swap for the firstloop
+		if (!firstLoop)
+			std::swap(operandOne, operandTwo);
+		else
+			firstLoop = true;
+
+		// Applies the operator on the operands and pushes the result back to the stack
+		if (_opertor == '+')
+			numStack.push(operandOne + operandTwo);
+		else if (_opertor == '-')
+			numStack.push(operandOne - operandTwo);
+		else if (_opertor == '*')
+			numStack.push(operandOne * operandTwo);
+		else if (_opertor == '/')
+		{
+			if (operandTwo == 0)	// can't divide something by zero
+				throw std::runtime_error("Undefined");
+			numStack.push(operandOne / operandTwo);
+		}
+	}
+
 	// Checks if the amount of operators is correct
-	if (_vecStack.size() != 1)
+	if (numStack.size() != 1) {
 		throw std::runtime_error("Not enough operators");
+	}
 
-	return _vecStack.back(); // Returns whats left in the vector (is the result)
+	return numStack.top();	// Returns whats left in the stack (is the result)
 }
-
