@@ -38,10 +38,10 @@ bool	polishMathematical::isOperator(char c)
 }
 
 // Does the Reverse Polish Notation calculation by using vectors(container)
-int	polishMathematical::calculations(const std::string& str) 
+// Does the Reverse Polish Notation calculation by using vectors(container)
+int	polishMathematical::calculations(const std::string& str)
 {
-	std::stack<int> numStack;
-	std::stack<char> opStack;
+	std::stack<int> _staStack;
 	std::string string;
 	std::stringstream iss(str);
 	bool firstLoop = false; 
@@ -53,60 +53,52 @@ int	polishMathematical::calculations(const std::string& str)
 			throw std::runtime_error("Input must be between 0 and 9");
 	}
 
-	// Iterate through the string from end to start
-	for (int i = str.size() - 1; i >= 0; --i)  
+	for (char c : str)
 	{
-		char c = str[i];		// Dereference the reverse iterator to get the character
-
 		if (isdigit(c))
-			numStack.push(c - '0');	// Convert char to int
+			_staStack.push(c - '0'); // Convert char to int
 		else if (isOperator(c))
-			opStack.push(c);	// Pushes operaator (char) to stack
+		{
+			// Checks if the amount of operators is correct
+			if (_staStack.size() < 2)
+				throw std::runtime_error("Too many operators");
+
+			// _staStack.top() returns a reference to the last element in the stack.
+			// _staStack.pop(): This function removes the element of the stack. (the last element)
+			// The 'int' gets assigned to the last element of the stack.
+			int operandOne = _staStack.top(); _staStack.pop();
+			int operandTwo = _staStack.top(); _staStack.pop();
+
+			// Swaps the values of 'operandOne' and 'operandTwo', else the output is wrong
+			// DOES NOT swap for the firstloop
+			if (!firstLoop)
+				std::swap(operandOne, operandTwo);
+			else
+				firstLoop = true;
+
+			// Applies the operator on the operands and pushes the result back to the stack
+			if (c == '+')
+				_staStack.push(operandOne + operandTwo);
+			else if (c == '-')
+				_staStack.push(operandOne - operandTwo);
+			else if (c == '*')
+				_staStack.push(operandOne * operandTwo);
+			else if (c == '/')
+			{
+				if (operandTwo == 0) // can't divide something by zero
+					throw std::runtime_error("Undefined");
+				_staStack.push(operandOne / operandTwo);
+			}
+		}
 		else if (isspace(c))
-			continue;		// Skip whitespace
+			continue; // Skip whitespace
 		else
 			throw std::runtime_error("Unknown character");
 	}
 
-	while (!opStack.empty()) 
-	{
-		// Checks if the amount of operators is correct
-		if (numStack.size() < 2)
-			throw std::runtime_error("Too many operators");
-
-		// top() returns a reference to the last element in the stack.
-		// pop(): This function removes the element of the stack. (the last element)
-		// The 'int' gets assigned to the last element of the stack.
-		int	operandTwo = numStack.top(); numStack.pop();
-		int	operandOne = numStack.top(); numStack.pop();
-		char	_opertor = opStack.top(); opStack.pop();
-
-		// Swaps the values of 'operandOne' and 'operandTwo', else the output is wrong
-		// DOES NOT swap for the firstloop
-		if (!firstLoop)
-			std::swap(operandOne, operandTwo);
-		else
-			firstLoop = true;
-
-		// Applies the operator on the operands and pushes the result back to the stack
-		if (_opertor == '+')
-			numStack.push(operandOne + operandTwo);
-		else if (_opertor == '-')
-			numStack.push(operandOne - operandTwo);
-		else if (_opertor == '*')
-			numStack.push(operandOne * operandTwo);
-		else if (_opertor == '/')
-		{
-			if (operandTwo == 0)	// can't divide something by zero
-				throw std::runtime_error("Undefined");
-			numStack.push(operandOne / operandTwo);
-		}
-	}
-
 	// Checks if the amount of operators is correct
-	if (numStack.size() != 1) {
+	if (_staStack.size() != 1)
 		throw std::runtime_error("Not enough operators");
-	}
 
-	return numStack.top();	// Returns whats left in the stack (is the result)
+	return _staStack.top(); // Returns whats left in the stack (is the result)
 }
