@@ -54,9 +54,9 @@ int	polishMathematical::calculations(const std::string& str)
 	}
 
 	// Iterate through the string from end to start
-	for (auto it = str.rbegin(); it != str.rend(); ++it) 
+	for (int i = str.size() - 1; i >= 0; --i)  
 	{
-		char c = *it;			// Dereference the reverse iterator to get the character
+		char c = str[i];		// Dereference the reverse iterator to get the character
 
 		if (isdigit(c))
 			numStack.push(c - '0');	// Convert char to int
