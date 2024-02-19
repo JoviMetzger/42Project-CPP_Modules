@@ -52,6 +52,8 @@ int	polishMathematical::calculations(const std::string& str)
 		if (string.size() >= 2)
 			throw std::runtime_error("Input must be between 0 and 9");
 	}
+	if ((!isdigit(str[0])) || (!isdigit(str[2])) || (!isOperator(str[4])))
+			throw std::runtime_error("Wrong format");
 
 	for (char c : str)
 	{
