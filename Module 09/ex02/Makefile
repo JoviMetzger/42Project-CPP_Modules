@@ -1,11 +1,11 @@
 # Executable
-NAME		= ex02
+NAME		= PmergeMe
 
 # Compiler and flags
 CC		= c++
 CPPFLAGS	= -Wall -Wextra -std=c++11
-#CPPFLAGS	+= -Werror
-CPPFLAGS	+= -g -fsanitize=address
+CPPFLAGS	+= -Werror
+# CPPFLAGS	+= -g -fsanitize=address
 
 # Sources files
 SRC		= ./src/main.cpp \
