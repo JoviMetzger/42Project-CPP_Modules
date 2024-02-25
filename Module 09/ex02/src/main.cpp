@@ -11,19 +11,39 @@ int	main(int argc, char **argv)
 	(void) argc;
 
 	try {
-		// // Checks argumenta
-		// checkInput(argc, argv);
+		// --- Checks arguments ---
+		std::string str = checkInput(argc, argv);
 	
-		// Converts char** into string
-		std::string str = argv[1];
+		// --- Sorting algorithm ---
+		clock_t	vec_startTime, vec_endTime;
+		clock_t	list_startTime, list_endTime;
 
-		// Calculates Reverse Polish Notation
-		std::vector<int> result = sort.vecJohnsonSort(str);
-		// print the sorted vector
-		for (int num : result)
+		// VECTOR
+		vec_startTime = clock();
+		std::vector<int> vecResult = sort.vecJohnsonSort(str);
+		vec_endTime = clock();
+
+		// LIST
+		list_startTime = clock();
+		std::list<int> listResult = sort.listJohnsonSort(str);
+		list_endTime = clock();
+
+    	// --- Printing ---
+		std::cout << "Before    : " << str << std::endl;
+
+		std::cout << "VEC After : ";
+		for (int num : vecResult)
 			std::cout << num << " ";
 		std::cout << std::endl;
+		
+		std::cout << "LST After : ";
+		for (int num : listResult)
+			std::cout << num << " ";
+		std::cout << std::endl << std::endl;
 
+		std::cout << "VEC : Time to process a range of " << vecResult.size() << " elements with std::[..] : " << vec_endTime - vec_startTime << " us" << std::endl;
+		std::cout << "LST : Time to process a range of " << listResult.size() << " elements with std::[..] : " << list_endTime - list_startTime << " us" << std::endl;
+	
 	} catch(const std::exception& e) {
 		std::cerr << RED << "Error: " << RESET <<  e.what() << std::endl;;
 	}
