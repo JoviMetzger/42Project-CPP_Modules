@@ -22,12 +22,10 @@ class	PmergeMe
 		~PmergeMe();					// Destructor
 
 		// Member functions
-		std::vector<int> vecJohnsonSort(const std::string& str);
-		std::list<int> listJohnsonSort(const std::string& str);
-
-
+		std::vector<int>	vecJohnsonSort(const std::string& str);
+		std::list<int>		listJohnsonSort(const std::string& str);
 };
-std::string checkInput(int argc, char **argv);
 
+std::string checkInput(int argc, char **argv);
 
 #endif
