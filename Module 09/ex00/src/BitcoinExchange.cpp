@@ -46,7 +46,7 @@ void BitcoinDB::processInputLine(std::string line, std::ifstream& bitcoinDataFil
 		// Trim whitespace at position 0 from value ('| 3" -> "|3")
 		value.erase(0, value.find_first_not_of(" \n\r\t"));
 
-		// Checks if the 'date' and 'value' are valid valid 
+		// Checks if the 'date' and 'value' are valid 
 		if (!dateCheck(date, line) || !valueCheck(value)) 
 			return ;
 		calculateBitcoinPrice(date, value, bitcoinDataFile); // Does the calculation of the Bitcoin price (data.csv)
