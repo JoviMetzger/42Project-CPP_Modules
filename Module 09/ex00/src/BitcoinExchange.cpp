@@ -180,7 +180,7 @@ static bool checkDoubelValue(std::string value)
 // Checks if the value is correct (NOT: 5 6 or -1 or 23b or <MAX_INT)
 bool BitcoinDB::valueCheck(std::string value)
 {
-	// Check if the value is one number (no whitspace in between
+	// Check if the value is one number (no whitspace in between)
 	for (char currentPos : value)
 	{
 		if (std::isspace(currentPos))
