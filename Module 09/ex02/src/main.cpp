@@ -8,8 +8,6 @@ int	main(int argc, char **argv)
 {
 	PmergeMe sort;
 
-	(void) argc;
-
 	try {
 		// --- Checks arguments ---
 		std::string str = checkInput(argc, argv);
@@ -28,7 +26,7 @@ int	main(int argc, char **argv)
 		std::list<int> listResult = sort.listJohnsonSort(str);
 		list_endTime = clock();
 
-    	// --- Printing ---
+		// --- Printing ---
 		std::cout << "Before    : " << str << std::endl;
 
 		std::cout << "VEC After : ";
