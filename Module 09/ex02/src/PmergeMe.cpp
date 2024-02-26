@@ -36,17 +36,17 @@ bool	comparePairs(const std::pair<int, int> &pair1, const std::pair<int, int> &p
 }
 
 // Compute the n-th term in the Jacobsthal sequence based on the previous two terms, following the defined recurrence relation.
-int		jacobsthalSequence(int n)
+int	jacobsthalSequence(int n)
 {
 	// Base Cases 0 & 1
-	if (n == 0)		// 0th term in the Jacobsthal sequence is 0
+	if (n == 0)				// 0th term in the Jacobsthal sequence is 0
 		return (0);
-	if (n == 1)		// 1st term in the Jacobsthal sequence is 1
+	if (n == 1)				// 1st term in the Jacobsthal sequence is 1
 		return (1);
 
 	// Recurrence Relation
-	int prev = 0;		// Previous term ('J(n-2)')
-	int current = 1;	// Current term ('J(n-1)')
+	int prev = 0;				// Previous term ('J(n-2)')
+	int current = 1;			// Current term ('J(n-1)')
 	for (int i = 2; i < n; ++i)
 	{
 		// Calculates the next term in the sequence using the Jacobsthal sequence
@@ -54,7 +54,7 @@ int		jacobsthalSequence(int n)
 		prev = current;
 		current = next;
 	}
-	return (current);	// Return the n-th term in the Jacobsthal sequence
+	return (current);			// Return the n-th term in the Jacobsthal sequence
 }
 
 //------------------------------------------------------------------------------
@@ -152,13 +152,13 @@ std::vector<int>	PmergeMe::vecJohnsonSort(const std::string& str)
 
 	// Step 4: Create main_chain and pend
 	std::vector<int> main_chain;
-    std::vector<int> pend;
+    	std::vector<int> pend;
 
-    for (const auto& pair : pairs) 
+	for (const auto& pair : pairs) 
 	{
-        main_chain.push_back(pair.first);	// main_chain: first element of the pair
-        pend.push_back(pair.second);		// pend: second element of the pair
-    }
+		main_chain.push_back(pair.first);	// main_chain: first element of the pair
+		pend.push_back(pair.second);		// pend: second element of the pair
+	}
 
 		// // Print main_chain elements & print pend elements
 		// std::cout << "main_chain: ";
@@ -175,26 +175,26 @@ std::vector<int>	PmergeMe::vecJohnsonSort(const std::string& str)
 
 	// Step 5: Generate order of insertion using Jacobsthal sequence
 	int i = 1;
-    int k = 1;
-    int pendSize = pend.size();
-       
-    main_chain.insert(main_chain.begin(), pend.front());
+	int k = 1;
+	int pendSize = pend.size();
 
-    while (i < pendSize)
-    {
-        for (int j = jacobsthalSequence(k); j > 0 && j > jacobsthalSequence(k - 1); --j)
-        {
-            auto it = pend.begin();
-            if (j >= pendSize)
-                j = pendSize - 1;
-            std::advance(it, j);
+	main_chain.insert(main_chain.begin(), pend.front());
 
+	while (i < pendSize)
+	{
+	        for (int j = jacobsthalSequence(k); j > 0 && j > jacobsthalSequence(k - 1); --j)
+	        {
+			auto it = pend.begin();
+		        if (j >= pendSize)
+				j = pendSize - 1;
+			std::advance(it, j);
+	
 			// Step 6: Use binary search for insertion positions
-            vecBinarySearch(main_chain, 0, main_chain.size(), *it);
-            ++i;
-        }
-        ++k;
-    }
+			vecBinarySearch(main_chain, 0, main_chain.size(), *it);
+			++i;
+	        }
+	        ++k;
+	}
 	
 	// Step 7: Insert the struggler
 	if (struggler != -1)
