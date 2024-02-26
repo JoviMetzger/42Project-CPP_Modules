@@ -23,7 +23,7 @@ PmergeMe::PmergeMe(const PmergeMe& value)
 PmergeMe	&PmergeMe::operator=(const PmergeMe& value)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &value)	{}
+	if (this != &value) {}
 	return *this;
 }
 
@@ -59,6 +59,7 @@ int		jacobsthalSequence(int n)
 
 //------------------------------------------------------------------------------
 // VECTOR
+//------------------------------------------------------------------------------
 // Recursive function to sort pairs
 void	vecRecursivePairSort(std::vector<std::pair<int, int>> &pairs, size_t startIdx) 
 {
@@ -89,11 +90,11 @@ void	vecBinarySearch(std::vector<int>& main_chain, int start, int len, int value
 	// Calculate the mid index of the range.
 	int mid = start + (len - start) / 2;
 	
-	if (main_chain[mid] < value)							// If the middle element is less than the value,
+	if (main_chain[mid] < value)					// If the middle element is less than the value,
 		vecBinarySearch(main_chain, mid + 1, len, value);	// search the upper half of the range.
-	else if (main_chain[mid] > value)						// If the middle element is greater than the value,
+	else if (main_chain[mid] > value)				// If the middle element is greater than the value,
 		vecBinarySearch(main_chain, start, mid, value);		// search the lower half of the range.
-	else													// If the middle element is equal to the value,
+	else								// If the middle element is equal to the value,
 	{
 		main_chain.insert(main_chain.begin() + mid, value);	// insert the value at the mid index.
 		return ;
@@ -204,6 +205,7 @@ std::vector<int>	PmergeMe::vecJohnsonSort(const std::string& str)
 
 //------------------------------------------------------------------------------
 // LIST
+//------------------------------------------------------------------------------
 // Recursive function to sort pairs
 void	listRecursivePairSort(std::list<std::pair<int, int>> &pairs, std::list<std::pair<int, int>>::iterator startIdx) 
 {
@@ -234,13 +236,13 @@ void	listBinarySearch(std::list<int>& main_chain, std::list<int>::iterator start
 	// Calculate the mid index of the range.
 	auto mid = std::next(start, std::distance(start, len) / 2);
 	
-	if (*mid < value)												// If the middle element is less than the value,
+	if (*mid < value)							// If the middle element is less than the value,
 		listBinarySearch(main_chain, std::next(mid), len, value);	// search the upper half of the range.
-	else if (*mid > value)											// If the middle element is greater than the value,
-		listBinarySearch(main_chain, start, mid, value);			// search the lower half of the range.
-	else															// If the middle element is equal to the value,
+	else if (*mid > value)							// If the middle element is greater than the value,
+		listBinarySearch(main_chain, start, mid, value);		// search the lower half of the range.
+	else									// If the middle element is equal to the value,
 	{
-		main_chain.insert(mid, value);								// insert the value at the mid index.
+		main_chain.insert(mid, value);					// insert the value at the mid index.
 		return ;
 	}
 }
@@ -350,6 +352,7 @@ std::list<int>	PmergeMe::listJohnsonSort(const std::string& str)
 
 //------------------------------------------------------------------------------
 // INPUT CHECK
+//------------------------------------------------------------------------------
 std::string	checkInput(int argc, char **argv)
 {
 	if (argc <= 2)
