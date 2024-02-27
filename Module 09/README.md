@@ -52,8 +52,3 @@ OR
 ```bash 
 $  ./PmergeMe `shuf -i 1-100000 -n 3000 | tr "\n" " "`
 ```
-
-
-
-
-Book what adri send ofer slack page 180 explains johnsansort (page on PDF 191)
