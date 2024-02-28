@@ -593,12 +593,16 @@ and you can access any box directly by its number.
 - Dynamic array that resizes itself as needed.
 - Efficient for random access and appending elements.
 
+<br>
+
 #### ➖ Deque (Double-ended Queue):
 Imagine a long tube with openings at both ends. 
 You can put things in or take them out from either end.
 It's like having a line of storage containers where you can add or remove items from both the front and the back.
 - Allows efficient insertion and deletion at both ends.
 - Similar to a tube with openings at both ends.
+
+<br>
 
 #### ➖ List:
 Picture a chain where each link is connected to the next one. 
@@ -607,68 +611,72 @@ It's like having a necklace where you can add or remove beads at any position al
 - Doubly linked list allowing efficient insertion and deletion anywhere in the list.
 - Imagine a chain where each link is connected to the next one.
 
+<br>
+
 #### ➖ Forward List:
 - Singly linked list with less memory overhead.
 - Similar to a list but with single links.
+
+<br>
 
 #### ➖ Array:
 - Static array with a fixed size.
 - Used when the size is known at compile time.
 
-<br>
 ---------------------------------------------------------------------------------------------
-<br>
 
 ### 📌 Associative Containers
-#### ➖ Set:
+##### ➖ Set:
 Think of a set like a collection of unique items. 
 Each item in the set is distinct, and there are no duplicates allowed.
 It's like having a collection of different-colored marbles where you can't have the same color marble twice.
 - Collection of unique keys, sorted according to a specified comparison criterion.
 - Like a collection of distinct marbles.
+<br>
 
-#### 	➖ Multiset:
+##### 	➖ Multiset:
 - Collection of keys that can have duplicates, sorted according to a specified comparison criterion.
 - Similar to a set but allows duplicates.
+<br>
 
-#### 	➖ Map:
+##### 	➖ Map:
 Picture a dictionary where each word *(key)* has a corresponding definition *(value)*. 
 You can look up a word and find its definition quickly.
 It's like having a phone book where you can find a person's phone number by looking up their name.
 - Collection of key-value pairs with unique keys, sorted according to a specified comparison criterion.
 - Similar to a dictionary with words and definitions.
+<br>
 
-#### 	➖ Multimap:
+##### 	➖ Multimap:
 - Collection of key-value pairs where keys can have duplicates, sorted according to a specified comparison criterion.
 - Similar to a map but allows duplicate keys.
 
-<br>
 ---------------------------------------------------------------------------------------------
-<br>
 
 ### 📌 Unordered Containers
-#### 	➖ Unordered Set:
+##### 	➖ Unordered Set:
 - Collection of unique keys, not sorted but with constant-time average complexity for most operations.
 - Useful for fast lookup without sorting.
+<br>
 
-#### 	➖ Unordered Multiset:
+##### 	➖ Unordered Multiset:
 - Collection of keys that can have duplicates, not sorted but with constant-time average complexity for most operations.
 - Similar to an unordered set but allows duplicates.
+<br>
 
-#### 	➖ Unordered Map:
+##### 	➖ Unordered Map:
 - Collection of key-value pairs, not sorted but with constant-time average complexity for most operations.
 - Similar to a map but without sorting.
+<br>
 
-#### 	➖ Unordered Multimap:
+##### 	➖ Unordered Multimap:
 - Collection of key-value pairs where keys can have duplicates, not sorted but with constant-time average complexity for most operations.
 - Similar to an unordered map but allows duplicate keys.
 
-<br>
 ---------------------------------------------------------------------------------------------
-<br>
 
 ### 📌 Abstract Data Types (ADTs)
-#### 	➖ Stack:
+##### 	➖ Stack:
 Imagine a stack of plates in a cafeteria. 
 You put one plate on top of another, and when you need to remove a plate, you take the top one off.
 In programming, a stack works similarly. 
@@ -677,8 +685,9 @@ Think of it like a pile of books where you can only add or remove books from the
 - Last In, First Out (LIFO) data structure.
 - Items are inserted and removed from one end.
 - Useful for backtracking, recursion, and expression evaluation.
+<br>
 
-#### 	➖ Queue:
+##### 	➖ Queue:
 Picture a line at a movie theater. 
 People join the line at the back and leave from the front as they enter the theater.
 In programming, a queue operates the same way. 
@@ -687,16 +696,15 @@ It's like waiting in line for a rollercoaster ride where the first person who jo
 - First In, First Out (FIFO) data structure.
 - Elements are inserted at the rear and removed from the front.
 - Used in scheduling, breadth-first search, and task management.
+<br>
 
-#### 	➖ Priority Queue:
+##### 	➖ Priority Queue:
 Think of a priority queue as a line where people with VIP passes go first, regardless of who arrived first.
 Each item in a priority queue has a priority, and the item with the highest priority gets removed first.
 It's like boarding a plane where first-class passengers (highest priority) board before economy class (lower priority).
 - Queue with elements dequeued based on their priority.
 - Highest priority elements are dequeued first.
 - Often implemented using heaps.
-
-<br>
 <br>
 
 ### 📌 Reference: 
