@@ -1042,12 +1042,44 @@ This exercise provides hands-on experience in enhancing and extending standard c
 <details>
   <summary><strong>Module 09:</strong> <br> &nbsp;&nbsp;&nbsp;<em>(<strong>Topics:</strong> STL)</em></summary>
   <br>
-  <br>
-  <br>
 
-</br>
+## Module 09
+This module introduces different containers and their applications through practical exercises.
+
+### 🔸Exercise 00 - Bitcoin Exchange
+**Container: 'map'** <br> <br>
+This exercise involves creating a program to determine the value of a specific amount of bitcoin on a given date. <br>
+**You'll learn or practice:**
+1. File handling for retrieving information.
+2. Understanding the 'map' container.
+
+<br>
+
+### 🔸Exercise 01 - Reverse Polish Notation
+**Container: 'stack'** <br> <br>
+Explore Reverse Polish Notation and implement it in a program.<br>
+**You'll learn or practice:**
+1. Understanding the mechanics of Reverse Polish Notation.
+2. Understanding the 'stack' container.
+
+<br>
+
+### 🔸Exercise 02 - PmergeMe
+**Container: 'vector' & 'list'** <br> <br>
+Implement the Ford-Johnson algorithm to sort a sequence of positive integers.<br>
+**You'll learn or practice:**
+1. Understanding the Ford-Johnson algorithm and Jacob Sthal sequence.
+2. Implementing algorithms across different containers.
+3. Comparing the performance characteristics of list and vector containers.
+
+<br>
+
+➡️  [Installing/running the programs](https://github.com/JoviMetzger/42Project-CPP_Modules/tree/main/Module%2009)  ⬅️
+<br>
+<br>
 
 </details>
+
 <br>
 
 
