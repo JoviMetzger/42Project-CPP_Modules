@@ -702,7 +702,6 @@ It's like boarding a plane where first-class passengers (highest priority) board
 - Highest priority elements are dequeued first.
 - Often implemented using heaps.
 <br>
----------------------------------------------------------------------------------------------
 
 ### 📌 Reference: 
 - [C++ Container Types and Sequences](https://www.scaler.com/topics/cpp/containers-in-cpp/)
