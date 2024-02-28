@@ -20,7 +20,7 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 - [Virtual Class](#Virtual-Class)
 - [Virtual Functions](#Virtual-Functions)
 - [Type Casting](#Type-Casting)
-- [Containers and Abstract Data Types](#Containers-and-Abstract-Data-Types)
+- [Containers and Container Adapters](#Containers-and-Container-Adapters)
 - [Ford-Johnson Algorithm](#Ford-Johnson-Algorithm)
 - [C++ Modules](#C-Modules)
 <br>
@@ -578,7 +578,7 @@ It turns one type directly into another, such as casting the value from one poin
 <br>
 <br>
 
-## 📦Containers and Abstract Data Types
+## 📦Containers and Container Adapters
 
 ![image](https://github.com/JoviMetzger/42Project-CPP_Modules/assets/117259075/82581795-0ed3-45bf-ace8-5b92cc0f7323)
 
@@ -671,7 +671,7 @@ It's like having a phone book where you can find a person's phone number by look
 
 ---------------------------------------------------------------------------------------------
 
-### 📌 Abstract Data Types (ADTs)
+### 📌 Container Adapters OR Abstract Data Types (ADTs)
 #### 	➖ Stack:
 Imagine a stack of plates in a cafeteria. 
 You put one plate on top of another, and when you need to remove a plate, you take the top one off.
