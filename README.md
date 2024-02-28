@@ -592,7 +592,6 @@ It's like having a list of boxes where you can add more boxes as needed,
 and you can access any box directly by its number.
 - Dynamic array that resizes itself as needed.
 - Efficient for random access and appending elements.
-
 <br>
 
 #### ➖ Deque (Double-ended Queue):
@@ -601,7 +600,6 @@ You can put things in or take them out from either end.
 It's like having a line of storage containers where you can add or remove items from both the front and the back.
 - Allows efficient insertion and deletion at both ends.
 - Similar to a tube with openings at both ends.
-
 <br>
 
 #### ➖ List:
@@ -610,13 +608,11 @@ You can add or remove links anywhere in the chain.
 It's like having a necklace where you can add or remove beads at any position along the chain.
 - Doubly linked list allowing efficient insertion and deletion anywhere in the list.
 - Imagine a chain where each link is connected to the next one.
-
 <br>
 
 #### ➖ Forward List:
 - Singly linked list with less memory overhead.
 - Similar to a list but with single links.
-
 <br>
 
 #### ➖ Array:
@@ -626,7 +622,7 @@ It's like having a necklace where you can add or remove beads at any position al
 ---------------------------------------------------------------------------------------------
 
 ### 📌 Associative Containers
-##### ➖ Set:
+#### ➖ Set:
 Think of a set like a collection of unique items. 
 Each item in the set is distinct, and there are no duplicates allowed.
 It's like having a collection of different-colored marbles where you can't have the same color marble twice.
@@ -634,12 +630,12 @@ It's like having a collection of different-colored marbles where you can't have 
 - Like a collection of distinct marbles.
 <br>
 
-##### 	➖ Multiset:
+#### 	➖ Multiset:
 - Collection of keys that can have duplicates, sorted according to a specified comparison criterion.
 - Similar to a set but allows duplicates.
 <br>
 
-##### 	➖ Map:
+#### 	➖ Map:
 Picture a dictionary where each word *(key)* has a corresponding definition *(value)*. 
 You can look up a word and find its definition quickly.
 It's like having a phone book where you can find a person's phone number by looking up their name.
@@ -647,36 +643,36 @@ It's like having a phone book where you can find a person's phone number by look
 - Similar to a dictionary with words and definitions.
 <br>
 
-##### 	➖ Multimap:
+#### 	➖ Multimap:
 - Collection of key-value pairs where keys can have duplicates, sorted according to a specified comparison criterion.
 - Similar to a map but allows duplicate keys.
 
 ---------------------------------------------------------------------------------------------
 
 ### 📌 Unordered Containers
-##### 	➖ Unordered Set:
+#### 	➖ Unordered Set:
 - Collection of unique keys, not sorted but with constant-time average complexity for most operations.
 - Useful for fast lookup without sorting.
 <br>
 
-##### 	➖ Unordered Multiset:
+#### 	➖ Unordered Multiset:
 - Collection of keys that can have duplicates, not sorted but with constant-time average complexity for most operations.
 - Similar to an unordered set but allows duplicates.
 <br>
 
-##### 	➖ Unordered Map:
+#### 	➖ Unordered Map:
 - Collection of key-value pairs, not sorted but with constant-time average complexity for most operations.
 - Similar to a map but without sorting.
 <br>
 
-##### 	➖ Unordered Multimap:
+#### 	➖ Unordered Multimap:
 - Collection of key-value pairs where keys can have duplicates, not sorted but with constant-time average complexity for most operations.
 - Similar to an unordered map but allows duplicate keys.
 
 ---------------------------------------------------------------------------------------------
 
 ### 📌 Abstract Data Types (ADTs)
-##### 	➖ Stack:
+#### 	➖ Stack:
 Imagine a stack of plates in a cafeteria. 
 You put one plate on top of another, and when you need to remove a plate, you take the top one off.
 In programming, a stack works similarly. 
@@ -687,7 +683,7 @@ Think of it like a pile of books where you can only add or remove books from the
 - Useful for backtracking, recursion, and expression evaluation.
 <br>
 
-##### 	➖ Queue:
+#### 	➖ Queue:
 Picture a line at a movie theater. 
 People join the line at the back and leave from the front as they enter the theater.
 In programming, a queue operates the same way. 
@@ -698,7 +694,7 @@ It's like waiting in line for a rollercoaster ride where the first person who jo
 - Used in scheduling, breadth-first search, and task management.
 <br>
 
-##### 	➖ Priority Queue:
+#### 	➖ Priority Queue:
 Think of a priority queue as a line where people with VIP passes go first, regardless of who arrived first.
 Each item in a priority queue has a priority, and the item with the highest priority gets removed first.
 It's like boarding a plane where first-class passengers (highest priority) board before economy class (lower priority).
@@ -706,6 +702,7 @@ It's like boarding a plane where first-class passengers (highest priority) board
 - Highest priority elements are dequeued first.
 - Often implemented using heaps.
 <br>
+---------------------------------------------------------------------------------------------
 
 ### 📌 Reference: 
 - [C++ Container Types and Sequences](https://www.scaler.com/topics/cpp/containers-in-cpp/)
