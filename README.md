@@ -590,7 +590,7 @@ https://cplusplus.com/reference/stl/
 
 **LINK:**
 - 🟪 [Springer Link](https://link.springer.com/article/10.1007/s00224-020-09987-4#:~:text=MergeInsertion%2C%20also%20known%20as%20the,on%20the%20number%20of%20comparisons.) *(Helps with the JacobSthal sequense **'Step5 & Step6'***
-- 🟪 [Link from the image](https://www.tldraw.com/v/y9Y2Et7vl18fkPZT4UoEKTW?viewport=100,-2264,2312,2335&page=page:jEhR30akJPWN_ZhTL5KgI) *(VERY USEFUL)*
+- 🟩 [Link from the image](https://www.tldraw.com/v/y9Y2Et7vl18fkPZT4UoEKTW?viewport=100,-2264,2312,2335&page=page:jEhR30akJPWN_ZhTL5KgI) *(VERY USEFUL!)*
 
 ![image](https://github.com/JoviMetzger/42Project-CPP_Modules/assets/117259075/eee1b5fb-f395-4c25-ba17-6a9743eae2d2)
 
