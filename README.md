@@ -20,6 +20,8 @@ These modules are an introduction to **Object-Oriented Programming** in C++.
 - [Virtual Class](#Virtual-Class)
 - [Virtual Functions](#Virtual-Functions)
 - [Type Casting](#Type-Casting)
+- [Containers and Abstract Data Types](#Containers-and-Abstract-Data-Types)
+- [Ford-Johnson Algorithm](#Ford-Johnson-Algorithm)
 - [C++ Modules](#C-Modules)
 <br>
 
@@ -573,6 +575,26 @@ Can be used to remove or add const to a variable.
 
 **🌼 reinterpret_cast:** <br>
 It turns one type directly into another, such as casting the value from one pointer to another, or storing a pointer in an int, or all sorts of other nasty things.
+<br>
+<br>
+
+## 📦Containers and Abstract Data Types
+
+https://www.scaler.com/topics/cpp/containers-in-cpp/
+https://cplusplus.com/reference/stl/
+
+<br>
+<br>
+
+## 📊Ford-Johnson Algorithm
+
+**LINK:** <br>
+✳️[Springer Link](https://link.springer.com/article/10.1007/s00224-020-09987-4#:~:text=MergeInsertion%2C%20also%20known%20as%20the,on%20the%20number%20of%20comparisons.)✳️
+<br>
+❗[Link from the image](https://www.tldraw.com/v/y9Y2Et7vl18fkPZT4UoEKTW?viewport=-365,-2318,3167,3198&page=page:jEhR30akJPWN_ZhTL5KgI)❗ 
+<br>
+![image](https://www.tldraw.com/v/y9Y2Et7vl18fkPZT4UoEKTW?viewport=-365,-2318,3167,3198&page=page:jEhR30akJPWN_ZhTL5KgI)
+
 <br>
 <br>
 
