@@ -65,6 +65,21 @@ void	Account::displayStatus( void ) const
 	<< "withdrawals:" <<_nbWithdrawals << std::endl;
 }
 
+/* _displayTimestamp();
+ *	Gets the current time.
+ *	strftime(): displays it in [Year,Month,Day_Hour,Minute,Second] order.
+ */
+void	Account::_displayTimestamp( void )
+{
+	time_t	UnixEpoch;
+	time(&UnixEpoch);								//number of seconds elapsed since the Unix epoch (January 1, 1970).
+	struct	tm *tm_struct = localtime(&UnixEpoch);	//convert this UnixEpoch timestamp in the local time zone.
+	char	buffer[20];
+
+	strftime(buffer, sizeof(buffer), "[%Y%m%d_%H%M%S] ", tm_struct);
+	std::cout << buffer;
+}
+
 // ---------- GET FUNCTIONS ----------
 int	Account::getNbAccounts( void )
 {
@@ -150,19 +165,3 @@ bool	Account::makeWithdrawal( int withdrawal )
 		return (true);
 	}
 }
-
-/* _displayTimestamp();
- *	Gets the current time.
- *	strftime(): displays it in [Year,Month,Day_Hour,Minute,Second] order.
- */
-void	Account::_displayTimestamp( void )
-{
-	time_t	UnixEpoch;
-	time(&UnixEpoch);								//number of seconds elapsed since the Unix epoch (January 1, 1970).
-	struct	tm *tm_struct = localtime(&UnixEpoch);	//convert this UnixEpoch timestamp in the local time zone.
-	char	buffer[20];
-
-	strftime(buffer, sizeof(buffer), "[%Y%m%d_%H%M%S] ", tm_struct);
-	std::cout << buffer;
-}
-
