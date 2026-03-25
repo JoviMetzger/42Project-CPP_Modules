@@ -287,6 +287,14 @@ A Floating-point number is composed of two main parts.
   so there's also a sign bit to represent the sign of the number.
 
 ![image](https://github.com/user-attachments/assets/65336798-e736-4e6e-a10a-b1e9cd5f2d97)
+
+
+
+<img width="1500" height="527" alt="floating number atricle images-en-03" src="https://github.com/user-attachments/assets/521d2602-b727-48e9-a9ee-759cc350215b" />
+
+
+
+
 <br>
 
 ### 🌗 Difference between a Floating-Point, Fixed-Point, float and double:
