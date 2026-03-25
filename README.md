@@ -286,7 +286,7 @@ A Floating-point number is composed of two main parts.
 3. `Sign:` Floating-point numbers can be positive or negative, <br> 
   so there's also a sign bit to represent the sign of the number.
 
-![image](https://www.c-programming-simple-steps.com/images/xIEEE-754-float-representation.png.pagespeed.ic.wRFQquB-9H.webp)
+![image](https://github.com/user-attachments/assets/65336798-e736-4e6e-a10a-b1e9cd5f2d97)
 <br>
 
 ### 🌗 Difference between a Floating-Point, Fixed-Point, float and double:
